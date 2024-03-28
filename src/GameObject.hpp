@@ -44,12 +44,12 @@ public:
 	Component& GetComponent(const char* id) {
 		for (auto& component_ptr : m_Components) {
 			Component* tryCast = dynamic_cast<T>(component_ptr.get());
-			if (tryCast && (strcmp(id, component_ptr->m_Id))) {
+			if (tryCast && (strcmp(id, component_ptr->m_Id) == 0)) {
 				return (*tryCast);
+			}
 		}
-	}
 		throw "Component& GetComponent()<T> : Component with type not found";
-}
+	}
 #ifndef CPORTA
 
 #endif
