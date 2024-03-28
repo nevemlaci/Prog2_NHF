@@ -1,0 +1,54 @@
+#Music
+*.wav
+
+#Font files
+*.ttf
+
+# VS files
+.vs/**
+.x64/**
+x64/**
+SDL_Wrapper_Lib/x64/**
+TestProject/x64/**
+*.dll.recipe
+*..ilk
+*.lib.recipe
+*.pdb
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+*.aps
+
+#Debug
+*.idb
+*.pbd
+*.log
+*.tlog
