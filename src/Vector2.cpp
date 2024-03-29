@@ -8,7 +8,7 @@
 #endif
 
 namespace SGE2 {
-	Vector2::Vector2(int x , int y) : x(x), y(y) {}
+	Vector2::Vector2(float x , float y) : x(x), y(y) {}
 
 	float Vector2::abs() const {
 		return sqrtf((x * x) + (y * y));

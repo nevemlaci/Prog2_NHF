@@ -30,6 +30,10 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Vector2.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.hpp">
@@ -37,6 +41,14 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="GameObject.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Transform.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Vector2.hpp">
       <SubType>
       </SubType>
     </ClInclude>
@@ -67,6 +79,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>true</EnableASAN>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>

@@ -15,8 +15,8 @@ class Component {
 public:
 	Component(GameObject*);
 	
-	virtual void Startup(Game&);
-	virtual void Update(Game&);
+	virtual void Startup(Game&) = 0;
+	virtual void Update(Game&) = 0;
 
 	const char* GetId() { return m_Id; }
 #ifndef CPORTA
