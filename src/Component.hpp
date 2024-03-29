@@ -13,12 +13,13 @@ namespace SGE2 {
 
 class Component {
 public:
-	Component(GameObject*);
+	Component(GameObject*, const char*);
 	
 	virtual void Startup(Game&) = 0;
 	virtual void Update(Game&) = 0;
 
 	const char* GetId() { return m_Id; }
+	GameObject& GetRoot() { return (*m_RootGameObject); }
 #ifndef CPORTA
 
 #endif
@@ -27,8 +28,10 @@ public:
 
 #endif
 
-protected:
+private:
 	GameObject* m_RootGameObject;
+
+protected:
 	const char* m_Id;
 #ifndef CPORTA
 

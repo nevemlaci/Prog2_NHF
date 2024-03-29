@@ -16,7 +16,7 @@
 namespace SGE2 {
 class GameObject {
 public:
-	GameObject(std::initializer_list<Component&>);
+	GameObject(const Vector2&, const Vector2&, float rot);
 	virtual ~GameObject();
 
 	/// @brief Called after the game initialization is finished
@@ -27,11 +27,11 @@ public:
 	/// @brief Constructs a new component and adds it to the GameObject
 	/// @tparam T typename of component subclass to be added
 	/// @tparam ...Args shouldn't be passed explicitly
-	/// @param ...args parameters of the constructor of T
+	/// @param ...args parameters of the constructor of T(except the pointer to this game object)
 	/// @return a reference to the newly added Component
 	template <class T, class... Args>
 	Component& AddComponent(Args&&... args) {
-		m_Components.push_back(T(std::forward<Args>(args)...));
+		m_Components.push_back(T(this, std::forward<Args>(args)...));
 		return (*m_Components.back());
 	}
 
@@ -50,6 +50,11 @@ public:
 		throw "Component& GetComponent()<T> : Component with type not found";
 	}
 
+	/// @brief Get the first component of T type of the GameObject with given id
+	/// @tparam T typename of component subclass
+	/// @param id
+	/// @return the first T type component of the GameObject
+	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T and with given id was not found.
 	template <class T>
 	Component& GetComponent(const char* id) {
 		for (auto& component_ptr : m_Components) {
@@ -58,9 +63,12 @@ public:
 				return (*tryCast);
 			}
 		}
-		throw "Component& GetComponent()<T> : Component with type not found";
+		throw "Component& GetComponent()<T> : Component with type and id not found";
 	}
 
+	/// @brief Get the first component of the GameObject with given id
+	/// @param id 
+	/// @return the first component with given id of the GameObject
 	Component& GetComponent(const char* id) {
 		for (auto& component_ptr : m_Components) {
 			
