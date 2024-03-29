@@ -5,6 +5,8 @@
 
 #include <vector>
 #include <memory>
+#include <string>
+#include <stdexcept>
 
 #include "Component.hpp"
 #include "Transform.hpp"
@@ -47,7 +49,8 @@ public:
 				return (*tryCast);
 			}
 		}
-		throw "Component& GetComponent()<T> : Component with type not found";
+		throw std::runtime_error(std::string(" GetComponent(): Component with type ") + typeid(T).name + " was not found.");
+
 	}
 
 	/// @brief Get the first component of T type of the GameObject with given id
@@ -63,7 +66,8 @@ public:
 				return (*tryCast);
 			}
 		}
-		throw "Component& GetComponent()<T> : Component with type and id not found";
+		
+		throw std::runtime_error(std::string(" GetComponent(): Component with type ") + typeid(T).name + " and id: " + id + " was not found.");
 	}
 
 	/// @brief Get the first component of the GameObject with given id
