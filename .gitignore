@@ -10,12 +10,13 @@
 src/x64/**
 src/.vs/**
 x64/**
-SDL_Wrapper_Lib/x64/**
-TestProject/x64/**
 *.dll.recipe
 *..ilk
 *.lib.recipe
 *.pdb
+
+*.exe.recipe
+*.ilk
 
 # Prerequisites
 *.d
