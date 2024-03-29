@@ -17,8 +17,7 @@ namespace SGE2 {
 #endif
 
 #ifdef CPORTA
-	GameObject::GameObject(const Vector2& position, const Vector2& size, float rot) :
-		m_Components({})
+	GameObject::GameObject(const Vector2& position, const Vector2& size, float rot)
 	{
 		m_Transform.position = position;
 		m_Transform.size = size;
