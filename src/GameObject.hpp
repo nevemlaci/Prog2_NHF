@@ -21,11 +21,6 @@ public:
 	GameObject(const Vector2&, const Vector2&, float rot);
 	virtual ~GameObject();
 
-	/// @brief Called after the game initialization is finished
-	virtual void Startup() = 0; 
-	/// @brief Called every frame
-	virtual void Update() = 0;
-
 	/// @brief Constructs a new component and adds it to the GameObject
 	/// @tparam T typename of component subclass to be added
 	/// @tparam ...Args shouldn't be passed explicitly

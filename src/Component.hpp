@@ -29,9 +29,9 @@ public:
 #endif
 
 private:
-	GameObject* m_RootGameObject;
 
 protected:
+	GameObject* m_RootGameObject;
 	const char* m_Id;
 #ifndef CPORTA
 

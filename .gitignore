@@ -5,18 +5,20 @@
 *.ttf
 
 # VS files
-.vs/**
-.x64/**
-src/x64/**
-src/.vs/**
-x64/**
+.vs/
+x64/
+src/x64/
+src/.vs/
+**/x64/
+**/.vs/
+
+
+#Build stuff
 *.dll.recipe
-*..ilk
+*.ilk
 *.lib.recipe
 *.pdb
-
 *.exe.recipe
-*.ilk
 
 # Prerequisites
 *.d
