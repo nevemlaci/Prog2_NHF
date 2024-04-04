@@ -33,6 +33,10 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <SubType>
       </SubType>
@@ -48,6 +52,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameObject.hpp">
       <SubType>
       </SubType>

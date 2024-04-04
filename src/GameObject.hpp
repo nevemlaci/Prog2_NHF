@@ -7,6 +7,7 @@
 #include <memory>
 #include <string>
 #include <stdexcept>
+#include <functional>
 
 #include "Component.hpp"
 #include "Transform.hpp"
@@ -17,6 +18,8 @@
 
 namespace SGE2 {
 class GameObject {
+
+	friend class Game;
 public:
 	GameObject(const Vector2&, const Vector2&, float rot);
 	virtual ~GameObject();
@@ -28,7 +31,7 @@ public:
 	/// @return a reference to the newly added Component
 	template <class T, class... Args>
 	Component& AddComponent(Args&&... args) {
-		m_Components.push_back(T(this, std::forward<Args>(args)...));
+		m_Components.push_back(std::make_unique<T>(this, std::forward<Args>(args)...));
 		return (*m_Components.back());
 	}
 
@@ -45,7 +48,6 @@ public:
 			}
 		}
 		throw std::runtime_error(std::string(" GetComponent(): Component with type ") + typeid(T).name + " was not found.");
-
 	}
 
 	/// @brief Get the first component of T type of the GameObject with given id
