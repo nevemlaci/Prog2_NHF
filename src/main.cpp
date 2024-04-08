@@ -14,14 +14,18 @@ public:
 	c1(GameObject* gameobject, const char* id) : Component(gameobject, id) {}
 
 	void Startup(Game& game) override {
+#ifndef CPORTA
 		game.GetRenderer().SetRenderDrawColor(0, 0, 255, 255);
+#endif
 	}
 	void Update(Game& game) override {
+#ifndef CPORTA
 		game.GetRenderer().RenderClear();
 		game.GetRenderer().SetRenderDrawColor(255, 0, 0, 255);
 		game.GetRenderer().FillRect(SDL::Rect(0, 0, 50, 50));
 		game.GetRenderer().RenderPresent();
 		game.GetRenderer().SetRenderDrawColor(0, 0, 255, 255);
+#endif
 	}
 
 	void print() {
