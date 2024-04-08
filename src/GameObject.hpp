@@ -40,14 +40,14 @@ public:
 	/// @return the first T type component of the GameObject
 	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T was not found.
 	template <class T>
-	Component& GetComponent() {
+	T& GetComponent() {
 		for (auto& component_ptr : m_Components) {
-			Component* tryCast = dynamic_cast<T>(component_ptr.get());
+			Component* tryCast = dynamic_cast<T*>(component_ptr.get());
 			if (tryCast) {
-				return (*tryCast);
+				return dynamic_cast<T&>(*tryCast);
 			}
 		}
-		throw std::runtime_error(std::string(" GetComponent(): Component with type ") + typeid(T).name + " was not found.");
+		throw std::runtime_error(std::string("GetComponent(): Component with type not found."));
 	}
 
 	/// @brief Get the first component of T type of the GameObject with given id
@@ -56,28 +56,15 @@ public:
 	/// @return the first T type component of the GameObject
 	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T and with given id was not found.
 	template <class T>
-	Component& GetComponent(const char* id) {
+	T& GetComponent(const char* id) {
 		for (auto& component_ptr : m_Components) {
-			Component* tryCast = dynamic_cast<T>(component_ptr.get());
+			Component* tryCast = dynamic_cast<T*>(component_ptr.get());
 			if (tryCast && (strcmp(id, component_ptr->GetId()) == 0)) {
-				return (*tryCast);
+				return dynamic_cast<T&>(*tryCast);
 			}
 		}
 		
-		throw std::runtime_error(std::string(" GetComponent(): Component with type ") + typeid(T).name + " and id: " + id + " was not found.");
-	}
-
-	/// @brief Get the first component of the GameObject with given id
-	/// @param id 
-	/// @return the first component with given id of the GameObject
-	Component& GetComponent(const char* id) {
-		for (auto& component_ptr : m_Components) {
-			
-			if (strcmp(id, component_ptr->GetId()) == 0) {
-				return (*component_ptr);
-			}
-		}
-		throw "Component& GetComponent()<T> : Component with type not found";
+		throw std::runtime_error(std::string("GetComponent(): Component with type and id not found."));
 	}
 
 	Transform m_Transform;
