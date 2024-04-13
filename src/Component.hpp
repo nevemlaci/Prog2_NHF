@@ -3,6 +3,8 @@
 #ifndef __Component_H__
 #define __Component_H__
 
+#include "memtrace.h"
+
 #ifndef CPORTA
 
 #endif
@@ -14,6 +16,8 @@ namespace SGE2 {
 class Component {
 public:
 	Component(GameObject*, const char*);
+
+	virtual ~Component() {}
 	
 	virtual void Startup(Game&) = 0;
 	virtual void Update(Game&) = 0;

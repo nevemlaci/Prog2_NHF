@@ -29,6 +29,7 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp" />
+    <ClCompile Include="..\memtrace\memtrace.cpp" />
     <ClCompile Include="Component.cpp">
       <SubType>
       </SubType>
@@ -41,19 +42,34 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="init.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RendererComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Vector2.cpp">
       <SubType>
       </SubType>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\memtrace\memtrace.h" />
     <ClInclude Include="Component.hpp">
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="example.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameObject.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="init.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="RendererComponent.hpp">
       <SubType>
       </SubType>
     </ClInclude>
@@ -162,7 +178,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);MEMTRACE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>

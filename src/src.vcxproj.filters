@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,17 +8,41 @@
     <Filter Include="SDLWrapperSource">
       <UniqueIdentifier>{7c8959ac-4234-4347-b399-05a13853797b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Built In Components">
-      <UniqueIdentifier>{af7c2ca9-bfa6-4647-a78d-1ef994439ae8}</UniqueIdentifier>
+    <Filter Include="memtrace">
+      <UniqueIdentifier>{9b8c251d-b491-4acd-b1f9-a29bcdff08e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Built In Components">
-      <UniqueIdentifier>{09006dd3-648c-4ddd-a93c-9ca01b002e55}</UniqueIdentifier>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{0b0e9136-5616-4655-9eb1-ff78d99df307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base">
+      <UniqueIdentifier>{5a38f133-501d-4044-aac5-c00bea8adb7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Vec2">
+      <UniqueIdentifier>{ee5f6ca0-0a2d-47a3-ad8c-ce8cfa3b36e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Game">
+      <UniqueIdentifier>{3275da79-d844-4364-99f4-171db502976b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Component">
+      <UniqueIdentifier>{c3549187-b8fc-43f5-823e-b7a46eaec797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\GameObject">
+      <UniqueIdentifier>{205e2949-ac06-4b63-96d1-b9e516ce5b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Transform">
+      <UniqueIdentifier>{eb47459c-e28e-4bd0-9cbb-88d934bf6329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Built in components">
+      <UniqueIdentifier>{0aa7ce2e-fae3-476b-a82d-7e39506d98de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{579b594f-04d6-409b-9eea-da0874b52ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Init">
+      <UniqueIdentifier>{945f44b2-bc33-4fc0-93f8-a58f8e18d529}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.cpp">
       <Filter>SDLWrapperSource</Filter>
     </ClCompile>
@@ -57,34 +73,58 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp">
       <Filter>SDLWrapperSource</Filter>
     </ClCompile>
-    <ClCompile Include="Vector2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Component.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Engine\Base\Component</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Engine\Base\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Engine\Base\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Engine\Base\Vec2</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\memtrace\memtrace.cpp">
+      <Filter>memtrace</Filter>
+    </ClCompile>
+    <ClCompile Include="RendererComponent.cpp">
+      <Filter>Engine\Built in components</Filter>
+    </ClCompile>
+    <ClCompile Include="init.cpp">
+      <Filter>Test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Engine\Base\Component</Filter>
     </ClInclude>
     <ClInclude Include="Game.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Engine\Base\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.hpp">
+      <Filter>Engine\Base\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.hpp">
+      <Filter>Engine\Base\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.hpp">
+      <Filter>Engine\Base\Vec2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\memtrace\memtrace.h">
+      <Filter>memtrace</Filter>
+    </ClInclude>
+    <ClInclude Include="RendererComponent.hpp">
+      <Filter>Engine\Built in components</Filter>
+    </ClInclude>
+    <ClInclude Include="init.hpp">
+      <Filter>Engine\Init</Filter>
+    </ClInclude>
+    <ClInclude Include="example.hpp">
+      <Filter>Test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

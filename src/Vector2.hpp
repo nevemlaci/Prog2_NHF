@@ -3,6 +3,8 @@
 #ifndef __Vector2_H__
 #define __Vector2_H__
 
+#include "memtrace.h"
+
 #ifndef CPORTA
 
 #endif

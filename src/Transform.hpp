@@ -3,6 +3,8 @@
 #ifndef __Transform_H__
 #define __Transform_H__
 
+#include "memtrace.h"
+
 #include "Vector2.hpp"
 
 #ifndef CPORTA

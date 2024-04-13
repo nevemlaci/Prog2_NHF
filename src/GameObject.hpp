@@ -3,6 +3,8 @@
 #ifndef __GameObject_H__
 #define __GameObject_H__
 
+#include "memtrace.h"
+
 #include <vector>
 #include <memory>
 #include <string>
@@ -18,10 +20,14 @@
 
 namespace SGE2 {
 class GameObject {
-
 	friend class Game;
+	friend Component::Component(GameObject*, const char*);
 public:
-	GameObject(const Vector2&, const Vector2&, float rot);
+	/// @brief Constructor
+	/// @param position Vector2
+	/// @param size Vector2
+	/// @param rot rotation
+	GameObject(Game&, const char*, const Vector2&, const Vector2&, float rot);
 	virtual ~GameObject();
 
 	/// @brief Constructs a new component and adds it to the GameObject
@@ -32,13 +38,14 @@ public:
 	template <class T, class... Args>
 	Component& AddComponent(Args&&... args) {
 		m_Components.push_back(std::make_unique<T>(this, std::forward<Args>(args)...));
+		m_Components.back()->Startup(this->m_RootGameRef);
 		return (*m_Components.back());
 	}
 
-	/// @brief Get the first component of T type of the GameObject
-	/// @tparam T typename of component subclass
-	/// @return the first T type component of the GameObject
-	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T was not found.
+	/// @brief Get the component of a given type
+	/// @tparam T type of the component
+	/// @return the first component of type T in the Component vecto
+	/// @throw std::runtime_error : "GetComponent(): Component with type not found." | If a component with the given type was not found.
 	template <class T>
 	T& GetComponent() {
 		for (auto& component_ptr : m_Components) {
@@ -50,7 +57,7 @@ public:
 		throw std::runtime_error(std::string("GetComponent(): Component with type not found."));
 	}
 
-	/// @brief Get the first component of T type of the GameObject with given id
+	/// @brief Get the first component of T type of the GameObject with a specific id
 	/// @tparam T typename of component subclass
 	/// @param id
 	/// @return the first T type component of the GameObject
@@ -67,7 +74,7 @@ public:
 		throw std::runtime_error(std::string("GetComponent(): Component with type and id not found."));
 	}
 
-	Transform m_Transform;
+	Transform transform;
 #ifndef CPORTA
 
 #endif
@@ -77,6 +84,8 @@ public:
 #endif
 
 protected:
+	const char* m_Id;
+	Game& m_RootGameRef;
 	std::vector< std::unique_ptr<Component> > m_Components;
 #ifndef CPORTA
 

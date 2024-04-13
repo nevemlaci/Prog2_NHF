@@ -3,6 +3,8 @@
 #ifndef __Game_H__
 #define __Game_H__
 
+#include "memtrace.h"
+
 #ifndef CPORTA
 #include <cpp_SDL_include.hpp>
 #endif
@@ -14,6 +16,7 @@
 
 namespace SGE2 {
 class Game {
+	
 public:
 	Game(const char*);
 #ifndef CPORTA
@@ -34,13 +37,13 @@ public:
 
 	template<typename T, class... Args>
 	GameObject& AddGameObject(Args&&... args) {
-		m_GameObjects.push_back(std::make_unique<T>(std::forward<Args>(args)...));
+		m_GameObjects.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
 		return (*m_GameObjects.back());
 	}
+
+	void DeleteGameObject(const char*);
 private:
 	
-	/// @brief differs from the ctor as it gets called when the game is actually beind ran, not when the game object gets instantiated
-	void Startup();
 	/// @brief Runs the main loop of the game
 	void MainLoop();
 
