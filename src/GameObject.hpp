@@ -21,13 +21,18 @@
 namespace SGE2 {
 class GameObject {
 	friend class Game;
-	friend Component::Component(GameObject*, const char*);
 public:
 	/// @brief Constructor
 	/// @param position Vector2
 	/// @param size Vector2
 	/// @param rot rotation
-	GameObject(Game&, const char*, const Vector2&, const Vector2&, float rot);
+	GameObject(
+		Game& root_game, 
+		const std::string& id, 
+		const Vector2& position, 
+		const Vector2& size, 
+		float rot);
+
 	virtual ~GameObject();
 
 	/// @brief Constructs a new component and adds it to the GameObject
@@ -37,7 +42,7 @@ public:
 	/// @return a reference to the newly added Component
 	template <class T, class... Args>
 	Component& AddComponent(Args&&... args) {
-		m_Components.push_back(std::make_unique<T>(this, std::forward<Args>(args)...));
+		m_Components.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
 		m_Components.back()->Startup(this->m_RootGameRef);
 		return (*m_Components.back());
 	}
@@ -63,10 +68,10 @@ public:
 	/// @return the first T type component of the GameObject
 	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T and with given id was not found.
 	template <class T>
-	T& GetComponent(const char* id) {
+	T& GetComponent(const std::string& id) {
 		for (auto& component_ptr : m_Components) {
 			Component* tryCast = dynamic_cast<T*>(component_ptr.get());
-			if (tryCast && (strcmp(id, component_ptr->GetId()) == 0)) {
+			if (tryCast && (id == component_ptr->GetId())) {
 				return dynamic_cast<T&>(*tryCast);
 			}
 		}
@@ -84,7 +89,7 @@ public:
 #endif
 
 protected:
-	const char* m_Id;
+	std::string m_Id;
 	Game& m_RootGameRef;
 	std::vector< std::unique_ptr<Component> > m_Components;
 #ifndef CPORTA

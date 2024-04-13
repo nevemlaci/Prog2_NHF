@@ -9,7 +9,7 @@
 #endif
 
 namespace SGE2 {
-	RendererComponent::RendererComponent(GameObject* root, const char* id, const SDL::Texture& texture, int scaleX, int scaleY, int offsetX, int offsety) :
+	RendererComponent::RendererComponent(GameObject& root, const char* id, const SDL::Texture& texture, int scaleX, int scaleY, int offsetX, int offsety) :
 		Component(root, id),
 		m_OffsetX(offsetX),
 		m_OffsetY(offsety),
@@ -25,7 +25,7 @@ namespace SGE2 {
 	}
 
 	void RendererComponent::Update(Game& game) {
-		game.GetRenderer() << SDL::at({ m_RootGameObject->transform.position.x, m_RootGameObject->transform.position.x, m_RootGameObject->transform.size.x, m_RootGameObject->transform.size.y });
+		game.GetRenderer() << SDL::at({ m_RootGameObject.transform.position.x, m_RootGameObject.transform.position.x, m_RootGameObject.transform.size.x, m_RootGameObject.transform.size.y });
 	}
 #endif
 

@@ -3,7 +3,9 @@
 #ifndef __Component_H__
 #define __Component_H__
 
+
 #include "memtrace.h"
+#include <string>
 
 #ifndef CPORTA
 
@@ -15,15 +17,15 @@ namespace SGE2 {
 
 class Component {
 public:
-	Component(GameObject*, const char*);
+	Component(GameObject& gameobject, const std::string& id);
 
 	virtual ~Component() {}
 	
-	virtual void Startup(Game&) = 0;
-	virtual void Update(Game&) = 0;
+	virtual void Startup(Game& game) = 0;
+	virtual void Update(Game& game) = 0;
 
-	const char* GetId() { return m_Id; }
-	GameObject& GetRoot() { return (*m_RootGameObject); }
+	const std::string& GetId() { return m_Id; }
+	//GameObject& GetRoot() { return (*m_RootGameObject); }
 #ifndef CPORTA
 
 #endif
@@ -35,8 +37,8 @@ public:
 private:
 
 protected:
-	GameObject* m_RootGameObject;
-	const char* m_Id;
+	GameObject& m_RootGameObject;
+	std::string m_Id;
 #ifndef CPORTA
 
 #endif

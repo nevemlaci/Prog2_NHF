@@ -41,7 +41,7 @@ public:
 		return (*m_GameObjects.back());
 	}
 
-	void DeleteGameObject(const char*);
+	void DeleteGameObject(const std::string& id);
 private:
 	
 	/// @brief Runs the main loop of the game

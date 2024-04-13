@@ -13,9 +13,9 @@ namespace SGE2 {
 		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED) 
 	{}
 
-	void Game::DeleteGameObject(const char* id) {
+	void Game::DeleteGameObject(const std::string& id) {
 		for (size_t i = 0; i < m_GameObjects.size(); i++) {
-			if (strcmp(this->m_GameObjects.at(i)->m_Id, id) == 0) {
+			if (id==m_GameObjects.at(i)->m_Id) {
 				m_GameObjects.erase(m_GameObjects.begin() + 1);
 				break;
 			}
