@@ -14,6 +14,10 @@ namespace SGE2 {
 		return sqrtf((x * x) + (y * y));
 	}
 
+	float Vector2::length() const {
+		return this->abs();
+	}
+
 	Vector2 Vector2::operator+(const Vector2& other) const{
 		return Vector2(x + other.x, y + other.y);
 	}

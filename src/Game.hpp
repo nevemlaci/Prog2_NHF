@@ -15,10 +15,10 @@
 #include "GameObject.hpp"
 
 namespace SGE2 {
-class Game {
+class Game final {
 	
 public:
-	Game(const char*);
+	Game(const char* title);
 #ifndef CPORTA
 
 #endif

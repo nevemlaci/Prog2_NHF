@@ -17,7 +17,10 @@ namespace SGE2 {
 
 class Component {
 public:
-	Component(GameObject& gameobject, const std::string& id);
+	Component(
+		GameObject& gameobject, 
+		const std::string& id
+	);
 
 	virtual ~Component() {}
 	

@@ -19,6 +19,8 @@ public:
 
 	float abs() const;
 
+	float length() const;
+
 	Vector2 operator+(const Vector2&) const;
 	Vector2& operator+=(const Vector2&);
 

@@ -20,8 +20,8 @@ public:
 		int offsetX = 0, int offsety = 0
 	);
 	
-	void Startup(Game&) override;
-	void Update(Game&) override;
+	void Startup(Game& game) override;
+	void Update(Game& game) override;
 
 #ifndef CPORTA
 
