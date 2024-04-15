@@ -36,6 +36,10 @@ public:
 	}
 };
 
+class c2 : public Component {
+
+};
+
 class g1 : public GameObject {
 public:
 	//All GameObject constructors need to take at least a reference to a SGE2::Game

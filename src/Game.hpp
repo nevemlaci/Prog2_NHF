@@ -16,9 +16,14 @@ namespace SGE2 {
 class Game final {
 	
 public:
+	/// @brief game instance ctor
+	/// @param title title of the game(and the game window)
 	Game(const char* title);
+
+	/// @brief runs the game
 	void Run();
 #ifndef CPORTA
+
 	SDL::Renderer& GetRenderer() { return m_Renderer; }
 
 	SDL::Window& GetWindow() { return m_Window; }
