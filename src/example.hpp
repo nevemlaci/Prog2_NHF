@@ -4,7 +4,8 @@
 #include "Game.hpp"
 #include "GameObject.hpp"
 #include "Component.hpp"
-#undef main
+#include "iostream"
+
 #ifndef CPORTA
 
 #endif

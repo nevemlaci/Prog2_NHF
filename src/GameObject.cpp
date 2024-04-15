@@ -26,12 +26,18 @@ namespace SGE2 {
 #endif
 
 #ifdef CPORTA
-	GameObject::GameObject(const Vector2& position, const Vector2& size, float rot)
-	{
-		m_Transform.position = position;
-		m_Transform.size = size;
-		m_Transform.rot = rot;
-	}
+	GameObject::GameObject(
+		Game& root_game,
+		const std::string& id,
+		const Vector2& position,
+		const Vector2& size,
+		float rot) : 
+		m_RootGameRef(root_game),
+		m_Id(id),
+		transform({ position, size, rot })
+
+	{}
+
 #endif
 
 }

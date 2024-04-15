@@ -3,8 +3,6 @@
 #ifndef __Transform_H__
 #define __Transform_H__
 
-#include "memtrace.h"
-
 #include "Vector2.hpp"
 
 #ifndef CPORTA
@@ -12,9 +10,8 @@
 #endif
 
 namespace SGE2 {
-class Transform {
+struct Transform {
 public:
-	friend class GameObject;
 	Vector2 position;
 	Vector2 size;
 	float rotation;

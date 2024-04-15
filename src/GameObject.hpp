@@ -3,8 +3,6 @@
 #ifndef __GameObject_H__
 #define __GameObject_H__
 
-#include "memtrace.h"
-
 #include <vector>
 #include <memory>
 #include <string>
@@ -33,7 +31,7 @@ public:
 		const Vector2& size, 
 		float rot);
 
-	virtual ~GameObject();
+	
 
 	/// @brief Constructs a new component and adds it to the GameObject
 	/// @tparam T typename of component subclass to be added
@@ -78,6 +76,8 @@ public:
 		
 		throw std::runtime_error(std::string("GetComponent(): Component with type and id not found."));
 	}
+
+	const std::string& GetId() { return m_Id; }
 
 	Transform transform;
 #ifndef CPORTA

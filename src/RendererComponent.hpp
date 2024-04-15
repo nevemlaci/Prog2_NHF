@@ -4,21 +4,30 @@
 #define __RendererComponent_H__
 
 #include "Component.hpp"
-
-
+#include <iostream>
 
 #ifndef CPORTA
 #include "cpp_SDL_include.hpp"
 #endif
 
 namespace SGE2 {
-class RendererComponent : public Component {
+class RendererComponent final : public Component {
 public:
+#ifndef CPORTA
 	RendererComponent(
-		GameObject&, const char*, const SDL::Texture&,
+		GameObject& root, const std::string& id, const SDL::Texture&,
 		int scaleX=0, int scaleY=0,
 		int offsetX = 0, int offsety = 0
 	);
+#endif
+#ifdef CPORTA
+	RendererComponent(
+		GameObject& root, const std::string& id,
+		int scaleX = 0, int scaleY = 0,
+		int offsetX = 0, int offsety = 0
+	);
+#endif 
+
 	
 	void Startup(Game& game) override;
 	void Update(Game& game) override;

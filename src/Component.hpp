@@ -3,8 +3,6 @@
 #ifndef __Component_H__
 #define __Component_H__
 
-
-#include "memtrace.h"
 #include <string>
 
 #ifndef CPORTA
@@ -28,7 +26,6 @@ public:
 	virtual void Update(Game& game) = 0;
 
 	const std::string& GetId() { return m_Id; }
-	//GameObject& GetRoot() { return (*m_RootGameObject); }
 #ifndef CPORTA
 
 #endif

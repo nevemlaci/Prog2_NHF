@@ -7,12 +7,17 @@
 #endif
 
 namespace SGE2 {
+#ifndef CPORTA
 	Game::Game(const char* title) : 
 		m_Title(title), m_SDL(SDL::SDL::Get()), 
 		m_Window(title, 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP), 
 		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED) 
 	{}
+#endif
 
+#ifdef CPORTA
+	Game::Game(const char* title) : m_Title(title) {}
+#endif
 	void Game::DeleteGameObject(const std::string& id) {
 		for (size_t i = 0; i < m_GameObjects.size(); i++) {
 			if (id==m_GameObjects.at(i)->m_Id) {
@@ -22,6 +27,7 @@ namespace SGE2 {
 		}
 	}
 
+#ifndef CPORTA
 	void Game::Run() {
 		MainLoop();
 	}
@@ -48,6 +54,7 @@ namespace SGE2 {
 			}
 		}
 	}
+#endif // !CPORTA
 
 #ifndef CPORTA
 

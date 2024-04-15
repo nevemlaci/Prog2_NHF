@@ -8,9 +8,6 @@
     <Filter Include="SDLWrapperSource">
       <UniqueIdentifier>{7c8959ac-4234-4347-b399-05a13853797b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="memtrace">
-      <UniqueIdentifier>{9b8c251d-b491-4acd-b1f9-a29bcdff08e4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine">
       <UniqueIdentifier>{0b0e9136-5616-4655-9eb1-ff78d99df307}</UniqueIdentifier>
     </Filter>
@@ -40,6 +37,9 @@
     </Filter>
     <Filter Include="Engine\Init">
       <UniqueIdentifier>{945f44b2-bc33-4fc0-93f8-a58f8e18d529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Built in components\RendererComponent">
+      <UniqueIdentifier>{51308341-8751-4b8b-bca0-ebc984ca21f1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -88,14 +88,11 @@
     <ClCompile Include="main.cpp">
       <Filter>Test</Filter>
     </ClCompile>
-    <ClCompile Include="..\memtrace\memtrace.cpp">
-      <Filter>memtrace</Filter>
-    </ClCompile>
-    <ClCompile Include="RendererComponent.cpp">
-      <Filter>Engine\Built in components</Filter>
-    </ClCompile>
     <ClCompile Include="init.cpp">
       <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="RendererComponent.cpp">
+      <Filter>Engine\Built in components\RendererComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -114,17 +111,17 @@
     <ClInclude Include="Vector2.hpp">
       <Filter>Engine\Base\Vec2</Filter>
     </ClInclude>
-    <ClInclude Include="..\memtrace\memtrace.h">
-      <Filter>memtrace</Filter>
-    </ClInclude>
-    <ClInclude Include="RendererComponent.hpp">
-      <Filter>Engine\Built in components</Filter>
-    </ClInclude>
     <ClInclude Include="init.hpp">
       <Filter>Engine\Init</Filter>
     </ClInclude>
     <ClInclude Include="example.hpp">
       <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="SGE2.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="RendererComponent.hpp">
+      <Filter>Engine\Built in components\RendererComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

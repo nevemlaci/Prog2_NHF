@@ -29,7 +29,6 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp" />
-    <ClCompile Include="..\memtrace\memtrace.cpp" />
     <ClCompile Include="Component.cpp">
       <SubType>
       </SubType>
@@ -54,7 +53,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\memtrace\memtrace.h" />
     <ClInclude Include="Component.hpp">
       <SubType>
       </SubType>
@@ -73,6 +71,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="SGE2.hpp" />
     <ClInclude Include="Transform.hpp">
       <SubType>
       </SubType>
@@ -178,9 +177,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);MEMTRACE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);MEMTRACE;CPORTA;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
