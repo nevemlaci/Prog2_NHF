@@ -17,7 +17,7 @@ using SGE2::Game;
 
 class c1 : public Component {
 public:
-	c1(GameObject& gameobject, const char* id) : Component(gameobject, id) {}
+	c1(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
 
 	void Startup(Game& game) override {
 		std::cout << this->m_Id << '\n';

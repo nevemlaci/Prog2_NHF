@@ -5,6 +5,7 @@
 #include "Game.hpp"
 #include "GameObject.hpp"
 #include "Component.hpp"
+#include "example.hpp"
 
 #ifndef CPORTA
 #undef main //sdl2 magic

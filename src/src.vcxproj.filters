@@ -123,5 +123,8 @@
     <ClInclude Include="RendererComponent.hpp">
       <Filter>Engine\Built in components\RendererComponent</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gtest_lite.h">
+      <Filter>Test</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

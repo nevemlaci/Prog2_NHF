@@ -33,9 +33,20 @@ public:
 	const char* GetTitle() const { return m_Title; }
 
 	template<typename T, class... Args>
-	GameObject& AddGameObject(Args&&... args) {
+	T& AddGameObject(Args&&... args) {
 		m_GameObjects.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
-		return (*m_GameObjects.back());
+		return dynamic_cast<T&>(*m_GameObjects.back());
+	}
+
+	template<typename T = GameObject>
+	T& GetGameObject(const std::string& id) {
+		for (auto& gameobject : m_GameObjects) {
+			GameObject* tryCast = dynamic_cast<T*>(gameobject.get());
+			if (gameobject->m_Id == id && tryCast) {
+				return dynamic_cast<T&>(*tryCast);
+			}
+		}
+		throw std::runtime_error("GameObject with given id not found.");
 	}
 
 	void DeleteGameObject(const std::string& id);

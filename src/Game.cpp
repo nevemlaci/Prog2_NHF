@@ -18,6 +18,7 @@ namespace SGE2 {
 #ifdef CPORTA
 	Game::Game(const char* title) : m_Title(title) {}
 #endif
+
 	void Game::DeleteGameObject(const std::string& id) {
 		for (size_t i = 0; i < m_GameObjects.size(); i++) {
 			if (id==m_GameObjects.at(i)->m_Id) {
