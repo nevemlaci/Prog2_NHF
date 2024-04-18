@@ -11,6 +11,7 @@
 #include <memory>
 
 #include "GameObject.hpp"
+#include "AssetManager.hpp"
 
 namespace SGE2 {
 class Game final {
@@ -86,7 +87,11 @@ private:
 	SDL::SDL& m_SDL;
 	SDL::Window m_Window;
 	SDL::Renderer m_Renderer;
+
+	AssetManager m_AssetManager;
 #endif
+
+
 
 	std::vector<std::unique_ptr<GameObject>> m_GameObjects;
 

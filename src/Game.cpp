@@ -1,5 +1,6 @@
 // Game.cpp
 
+#include "AssetManager.hpp"
 #include "Game.hpp"
 
 #ifndef CPORTA
@@ -8,10 +9,11 @@
 
 namespace SGE2 {
 #ifndef CPORTA
-	Game::Game(const char* title) : 
-		m_Title(title), m_SDL(SDL::SDL::Get()), 
-		m_Window(title, 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP), 
-		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED) 
+	Game::Game(const char* title) :
+		m_Title(title), m_SDL(SDL::SDL::Get()),
+		m_Window(title, 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP),
+		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED),
+		m_AssetManager(this)
 	{}
 #endif
 

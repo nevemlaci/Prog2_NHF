@@ -29,6 +29,7 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp" />
+    <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Component.cpp">
       <SubType>
       </SubType>
@@ -54,6 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gtest_lite.h" />
+    <ClInclude Include="AssetManager.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Component.hpp">
       <SubType>
       </SubType>
@@ -178,7 +183,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;CPORTA</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
