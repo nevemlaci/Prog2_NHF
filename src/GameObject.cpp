@@ -1,7 +1,7 @@
 // GameObject.cpp
 
 #include "GameObject.hpp"
-
+#include "Game.hpp"
 #ifndef CPORTA
 
 #endif
@@ -24,21 +24,30 @@ namespace SGE2 {
 
 #endif
 
-	GameObject::~GameObject() {}
-
 #ifdef CPORTA
 	GameObject::GameObject(
-		Game& root_game,
+		Game& root_game, 
 		const std::string& id,
 		const Vector2& position,
 		const Vector2& size,
 		float rot) : 
-		m_RootGameRef(root_game),
 		m_Id(id),
+		m_RootGameRef(root_game),
+		m_IsActive(true),
 		transform({ position, size, rot })
-
 	{}
 
 #endif
 
+	bool GameObject::Active() const {
+		return m_IsActive;
+	}
+
+	void GameObject::Active(bool a) {
+		m_IsActive = a;
+	}
+
+	GameObject::~GameObject() {
+		
+	}
 }

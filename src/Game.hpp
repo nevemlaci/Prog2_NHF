@@ -14,7 +14,7 @@
 
 namespace SGE2 {
 class Game final {
-	
+	friend class GameObject;
 public:
 	/// @brief game instance ctor
 	/// @param title title of the game(and the game window)

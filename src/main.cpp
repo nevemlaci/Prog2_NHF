@@ -41,7 +41,6 @@ int main(int argc, char** argv) {
 	}END
 
 
-
 #endif
 	delete game;
 	std::cerr << "\n\n\nInput any character to exit...\n";
