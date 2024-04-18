@@ -1,16 +1,9 @@
-#include "GameObject.hpp"
-#include "Game.hpp"
-#include "init.hpp"
 #include <gtest_lite.h>
 #include <iostream>
+#include "init.hpp"
 
 
-using SGE2::Game;
-using SGE2::GameObject;
-using SGE2::Component;
-
-#undef main
-int main() {
+int main(int argc, char** argv) {
 	Game* game = SGE2::init();
 #ifndef CPORTA
 	game->Run();
@@ -31,7 +24,6 @@ int main() {
 		std::runtime_error);
 	}END
 
-
 	/*Test the component getter*/
 	c1& testcomp = testobj.GetComponent<c1>();
 	TEST(GameObject, GetComponentByTypeOnly) {
@@ -42,8 +34,11 @@ int main() {
 	TEST(GameObject, GetNonExistentComponentById) {
 		EXPECT_THROW(testobj.GetComponent<c2>(), std::runtime_error);
 	}END
-	
 
+	c1& testcomp_2 = testobj.GetComponent<c1>("c1");
+	TEST(GameObject, GetComponentByIdAndName) {
+		EXPECT_EQ(testcomp_2.GetId(), std::string("c1") /*the first component had the id "c1"*/);
+	}END
 
 
 

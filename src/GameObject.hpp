@@ -31,7 +31,7 @@ public:
 		const Vector2& size, 
 		float rot);
 
-	virtual ~GameObject() {}
+	virtual ~GameObject();
 
 	/// @brief Constructs a new component and adds it to the GameObject
 	/// @tparam T typename of component subclass to be added

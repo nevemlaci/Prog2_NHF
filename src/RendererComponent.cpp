@@ -12,7 +12,7 @@ namespace SGE2 {
 #ifndef CPORTA
 	RendererComponent::RendererComponent(GameObject& root, 
 		const std::string& id, 
-		const SDL::Texture&,
+		const SDL::Texture& texture,
 		int scaleX, int scaleY,
 		int offsetX, int offsety) :
 		Component(root, id),

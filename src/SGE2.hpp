@@ -7,3 +7,9 @@
 
 /*Built in components*/
 #include "RendererComponent.hpp"
+
+/*Simplify types*/
+using SGE2::Game;
+using SGE2::GameObject;
+using SGE2::Component;
+

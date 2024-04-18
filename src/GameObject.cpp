@@ -21,9 +21,10 @@ namespace SGE2 {
 		transform({position, size, rot })
 	{}
 
-	GameObject::~GameObject() {}
 
 #endif
+
+	GameObject::~GameObject() {}
 
 #ifdef CPORTA
 	GameObject::GameObject(
