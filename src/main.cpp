@@ -43,8 +43,12 @@ int main(int argc, char** argv) {
 
 #endif
 	delete game;
+
+#ifndef CPORTA
 	std::cerr << "\n\n\nInput any character to exit...\n";
 	std::cin.get(); //block Mr Memory from exiting instantly
+
+#endif // !CPORTA
 
 	return 0;
 }
