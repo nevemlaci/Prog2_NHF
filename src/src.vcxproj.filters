@@ -41,38 +41,14 @@
     <Filter Include="Engine\Built in components\RendererComponent">
       <UniqueIdentifier>{51308341-8751-4b8b-bca0-ebc984ca21f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SDLWrapperSource\src">
+      <UniqueIdentifier>{d713db4f-5f6b-4703-bf60-6bc91e863004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDLWrapperSource\header">
+      <UniqueIdentifier>{e4e7ab87-472f-425d-8862-740765b10ad8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Font.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mix_Chunk.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mix_Music.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mixer.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Renderer.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Renderermanip.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp">
-      <Filter>SDLWrapperSource</Filter>
-    </ClCompile>
     <ClCompile Include="Component.cpp">
       <Filter>Engine\Base\Component</Filter>
     </ClCompile>
@@ -93,6 +69,37 @@
     </ClCompile>
     <ClCompile Include="RendererComponent.cpp">
       <Filter>Engine\Built in components\RendererComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Font.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mix_Chunk.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mix_Music.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mixer.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Renderer.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Renderermanip.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp">
+      <Filter>SDLWrapperSource\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +132,43 @@
     </ClInclude>
     <ClInclude Include="..\include\gtest_lite.h">
       <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.hpp" />
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Font.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_include.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mix_Chunk.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mix_Music.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Mixer.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Rect.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Renderer.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Renderermanip.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.hpp">
+      <Filter>SDLWrapperSource\header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
