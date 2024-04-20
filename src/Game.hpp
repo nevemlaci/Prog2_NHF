@@ -78,6 +78,8 @@ public:
 	/// @param id 
 	void DeleteGameObject(const std::string& id);
 
+	AssetManager& GetAssetManager() { return m_AssetManager; }
+
 private:
 #ifndef CPORTA
 	/// @brief Runs the main loop of the game

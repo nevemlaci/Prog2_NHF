@@ -49,12 +49,13 @@ namespace SGE2 {
 				if (!shouldrun) break;
 			}
 			if (!shouldrun) break;
-
+			m_Renderer.RenderClear();
 			for (auto& object : m_GameObjects) {
 				for (auto& component : object->m_Components) {
 					component->Update(*this);
 				}
 			}
+			m_Renderer.RenderPresent();
 		}
 	}
 #endif // !CPORTA

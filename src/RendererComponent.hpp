@@ -15,8 +15,9 @@ class RendererComponent final : public Component {
 public:
 #ifndef CPORTA
 	RendererComponent(
-		GameObject& root, const std::string& id, const SDL::Texture&,
-		int scaleX=0, int scaleY=0,
+		GameObject& root, const std::string& id, 
+		const std::string& asset_name,
+		int scaleX=1, int scaleY=1,
 		int offsetX = 0, int offsety = 0
 	);
 #endif
@@ -27,7 +28,6 @@ public:
 		int offsetX = 0, int offsety = 0
 	);
 #endif 
-
 	
 	void Startup(Game& game) override;
 	void Update(Game& game) override;
@@ -46,7 +46,7 @@ private:
 	int m_ScaleX;
 	int m_ScaleY;
 #ifndef CPORTA
-	std::shared_ptr<SDL::Texture> m_TexturePtr;
+	const SDL::Texture& m_Texture;
 #endif
 
 #ifdef CPORTA

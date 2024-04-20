@@ -1,6 +1,6 @@
 #include "Game.hpp"
 #include "AssetManager.hpp"
-
+#include <iostream>
 
 #ifndef CPORTA
 
@@ -40,11 +40,16 @@ namespace SGE2 {
 		const std::string& font_asset_name, 
 		SDL_Color color)
 	{
-		m_Texts[asset_name] = new SDL::Text(
-			text.c_str(),
-			*m_Fonts[font_asset_name],
-			m_RootGameRef.GetRenderer(),
-			color);
+		try {
+			m_Texts[asset_name] = new SDL::Text(
+				text.c_str(),
+				*m_Fonts[font_asset_name],
+				m_RootGameRef.GetRenderer(),
+				color);
+		}
+		catch (const char* e) {
+			std::cout << e << '\n';
+		}
 	}
 
 	const SDL::Text& AssetManager::GetText(const std::string& asset_name) const
@@ -54,7 +59,12 @@ namespace SGE2 {
 
 	void AssetManager::AddTexture(const std::string& asset_name, const std::string& path)
 	{
-		m_Textures[asset_name] = new SDL::Texture(path.c_str(), m_RootGameRef.GetRenderer());
+		try {
+			m_Textures[asset_name] = new SDL::Texture(path.c_str(), m_RootGameRef.GetRenderer());
+		}
+		catch (const char* e) {
+			std::cout << e << '\n';
+		}
 	}
 
 	const SDL::Texture& AssetManager::GetTexture(const std::string& asset_name) const
@@ -64,12 +74,22 @@ namespace SGE2 {
 
 	void AssetManager::SetMusic(const std::string& path)
 	{
+		try {
 		m_Music = new SDL::MixMusic(path.c_str());
+		}
+		catch (const char* e) {
+			std::cout << e << '\n';
+		}
 	}
 	
 	void AssetManager::AddSound(const std::string& asset_name, const std::string& path)
 	{
-		m_SFXs[asset_name] = new SDL::MixChunk(path.c_str());
+		try {
+			m_SFXs[asset_name] = new SDL::MixChunk(path.c_str());
+		}
+		catch (const char* e) {
+			std::cout << e << '\n';
+		}
 	}
 	const SDL::MixChunk& AssetManager::GetSound(const std::string& asset_name) const
 	{

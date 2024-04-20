@@ -50,7 +50,7 @@ public:
 	/// @return the first component of type T in the Component vecto
 	/// @throw std::runtime_error : "GetComponent(): Component with type not found." | If a component with the given type was not found.
 	template <class T>
-	T& GetComponent() {
+	T& GetComponent() const {
 		for (auto& component_ptr : m_Components) {
 			Component* tryCast = dynamic_cast<T*>(component_ptr.get());
 			if (tryCast) {
@@ -66,7 +66,7 @@ public:
 	/// @return the first T type component of the GameObject
 	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T and with given id was not found.
 	template <class T>
-	T& GetComponent(const std::string& id) {
+	T& GetComponent(const std::string& id) const {
 		for (auto& component_ptr : m_Components) {
 			Component* tryCast = dynamic_cast<T*>(component_ptr.get());
 			if (tryCast && (id == component_ptr->GetId())) {
@@ -77,7 +77,9 @@ public:
 		throw std::runtime_error(std::string("GetComponent(): Component with type and id not found."));
 	}
 
-	const std::string& GetId() { return m_Id; }
+	const std::string& GetId() const { return m_Id; }
+
+	Game& GetRoot() const { return m_RootGameRef; }
 
 	bool Active() const;
 
