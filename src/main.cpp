@@ -1,4 +1,8 @@
+
+#ifdef CPORTA
 #include <gtest_lite.h>
+#endif
+
 #include <iostream>
 #include "init.hpp"
 
@@ -46,9 +50,9 @@ int main(int argc, char** argv) {
 
 #ifndef CPORTA
 	std::cerr << "\n\n\nInput any character to exit...\n";
-	std::cin.get(); //block Mr Memory from exiting instantly
-
+	std::cin.get(); 
 #endif // !CPORTA
+	//int* a = new int; //memtrace test
 
 	return 0;
 }

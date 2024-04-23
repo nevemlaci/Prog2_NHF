@@ -16,6 +16,8 @@
 
 #endif
 
+#include "memtrace.h"
+
 namespace SGE2 {
 class GameObject {
 	friend class Game;
@@ -39,10 +41,10 @@ public:
 	/// @param ...args parameters of the constructor of T(except the pointer to this game object)
 	/// @return a reference to the newly added Component
 	template <class T, class... Args>
-	Component& AddComponent(Args&&... args) {
+	T& AddComponent(Args&&... args) {
 		m_Components.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
 		m_Components.back()->Startup(this->m_RootGameRef);
-		return (*m_Components.back());
+		return dynamic_cast<T&>(*m_Components.back());
 	}
 
 	/// @brief Get the component of a given type

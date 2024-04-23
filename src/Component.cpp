@@ -1,6 +1,7 @@
 // Component.cpp
 
 #include "Component.hpp"
+#include "GameObject.hpp"
 
 #ifndef CPORTA
 
@@ -12,7 +13,10 @@ namespace SGE2 {
 		const std::string& id
 	) : 
 		m_RootGameObject(gameobject), 
-		m_Id(id) {}
+		m_Id(id) 
+	{
+		std::cout << "New component added to " << gameobject.GetId() << '\n';
+	}
 	
 
 #ifndef CPORTA

@@ -24,7 +24,7 @@ namespace SGE2 {
 	{}
 
 	void RendererComponent::Startup(Game& game)  {
-
+		std::cout << "\tAdded RendererComponent(id: " << m_Id << ") to " << m_RootGameObject.GetId() << '\n';
 	}
 
 	void RendererComponent::Update(Game& game) {

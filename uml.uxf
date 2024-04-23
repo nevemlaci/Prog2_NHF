@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>440</y>
+      <w>112</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>SDL::SDL
+{final}
+--
+- SDL()
+- m_SDLInit : const int
+- m_SDLEvent : SDL_Event
+- m_KeyStates : Uint8[]
+
+--
++ static Get() : SDL&amp;
++ PollEvents() : int
++ GetEvent() : const SDL_Event&amp;
++ CheckKey(key : SDL_Scancode) : bool
++ CheckKey(key : const char*) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>208</x>
+      <y>388</y>
+      <w>788</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>SDL2 (SDL Wrapper)
+--
+bg=orange
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>276</x>
+      <y>568</y>
+      <w>148</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>SDL::Texture
+--
+# m_SDLTexture : SDL_Texture*
+--
++ Texture()
++ Texture(path : const char*, renderer : SDL::Renderer&amp;)
++ Texture(texture : SDL_Texture*)
++ ~Texture()
++GetSDLTexture() : SDL_Texture*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>704</y>
+      <w>132</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>SDL::Font
+{final}
+--
+- m_SDLFont : TTF_Font*
+--
++ Font(path : const char*, font_size : unsigned int)
++ ~Font()
++GetTTFFont() : TTF_Font*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>644</y>
+      <w>264</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>SDL::Text
+{final}
+--
+- m_SDLSurface : SDL_Surface
+- m_Text : const char*
+--
++ Text(text : const char*, font : const SDL::Font&amp;, renderer : const SDL::Renderer&amp;, color : SDL_Color)
++ ~Text()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>620</y>
+      <w>12</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>460</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>SDL::Window
+{final}
+--
+- m_SDLWindow : SDL_Window*
+--
++ Window(title : const char*, x : int, y : int, w : int, h : int, flags : Uint32)
++ ~Window()
++ GetSDLWindow() : SDL_Window*
++ HideWindow() : void
++ ShowWindow() : void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>604</x>
+      <y>416</y>
+      <w>280</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>SDL::Renderer
+{final}
+--
+- m_Window : const SDL::Window&amp;
+- m_SDLRenderer : SDL_Renderer*
+- m_NextRect : SDL::Rect
+- m_InsertMode : (enum) SDL::InsertMode
+--
++ Renderer(p_window : const SDL::Window&amp;, index : int, flags : Uint32)
++ ~Renderer()
++ GetSDLRenderer() : SDL_Renderer*
++ RenderCopy(texture : const SDL::Texture&amp;, angle : double) : void
++ RenderCopySrc(texture : const SDL::Texture&amp;, srcrect : SDL::Rect, angle : double) : void
++ RenderCopyDst(texture : const SDL::Texture&amp;, dstrect : SDL::Rect, angle : double) : void
++ RenderCopyEx(texture : const SDL::Texture&amp;, srcrect : SDL::Rect, dstrect : SDL::Rect, angle : double) : void
++ SetRenderDrawColor(r : uint8_t, g : unit8_t, b : uint8_t, a : unit8_t) : void
++ FillRect(rect : const SDL::Rect) : void
++ RenderClear() : void
++ RenderPresent() : void
++ EnableVsync() : void
++ DisableVsync() : void
+
++ operator&lt;&lt;(texture : const SDL::Texture&amp;) : SDL::Renderer&amp; 
++ operator&lt;&lt;(at : const SDL::at&amp;) : SDL::Renderer&amp; 
++ operator&lt;&lt;(from : const SDL::from&amp;) : SDL::Renderer&amp; </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>492</y>
+      <w>28</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>432</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>SDL::at
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>448</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>SDL::from
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>896</x>
+      <y>416</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Renderer Manipulators
+--
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>604</y>
+      <w>108</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>SDL::Rect
+{final}
+--
++ x : float
++ y : float
++ w : float
++ h : float
++ Rect(x : float, y : float, w : float, h : float)
++ GetSDLRect() : SDL_Rect
++ GetSDLFRect() : SDL_FRect
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>568</y>
+      <w>16</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>688</y>
+      <w>148</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>SDL::MixMusic
+{final}
+--
+- m_MusicVolume : unsigned int
+- m_SDLMusic : Mix_Music*
+--
++ MixMusic(path : const char*)
++ ~MixMusic()
++ Play(loops : int) : void
++ SetMusicVolume(volume : unsigned int) : unsigned int
++ GetMusicVolume() : unsigned int
++ GetSDLMusic() : Mix_Music*
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>748</x>
+      <y>688</y>
+      <w>148</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>SDL::MixChunk
+{final}
+--
+- m_Volume : unsigned int
+- m_SDLChunk : Mix_Chunk*
+--
++ MixChunk(path : const char*)
++ ~MixChunk()
++ Play(channel : int, loops : int) : void
++ SetMusicVolume(volume : unsigned int) : unsigned int
++ GetMusicVolume() : int
++ GetSDLChunk() : Mix_Chunk*
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

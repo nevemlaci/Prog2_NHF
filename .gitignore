@@ -57,3 +57,8 @@ src/.vs/
 *.pbd
 *.log
 *.tlog
+
+#UML+docs
+*.ufx
+*.pdf
+*.docx

@@ -9,8 +9,10 @@
 
 #endif
 
+#include "memtrace.h"
+
 namespace SGE2 {
-struct Transform {
+struct Transform final {
 public:
 	Vector2 position;
 	Vector2 size;

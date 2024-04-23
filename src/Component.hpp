@@ -9,6 +9,8 @@
 
 #endif
 
+#include "memtrace.h"
+
 namespace SGE2 {
 	class GameObject;
 	class Game;

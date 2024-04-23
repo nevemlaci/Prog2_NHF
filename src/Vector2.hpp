@@ -7,6 +7,8 @@
 
 #endif
 
+#include "memtrace.h"
+
 namespace SGE2 {
 class Vector2 {
 public:

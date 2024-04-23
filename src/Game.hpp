@@ -13,6 +13,8 @@
 #include "GameObject.hpp"
 #include "AssetManager.hpp"
 
+#include "memtrace.h"
+
 namespace SGE2 {
 class Game final {
 	friend class GameObject;

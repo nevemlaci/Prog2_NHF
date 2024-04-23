@@ -10,6 +10,8 @@
 #include <map>
 #include <memory>
 
+#include "memtrace.h"
+
 namespace SGE2 {
 
 class AssetManager {
@@ -41,17 +43,15 @@ public:
 	void AddSound(const std::string& asset_name, const std::string& path);
 	
 	const SDL::MixChunk& GetSound(const std::string& asset_name) const;
-
-	~AssetManager();
 private:
 	AssetManager(Game* game);
-	std::map<std::string, SDL::Texture*> m_Textures;
-	std::map<std::string, SDL::Text*> m_Texts;
-	std::map<std::string, SDL::Font*> m_Fonts;
+	std::map<std::string, std::unique_ptr<SDL::Texture>> m_Textures;
+	std::map<std::string, std::unique_ptr<SDL::Text>> m_Texts;
+	std::map<std::string, std::unique_ptr<SDL::Font>> m_Fonts;
 
 	SDL::MixMusic* m_Music;
 
-	std::map<std::string, SDL::MixChunk*> m_SFXs;
+	std::map<std::string, std::unique_ptr<SDL::MixChunk>> m_SFXs;
 
 	Game& m_RootGameRef;
 	

@@ -29,6 +29,7 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Text.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp" />
+    <ClCompile Include="..\lib\memtrace.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Component.cpp">
       <SubType>
@@ -67,6 +68,7 @@
     <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Texture.hpp" />
     <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.hpp" />
     <ClInclude Include="..\include\gtest_lite.h" />
+    <ClInclude Include="..\include\memtrace.h" />
     <ClInclude Include="AssetManager.hpp">
       <SubType>
       </SubType>
@@ -125,7 +127,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <EnableASAN>false</EnableASAN>
+    <EnableASAN>true</EnableASAN>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -195,12 +197,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;MEMTRACE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
-      <UndefinePreprocessorDefinitions>MEMTRACE</UndefinePreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
       <OmitFramePointers>false</OmitFramePointers>
     </ClCompile>
     <Link>

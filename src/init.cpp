@@ -1,12 +1,16 @@
 #include "init.hpp"
- //example game object + component classes
+
+ //example initialization
 
 namespace SGE2 {
 	Game* init() {
 		Game* game = new Game("title");
-		game->GetAssetManager().AddTexture("testtexture", "test.png");
-		g1& g = game->AddGameObject<g1>("g1"); //Add the gameobject and get a reference to it from the game	
-		game->AddGameObject<renderobject>("testrenderobject", Vector2(0, 0), Vector2(100, 100));
+		game->GetRenderer().SetRenderDrawColor(0, 100, 140, 255); //manually get an SDL component from the game
+		game->GetAssetManager().AddTexture("testtexture", "test.png"); //load an asset using the asset manager
+		g1& g = game->AddGameObject<g1>("g1"); //Add the gameobject and get a reference to it from the game	 (for testing)
+#ifndef CPORTA
+		game->AddGameObject<renderobject>("testrenderobject", Vector2(0, 0), Vector2(100, 100)); //add a 
+#endif
 		return game;
 	}
 }

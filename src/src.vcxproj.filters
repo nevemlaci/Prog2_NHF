@@ -11,24 +11,6 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{0b0e9136-5616-4655-9eb1-ff78d99df307}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Base">
-      <UniqueIdentifier>{5a38f133-501d-4044-aac5-c00bea8adb7d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Base\Vec2">
-      <UniqueIdentifier>{ee5f6ca0-0a2d-47a3-ad8c-ce8cfa3b36e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Base\Game">
-      <UniqueIdentifier>{3275da79-d844-4364-99f4-171db502976b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Base\Component">
-      <UniqueIdentifier>{c3549187-b8fc-43f5-823e-b7a46eaec797}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Base\GameObject">
-      <UniqueIdentifier>{205e2949-ac06-4b63-96d1-b9e516ce5b80}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Base\Transform">
-      <UniqueIdentifier>{eb47459c-e28e-4bd0-9cbb-88d934bf6329}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Built in components">
       <UniqueIdentifier>{0aa7ce2e-fae3-476b-a82d-7e39506d98de}</UniqueIdentifier>
     </Filter>
@@ -47,19 +29,43 @@
     <Filter Include="SDLWrapperSource\header">
       <UniqueIdentifier>{e4e7ab87-472f-425d-8862-740765b10ad8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="memtrace">
+      <UniqueIdentifier>{59822858-877e-4883-bff7-5742f3b6e9fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{5a38f133-501d-4044-aac5-c00bea8adb7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Vec2">
+      <UniqueIdentifier>{ee5f6ca0-0a2d-47a3-ad8c-ce8cfa3b36e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Game">
+      <UniqueIdentifier>{3275da79-d844-4364-99f4-171db502976b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Component">
+      <UniqueIdentifier>{c3549187-b8fc-43f5-823e-b7a46eaec797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\GameObject">
+      <UniqueIdentifier>{205e2949-ac06-4b63-96d1-b9e516ce5b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Transform">
+      <UniqueIdentifier>{eb47459c-e28e-4bd0-9cbb-88d934bf6329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\AssetManager">
+      <UniqueIdentifier>{86138632-fec2-4961-a474-d2d51a94ce7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component.cpp">
-      <Filter>Engine\Base\Component</Filter>
+      <Filter>Engine\Core\Component</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Engine\Base\Game</Filter>
+      <Filter>Engine\Core\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>Engine\Base\GameObject</Filter>
+      <Filter>Engine\Core\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="Vector2.cpp">
-      <Filter>Engine\Base\Vec2</Filter>
+      <Filter>Engine\Core\Vec2</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Test</Filter>
@@ -70,7 +76,6 @@
     <ClCompile Include="RendererComponent.cpp">
       <Filter>Engine\Built in components\RendererComponent</Filter>
     </ClCompile>
-    <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.cpp">
       <Filter>SDLWrapperSource\src</Filter>
     </ClCompile>
@@ -101,22 +106,28 @@
     <ClCompile Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.cpp">
       <Filter>SDLWrapperSource\src</Filter>
     </ClCompile>
+    <ClCompile Include="..\lib\memtrace.cpp">
+      <Filter>memtrace</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Engine\Core\AssetManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.hpp">
-      <Filter>Engine\Base\Component</Filter>
+      <Filter>Engine\Core\Component</Filter>
     </ClInclude>
     <ClInclude Include="Game.hpp">
-      <Filter>Engine\Base\Game</Filter>
+      <Filter>Engine\Core\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.hpp">
-      <Filter>Engine\Base\GameObject</Filter>
+      <Filter>Engine\Core\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="Transform.hpp">
-      <Filter>Engine\Base\Transform</Filter>
+      <Filter>Engine\Core\Transform</Filter>
     </ClInclude>
     <ClInclude Include="Vector2.hpp">
-      <Filter>Engine\Base\Vec2</Filter>
+      <Filter>Engine\Core\Vec2</Filter>
     </ClInclude>
     <ClInclude Include="init.hpp">
       <Filter>Engine\Init</Filter>
@@ -133,7 +144,6 @@
     <ClInclude Include="..\include\gtest_lite.h">
       <Filter>Test</Filter>
     </ClInclude>
-    <ClInclude Include="AssetManager.hpp" />
     <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.hpp">
       <Filter>SDLWrapperSource\header</Filter>
     </ClInclude>
@@ -169,6 +179,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL_Window.hpp">
       <Filter>SDLWrapperSource\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\memtrace.h">
+      <Filter>memtrace</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.hpp">
+      <Filter>Engine\Core\AssetManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

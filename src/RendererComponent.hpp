@@ -10,6 +10,8 @@
 #include "cpp_SDL_include.hpp"
 #endif
 
+#include "memtrace.h"
+
 namespace SGE2 {
 class RendererComponent final : public Component {
 public:
