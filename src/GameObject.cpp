@@ -11,9 +11,8 @@ namespace SGE2 {
 	GameObject::GameObject(
 		Game& root_game,
 		const std::string& id,
-		const Vector2&
-		position, const
-		Vector2& size,
+		const Vector2& position, 
+		const Vector2& size,
 		float rot
 	) :
 		transform({ position, size, rot }),

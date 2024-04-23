@@ -53,6 +53,9 @@
     <Filter Include="Engine\Core\AssetManager">
       <UniqueIdentifier>{86138632-fec2-4961-a474-d2d51a94ce7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Core\Input">
+      <UniqueIdentifier>{3f0ead6c-5328-46f0-b5de-0c1bdb37bc8d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component.cpp">
@@ -112,6 +115,8 @@
     <ClCompile Include="AssetManager.cpp">
       <Filter>Engine\Core\AssetManager</Filter>
     </ClCompile>
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="UDCharacterController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.hpp">
@@ -185,6 +190,12 @@
     </ClInclude>
     <ClInclude Include="AssetManager.hpp">
       <Filter>Engine\Core\AssetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <Filter>Engine\Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="UDCharacterController.hpp">
+      <Filter>Engine\Built in components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

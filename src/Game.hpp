@@ -12,6 +12,7 @@
 
 #include "GameObject.hpp"
 #include "AssetManager.hpp"
+#include "Input.hpp"
 
 #include "memtrace.h"
 
@@ -27,6 +28,8 @@ public:
 	/// @brief runs the game
 	void Run();
 #ifndef CPORTA
+
+	SDL::SDL& GetSDL() { return m_SDL; }
 
 	/// @brief getter for m_Renderer
 	/// @return SDL::Renderer reference
@@ -81,6 +84,7 @@ public:
 	void DeleteGameObject(const std::string& id);
 
 	AssetManager& GetAssetManager() { return m_AssetManager; }
+	InputManager& GetInputManager() { return m_InputManager; }
 
 private:
 #ifndef CPORTA
@@ -94,6 +98,7 @@ private:
 	SDL::Renderer m_Renderer;
 
 	AssetManager m_AssetManager;
+	InputManager m_InputManager;
 #endif
 
 

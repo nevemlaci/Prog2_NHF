@@ -1,5 +1,5 @@
 // Vector2.hpp
-
+//MyTodo add normalize method
 #ifndef __Vector2_H__
 #define __Vector2_H__
 

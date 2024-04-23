@@ -44,11 +44,13 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="init.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RendererComponent.cpp">
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="UDCharacterController.cpp" />
     <ClCompile Include="Vector2.cpp">
       <SubType>
       </SubType>
@@ -87,12 +89,20 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="RendererComponent.hpp">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="SGE2.hpp" />
     <ClInclude Include="Transform.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UDCharacterController.hpp">
       <SubType>
       </SubType>
     </ClInclude>
