@@ -50,8 +50,8 @@ private:
 	std::map<std::string, std::unique_ptr<SDL::Font>> m_Fonts;
 
 	SDL::MixMusic* m_Music;
-
 	std::map<std::string, std::unique_ptr<SDL::MixChunk>> m_SFXs;
+
 
 	Game& m_RootGameRef;
 	

@@ -32,6 +32,8 @@ namespace SGE2 {
 
 #ifndef CPORTA
 	void Game::Run() {
+		/*idk what else to do here but I'll surely need something else*/
+		std::cout << "Running game: " << m_Title << '\n' << "\tGameObjects count at start: " << m_GameObjects.size() << '\n';
 		MainLoop();
 	}
 
@@ -50,9 +52,11 @@ namespace SGE2 {
 			}
 			if (!shouldrun) break;
 			m_Renderer.RenderClear();
-			for (auto& object : m_GameObjects) {
-				for (auto& component : object->m_Components) {
-					component->Update(*this);
+			for (auto& gameobject_ptr : m_GameObjects) {
+				if (gameobject_ptr->Active()) {
+					for (auto& component_ptr : gameobject_ptr->m_Components) {
+						component_ptr->Update(*this);
+					}
 				}
 			}
 			m_Renderer.RenderPresent();
