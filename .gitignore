@@ -59,6 +59,6 @@ src/.vs/
 *.tlog
 
 #UML+docs
-*.ufx
+*.uxf
 *.pdf
 *.docx
