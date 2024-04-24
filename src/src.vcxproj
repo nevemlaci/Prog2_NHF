@@ -83,6 +83,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Camera.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Component.hpp">
       <SubType>
       </SubType>
@@ -269,7 +273,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CPORTA|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;MEMTRACE;CPORTA</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>

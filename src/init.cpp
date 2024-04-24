@@ -10,6 +10,9 @@ namespace SGL2 {
 		game->GetAssetManager().AddTexture("testtexture", "test.png"); //load an asset using the asset manager
 #endif
 		g1& g = game->AddGameObject<g1>("g1"); //Add the gameobject and get a reference to it from the game	 (for testing)
+
+		g.GetComponent<c1>();
+
 #ifndef CPORTA
 		game->AddGameObject<renderobject>("testrenderobject", Vector2(0, 0), Vector2(100, 100)); //add a 
 #endif

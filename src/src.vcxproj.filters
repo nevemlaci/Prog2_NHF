@@ -197,5 +197,8 @@
     <ClInclude Include="UDCharacterController.hpp">
       <Filter>Engine\Built in components</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

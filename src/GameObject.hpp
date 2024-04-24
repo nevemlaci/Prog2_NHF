@@ -26,13 +26,13 @@ public:
 	/// @param position Vector2
 	/// @param size Vector2
 	/// @param rot rotation
+	//MyTodo: component startup methods should probably be called when their gameobject gets constructed
 	GameObject(
 		Game& root_game,
 		const std::string& id, 
 		const Vector2& position, 
 		const Vector2& size, 
 		float rot);
-
 	virtual ~GameObject();
 
 	/// @brief Constructs a new component and adds it to the GameObject

@@ -33,10 +33,10 @@ namespace SGL2 {
 		const Vector2& position,
 		const Vector2& size,
 		float rot) : 
+		transform({ position, size, rot }),
 		m_Id(id),
 		m_RootGameRef(root_game),
-		m_IsActive(true),
-		transform({ position, size, rot })
+		m_IsActive(true)
 	{}
 
 #endif
