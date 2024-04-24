@@ -36,22 +36,29 @@ public:
 		std::cout << this->m_Id << '\n';
 	}
 	void Update(Game& game) override {
+		//link the camera to the player
+		
+		game.GetMainCamera().transform.position = m_RootGameObject.transform.position - (game.GetMainCamera().transform.size * 0.5) + (m_RootGameObject.transform.size * 0.5);
+
+		//check for the macros that we added
 		Vector2 mov = Vector2(0, 0);
-		if (m_RootGameObject.GetRoot().GetInputManager().Get("up")) {
+		if (game.GetInputManager().Get("up")) {
 			mov.y -= 1;
 		}
-		if (m_RootGameObject.GetRoot().GetInputManager().Get("down")) {
+		if (game.GetInputManager().Get("down")) {
 			mov.y += 1;
 		}
-		if (m_RootGameObject.GetRoot().GetInputManager().Get("left")) {
+		if (game.GetInputManager().Get("left")) {
 			mov.x -= 1;
 		}
-		if (m_RootGameObject.GetRoot().GetInputManager().Get("right")) {
+		if (game.GetInputManager().Get("right")) {
 			mov.x += 1;
 		}
 
 		//Move by the normalized vector
 		m_RootGameObject.GetComponent<UDCharacterController>().Move(m_MoveSpeed * mov.normalized());
+
+
 	}
 private:
 	float m_MoveSpeed = 1;

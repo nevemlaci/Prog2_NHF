@@ -13,6 +13,7 @@
 #include "GameObject.hpp"
 #include "AssetManager.hpp"
 #include "Input.hpp"
+#include "Camera.hpp"
 
 #include "memtrace.h"
 
@@ -38,6 +39,10 @@ public:
 	/// @brief getter for m_Window
 	/// @return SDL::Window reference
 	SDL::Window& GetWindow() { return m_Window; }
+
+	const Vector2& GetScreenSize() const { return m_ScreenSize; }
+
+	Camera& GetMainCamera() { return m_MainCamera; }
 #endif
 
 #ifdef CPORTA
@@ -99,8 +104,12 @@ private:
 	SDL::Window m_Window;
 	SDL::Renderer m_Renderer;
 
+	Vector2 m_ScreenSize;
+
 	AssetManager m_AssetManager;
 	InputManager m_InputManager;
+	Camera m_MainCamera;
+
 #endif
 
 

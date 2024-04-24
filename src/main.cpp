@@ -1,6 +1,6 @@
 
 #ifdef CPORTA
-#include "gtest_lite.h"
+#include "gtest_lite.h"gi
 #endif
 
 #include <iostream>

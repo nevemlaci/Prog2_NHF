@@ -29,10 +29,10 @@ namespace SGL2 {
 
 	void RendererComponent::Update(Game& game) {
 		game.GetRenderer() << SDL::at({ 
-			m_RootGameObject.transform.position.x + m_OffsetX, 
-			m_RootGameObject.transform.position.y + m_OffsetY, 
-			m_RootGameObject.transform.size.x * m_ScaleX, 
-			m_RootGameObject.transform.size.y * m_ScaleY})
+			m_RootGameObject.transform.position.x + m_OffsetX - game.GetMainCamera().transform.position.x,
+			m_RootGameObject.transform.position.y + m_OffsetY - game.GetMainCamera().transform.position.y,
+			m_RootGameObject.transform.size.x * m_ScaleX * game.GetMainCamera().transform.size.x/game.GetScreenSize().x,
+			m_RootGameObject.transform.size.y * m_ScaleY * game.GetMainCamera().transform.size.y / game.GetScreenSize().y })
 			<< m_Texture;
 	}
 #endif
