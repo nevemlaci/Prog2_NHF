@@ -83,8 +83,10 @@ public:
 	/// @param id 
 	void DeleteGameObject(const std::string& id);
 
+#ifndef CPORTA
 	AssetManager& GetAssetManager() { return m_AssetManager; }
 	InputManager& GetInputManager() { return m_InputManager; }
+#endif
 
 private:
 #ifndef CPORTA

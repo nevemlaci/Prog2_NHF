@@ -1,6 +1,7 @@
 #include "UDCharacterController.hpp"
 #include "GameObject.hpp"
 
+#ifndef CPORTA
 namespace SGE2 {
 	UDCharacterController::UDCharacterController(GameObject& gameobject, const std::string& id) :
 		Component(gameobject, id)
@@ -41,6 +42,7 @@ namespace SGE2 {
 	}
 
 }
+#endif
 
 
 

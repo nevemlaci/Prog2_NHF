@@ -16,8 +16,10 @@ using SGE2::GameObject;
 using SGE2::Vector2;
 using SGE2::Component;
 using SGE2::Game;
+#ifndef CPORTA
 using SGE2::RendererComponent;
 using SGE2::UDCharacterController;
+#endif
 
 class c1 : public Component {
 public:
@@ -44,6 +46,7 @@ class c2 : public Component {
 	//this does nothing it's just here for the unit tests
 };
 
+#ifndef CPORTA
 class ControllerScript : public Component {
 public:
 	ControllerScript(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
@@ -77,7 +80,7 @@ public:
 #endif
 	}
 };
-
+#endif
 
 class g1 : public GameObject {
 public:
@@ -87,7 +90,7 @@ public:
 		AddComponent<c1>("cid");
 	}
 };
-
+#ifndef CPORTA
 class renderobject : public GameObject {
 public:
 	renderobject(Game& game, const std::string& id, const Vector2& pos, const Vector2& size) :
@@ -97,7 +100,7 @@ public:
 		AddComponent<ControllerScript>("controllerscript");
 	}
 };
-
+#endif
 
 
 #endif
