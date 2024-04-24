@@ -1,11 +1,7 @@
 #ifndef __EXAMPLE_H__
 #define __EXAMPLE_H__
 
-#include "Game.hpp"
-#include "GameObject.hpp"
-#include "Component.hpp"
-#include "RendererComponent.hpp"
-#include "UDCharacterController.hpp"
+#include "SGE2.hpp"
 #include <iostream>
 
 #ifndef CPORTA
@@ -42,34 +38,32 @@ public:
 	ControllerScript(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
 
 	void Startup(Game& game) override {
-#ifndef CPORTA
 		m_RootGameObject.GetRoot().GetInputManager().AddMacro("up", "W");
 		m_RootGameObject.GetRoot().GetInputManager().AddMacro("down", "S");
 		m_RootGameObject.GetRoot().GetInputManager().AddMacro("left", "A");
 		m_RootGameObject.GetRoot().GetInputManager().AddMacro("right", "D");
-#endif
 		std::cout << this->m_Id << '\n';
 	}
 	void Update(Game& game) override {
-#ifndef CPORTA
 		Vector2 mov = Vector2(0, 0);
 		if (m_RootGameObject.GetRoot().GetInputManager().Get("up")) {
-			mov.y -= 5;
+			mov.y -= 1;
 		}
 		if (m_RootGameObject.GetRoot().GetInputManager().Get("down")) {
-			mov.y += 5;
+			mov.y += 1;
 		}
 		if (m_RootGameObject.GetRoot().GetInputManager().Get("left")) {
-			mov.x -= 5;
+			mov.x -= 1;
 		}
 		if (m_RootGameObject.GetRoot().GetInputManager().Get("right")) {
-			mov.x += 5;
+			mov.x += 1;
 		}
 
 		//Move by the normalized vector
-		m_RootGameObject.GetComponent<UDCharacterController>().Move(mov.normalized());
-#endif
+		m_RootGameObject.GetComponent<UDCharacterController>().Move(m_MoveSpeed * mov.normalized());
 	}
+private:
+	float m_MoveSpeed = 1;
 };
 #endif
 
