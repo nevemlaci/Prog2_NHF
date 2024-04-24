@@ -24,21 +24,11 @@ using SGE2::UDCharacterController;
 class c1 : public Component {
 public:
 	c1(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
-
 	void Startup(Game& game) override {
-#ifndef CPORTA
-		//m_RootGameObject.GetRoot().GetInputManager().AddMacro("wpress", "W");
-#endif
+
 		std::cout << this->m_Id << '\n';
 	}
 	void Update(Game& game) override {
-#ifndef CPORTA
-		/*
-		if (m_RootGameObject.GetRoot().GetInputManager().Get("wpress")) {
-			std::cout << "\nW pressed\n";
-		}
-		*/
-#endif
 	}
 };
 
@@ -76,7 +66,8 @@ public:
 			mov.x += 5;
 		}
 
-		m_RootGameObject.GetComponent<UDCharacterController>().Move(mov);
+		//Move by the normalized vector
+		m_RootGameObject.GetComponent<UDCharacterController>().Move(mov.normalized());
 #endif
 	}
 };
@@ -90,6 +81,8 @@ public:
 		AddComponent<c1>("cid");
 	}
 };
+
+
 #ifndef CPORTA
 class renderobject : public GameObject {
 public:

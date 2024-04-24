@@ -18,6 +18,12 @@ namespace SGE2 {
 		return this->abs();
 	}
 
+	Vector2 Vector2::normalized() const
+	{
+		if (abs() == 0) return Vector2(0, 0);
+		return Vector2(x / abs(), y / abs());
+	}
+
 	Vector2 Vector2::operator+(const Vector2& other) const{
 		return Vector2(x + other.x, y + other.y);
 	}

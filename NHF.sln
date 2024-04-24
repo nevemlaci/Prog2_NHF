@@ -7,12 +7,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "src", "src\src.vcxproj", "{
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CPORTA|x64 = CPORTA|x64
+		CPORTA|x86 = CPORTA|x86
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.CPORTA|x64.ActiveCfg = CPORTA|x64
+		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.CPORTA|x64.Build.0 = CPORTA|x64
+		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.CPORTA|x86.ActiveCfg = CPORTA|Win32
+		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.CPORTA|x86.Build.0 = CPORTA|Win32
 		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.Debug|x64.ActiveCfg = Debug|x64
 		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.Debug|x64.Build.0 = Debug|x64
 		{C60D0E49-48F1-4B4C-8836-8B2DA1C11FB0}.Debug|x86.ActiveCfg = Debug|Win32

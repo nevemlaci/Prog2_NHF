@@ -1,5 +1,5 @@
 // Vector2.hpp
-//MyTodo add normalize method
+
 #ifndef __Vector2_H__
 #define __Vector2_H__
 
@@ -20,6 +20,8 @@ public:
 	float abs() const;
 
 	float length() const;
+
+	Vector2 normalized() const;
 
 	Vector2 operator+(const Vector2&) const;
 	Vector2& operator+=(const Vector2&);
