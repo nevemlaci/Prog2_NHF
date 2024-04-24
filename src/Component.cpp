@@ -7,7 +7,7 @@
 
 #endif
 
-namespace SGE2 {
+namespace SGL2 {
 	Component::Component(
 		GameObject& gameobject, 
 		const std::string& id

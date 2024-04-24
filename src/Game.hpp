@@ -16,7 +16,7 @@
 
 #include "memtrace.h"
 
-namespace SGE2 {
+namespace SGL2 {
 class Game final {
 	friend class GameObject;
 	friend class AssetManager;

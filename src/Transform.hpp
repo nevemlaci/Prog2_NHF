@@ -11,7 +11,7 @@
 
 #include "memtrace.h"
 
-namespace SGE2 {
+namespace SGL2 {
 struct Transform final {
 public:
 	Vector2 position;

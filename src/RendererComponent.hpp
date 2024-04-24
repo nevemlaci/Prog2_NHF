@@ -12,7 +12,7 @@
 
 #include "memtrace.h"
 
-namespace SGE2 {
+namespace SGL2 {
 class RendererComponent final : public Component {
 public:
 #ifndef CPORTA

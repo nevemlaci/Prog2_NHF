@@ -9,7 +9,7 @@
 
 #endif
 
-namespace SGE2 {
+namespace SGL2 {
 	Game* init();
 }
 #endif

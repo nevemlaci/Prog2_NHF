@@ -10,13 +10,13 @@
 #include "UDCharacterController.hpp"
 
 /*Simplify types*/
-using SGE2::Game;
-using SGE2::GameObject;
-using SGE2::Component;
-using SGE2::Vector2;
-using SGE2::Transform;
+using SGL2::Game;
+using SGL2::GameObject;
+using SGL2::Component;
+using SGL2::Vector2;
+using SGL2::Transform;
 #ifndef CPORTA
-using SGE2::RendererComponent;
-using SGE2::UDCharacterController;
+using SGL2::RendererComponent;
+using SGL2::UDCharacterController;
 #endif
 

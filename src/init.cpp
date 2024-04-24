@@ -2,7 +2,7 @@
 
  //example initialization
 
-namespace SGE2 {
+namespace SGL2 {
 	Game* init() {
 		Game* game = new Game("title");
 #ifndef CPORTA

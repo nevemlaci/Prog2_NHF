@@ -7,7 +7,7 @@
 
 #endif
 
-namespace SGE2 {
+namespace SGL2 {
 #ifndef CPORTA
 	Game::Game(const char* title) :
 		m_Title(title), m_SDL(SDL::SDL::Get()),

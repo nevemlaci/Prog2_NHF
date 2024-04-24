@@ -9,7 +9,7 @@
 #include <vector>
 #include <string>
 
-namespace SGE2 {
+namespace SGL2 {
 	class Game;
 class InputManager {
 	friend class Game;

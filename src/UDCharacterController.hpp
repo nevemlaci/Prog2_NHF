@@ -8,7 +8,7 @@
 #include "Component.hpp"
 #include "Vector2.hpp"
 
-namespace SGE2 {
+namespace SGL2 {
 class UDCharacterController : public Component {
 public:
 	UDCharacterController(GameObject& gameobject, const std::string& id);

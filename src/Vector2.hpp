@@ -9,7 +9,7 @@
 
 #include "memtrace.h"
 
-namespace SGE2 {
+namespace SGL2 {
 class Vector2 {
 public:
 	float x;

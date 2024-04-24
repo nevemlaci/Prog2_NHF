@@ -8,15 +8,6 @@
 
 #endif
 
-using SGE2::GameObject;
-using SGE2::Vector2;
-using SGE2::Component;
-using SGE2::Game;
-#ifndef CPORTA
-using SGE2::RendererComponent;
-using SGE2::UDCharacterController;
-#endif
-
 class c1 : public Component {
 public:
 	c1(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}

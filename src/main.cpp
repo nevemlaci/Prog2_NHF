@@ -8,7 +8,7 @@
 
 
 int main(int argc, char** argv) {
-	Game* game = SGE2::init();
+	Game* game = SGL2::init();
 #ifndef CPORTA
 	game->Run();
 #endif

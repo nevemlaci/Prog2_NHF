@@ -7,7 +7,7 @@
 
 #endif
 
-namespace SGE2 {
+namespace SGL2 {
 	Vector2::Vector2(float x , float y) : x(x), y(y) {}
 
 	float Vector2::abs() const {

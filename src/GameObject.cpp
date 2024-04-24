@@ -6,7 +6,7 @@
 
 #endif
 
-namespace SGE2 {
+namespace SGL2 {
 #ifndef CPORTA
 	GameObject::GameObject(
 		Game& root_game,

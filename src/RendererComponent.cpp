@@ -8,7 +8,7 @@
 
 #endif
 
-namespace SGE2 {
+namespace SGL2 {
 #ifndef CPORTA
 	RendererComponent::RendererComponent(GameObject& root, 
 		const std::string& id, 

@@ -2,7 +2,7 @@
 #include "GameObject.hpp"
 
 #ifndef CPORTA
-namespace SGE2 {
+namespace SGL2 {
 	UDCharacterController::UDCharacterController(GameObject& gameobject, const std::string& id) :
 		Component(gameobject, id)
 	{}

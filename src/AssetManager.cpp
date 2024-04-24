@@ -4,7 +4,7 @@
 
 #ifndef CPORTA
 
-namespace SGE2 {
+namespace SGL2 {
 	AssetManager::AssetManager(Game* game) : m_RootGameRef(*game), m_Music(nullptr)
 	{
 		SDL::Mixer::OpenAudio(16000, MIX_DEFAULT_FORMAT, 2, 512);
