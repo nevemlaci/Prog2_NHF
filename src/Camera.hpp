@@ -16,7 +16,7 @@ namespace SGL2 {
 		friend class Game;
 	public:
 	private:
-		explicit Camera(Game& root_game, const Vector2& position, const Vector2& size);
+		Camera(Game& root_game, const Vector2& position, const Vector2& size);
 		Camera& operator=(const Camera& other);
 	};
 }

@@ -80,11 +80,26 @@ class renderobject : public GameObject {
 public:
 	renderobject(Game& game, const std::string& id, const Vector2& pos, const Vector2& size) :
 		GameObject(game, id, pos, size, 0) {
-		AddComponent<RendererComponent>("renerercomponent", "testtexture");
+		AddComponent<RendererComponent>("character", "charactertexture");
 		AddComponent<UDCharacterController>("charactercontroller");
 		AddComponent<ControllerScript>("controllerscript");
 	}
 };
+
+class background : public GameObject {
+public:
+	background(Game& game, const std::string& id) : GameObject(game, id, Vector2(0, 0), game.GetScreenSize(), 0) {
+		AddComponent<WorldRendererComponent>("worldrenderercomponent", "background");
+	}
+};
+
+class dummy : public GameObject {
+public:
+	dummy(Game& game, const std::string& id, const Vector2& pos, const Vector2& size = Vector2(50, 50)) : GameObject(game, id, pos, size, 0) {
+		AddComponent<RendererComponent>("dummy", "dummytexture");
+	}
+};
+
 #endif
 
 

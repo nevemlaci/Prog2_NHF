@@ -56,6 +56,15 @@
     <Filter Include="Engine\Core\Input">
       <UniqueIdentifier>{3f0ead6c-5328-46f0-b5de-0c1bdb37bc8d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Built in components\UDCharacterController">
+      <UniqueIdentifier>{2159642c-db39-4d87-ac7b-98ee98710024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Built in components\WorldRendererComponent">
+      <UniqueIdentifier>{3a859ce5-5d5b-4a3d-a50e-20e857d37996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Camera">
+      <UniqueIdentifier>{a404c154-a513-42ab-a2cc-9788d6b4dfad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component.cpp">
@@ -115,8 +124,18 @@
     <ClCompile Include="AssetManager.cpp">
       <Filter>Engine\Core\AssetManager</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="UDCharacterController.cpp" />
+    <ClCompile Include="UDCharacterController.cpp">
+      <Filter>Engine\Built in components\UDCharacterController</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Engine\Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine\Core\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldRendererComponent.cpp">
+      <Filter>Engine\Built in components\WorldRendererComponent</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.hpp">
@@ -195,10 +214,13 @@
       <Filter>Engine\Core\Input</Filter>
     </ClInclude>
     <ClInclude Include="UDCharacterController.hpp">
-      <Filter>Engine\Built in components</Filter>
+      <Filter>Engine\Built in components\UDCharacterController</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldRendererComponent.hpp">
+      <Filter>Engine\Built in components\WorldRendererComponent</Filter>
     </ClInclude>
     <ClInclude Include="Camera.hpp">
-      <Filter>Engine\Core</Filter>
+      <Filter>Engine\Core\Camera</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

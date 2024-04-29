@@ -40,7 +40,7 @@ public:
 	/// @return SDL::Window reference
 	SDL::Window& GetWindow() { return m_Window; }
 
-	const Vector2& GetScreenSize() const { return m_ScreenSize; }
+	Vector2 GetScreenSize() const { return m_ScreenSize; }
 
 	Camera& GetMainCamera() { return m_MainCamera; }
 #endif

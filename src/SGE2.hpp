@@ -7,6 +7,7 @@
 
 /*Built in components*/
 #include "RendererComponent.hpp"
+#include "WorldRendererComponent.hpp"
 #include "UDCharacterController.hpp"
 
 /*Simplify types*/
@@ -17,6 +18,7 @@ using SGL2::Vector2;
 using SGL2::Transform;
 #ifndef CPORTA
 using SGL2::RendererComponent;
+using SGL2::WorldRendererComponent;
 using SGL2::UDCharacterController;
 #endif
 
