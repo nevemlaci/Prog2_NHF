@@ -159,7 +159,7 @@
     <ClInclude Include="example.hpp">
       <Filter>Test</Filter>
     </ClInclude>
-    <ClInclude Include="SGE2.hpp">
+    <ClInclude Include="SGL2.hpp">
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="RendererComponent.hpp">

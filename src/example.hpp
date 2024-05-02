@@ -1,7 +1,7 @@
 #ifndef __EXAMPLE_H__
 #define __EXAMPLE_H__
 
-#include "SGE2.hpp"
+#include "SGL2.hpp"
 #include <iostream>
 
 #ifndef CPORTA

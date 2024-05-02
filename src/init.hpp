@@ -3,7 +3,7 @@
 #ifndef __init_H__
 #define __init_H__
 #include "example.hpp"
-#include "SGE2.hpp"
+#include "SGL2.hpp"
 
 #ifndef CPORTA
 
