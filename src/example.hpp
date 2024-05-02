@@ -56,12 +56,12 @@ public:
 		}
 
 		//Move by the normalized vector
-		m_RootGameObject.GetComponent<UDCharacterController>().Move(m_MoveSpeed * mov.normalized());
+		m_RootGameObject.GetComponent<UDCharacterController>().Move(m_MoveSpeed * mov.normalized() * (Time().DeltaTime() / Time().ratio));
 
 
 	}
 private:
-	float m_MoveSpeed = 1;
+	float m_MoveSpeed = 330.0;
 };
 #endif
 
@@ -89,7 +89,7 @@ public:
 class background : public GameObject {
 public:
 	background(Game& game, const std::string& id) : GameObject(game, id, Vector2(0, 0), game.GetScreenSize(), 0) {
-		AddComponent<WorldRendererComponent>("worldrenderercomponent", "background");
+		AddComponent<UIRendererComponent>("worldrenderercomponent", "background");
 	}
 };
 

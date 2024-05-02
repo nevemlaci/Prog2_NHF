@@ -1,7 +1,7 @@
-// WorldRendererComponent.hpp
+// UIRendererComponent.hpp
 
-#ifndef __WorldRendererComponent_H__
-#define __WorldRendererComponent_H__
+#ifndef __UIRendererComponent_H__
+#define __UIRendererComponent_H__
 
 #ifndef CPORTA
 #include "Component.hpp"
@@ -13,9 +13,9 @@
 #include "memtrace.h"
 
 namespace SGL2 {
-	class WorldRendererComponent final : public Component {
+	class UIRendererComponent final : public Component {
 	public:
-		WorldRendererComponent(
+		UIRendererComponent(
 			GameObject& root, const std::string& id,
 			const std::string& asset_name,
 			int scaleX = 1, int scaleY = 1,

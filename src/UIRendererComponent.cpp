@@ -1,13 +1,13 @@
 #ifndef CPORTA
 
-#include "WorldRendererComponent.hpp"
+#include "UIRendererComponent.hpp"
 #include "Game.hpp"
 #include "GameObject.hpp"
 
 
 
 namespace SGL2 {
-	WorldRendererComponent::WorldRendererComponent(GameObject& root,
+	UIRendererComponent::UIRendererComponent(GameObject& root,
 		const std::string& id,
 		const std::string& asset_name,
 		int scaleX, int scaleY,
@@ -20,11 +20,11 @@ namespace SGL2 {
 		m_Texture(root.GetRoot().GetAssetManager().GetTexture(asset_name))
 	{}
 
-	void WorldRendererComponent::Startup(Game& game) {
-		std::cout << "\tAdded WorldRendererComponent(id: " << m_Id << ") to " << m_RootGameObject.GetId() << '\n';
+	void UIRendererComponent::Startup(Game& game) {
+		std::cout << "\tAdded UIRendererComponent(id: " << m_Id << ") to " << m_RootGameObject.GetId() << '\n';
 	}
 
-	void WorldRendererComponent::Update(Game& game) {
+	void UIRendererComponent::Update(Game& game) {
 		game.GetRenderer() << SDL::at({
 			m_RootGameObject.transform.position.x + m_OffsetX,
 			m_RootGameObject.transform.position.y + m_OffsetY,

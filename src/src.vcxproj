@@ -59,12 +59,13 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="Time.cpp" />
     <ClCompile Include="UDCharacterController.cpp" />
     <ClCompile Include="Vector2.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="WorldRendererComponent.cpp" />
+    <ClCompile Include="UIRendererComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib\cpp_SDL.hpp" />
@@ -112,6 +113,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="SGL2.hpp" />
+    <ClInclude Include="Time.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Transform.hpp">
       <SubType>
       </SubType>
@@ -124,7 +129,7 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="WorldRendererComponent.hpp">
+    <ClInclude Include="UIRendererComponent.hpp">
       <SubType>
       </SubType>
     </ClInclude>
@@ -166,7 +171,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CPORTA|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>ClangCL</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <EnableASAN>true</EnableASAN>
   </PropertyGroup>
@@ -212,6 +217,7 @@
     <ExecutablePath>$(SolutionDir)lib;$(ExecutablePath)</ExecutablePath>
     <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
     <SourcePath>C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib;$(SourcePath)</SourcePath>
+    <ClangTidyChecks>clang-analyzer-*</ClangTidyChecks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib;$(SolutionDir)include</IncludePath>

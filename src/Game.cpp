@@ -2,6 +2,8 @@
 
 #include "AssetManager.hpp"
 #include "Game.hpp"
+#include "Time.hpp"
+#include "Windows.h"
 
 #ifndef CPORTA
 
@@ -19,8 +21,8 @@ namespace SGL2 {
 	{
 		SDL_DisplayMode dm;
 		SDL_GetDesktopDisplayMode(0, &dm);
-		m_ScreenSize.x = dm.w;
-		m_ScreenSize.y = dm.h;
+		m_ScreenSize.x = static_cast<float>(dm.w);
+		m_ScreenSize.y = static_cast<float>(dm.h);
 		m_MainCamera = Camera(*this, Vector2(0, 0), m_ScreenSize);
 	}
 #endif
@@ -48,6 +50,8 @@ namespace SGL2 {
 	void Game::MainLoop() {
 		bool shouldrun = true;
 		while (shouldrun) {
+		Time().FrameStart(); 
+		std::cout << (1.0 / (Time().DeltaTime() / Time().ratio)) << " FPS\n";
 			while (m_SDL.PollEvents()) {
 				switch (m_SDL.GetEvent().type) {
 				case SDL_QUIT:

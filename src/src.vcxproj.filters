@@ -65,6 +65,9 @@
     <Filter Include="Engine\Core\Camera">
       <UniqueIdentifier>{a404c154-a513-42ab-a2cc-9788d6b4dfad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Core\Time">
+      <UniqueIdentifier>{d0ecf6bd-1e30-4186-8d8e-691e87da381c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component.cpp">
@@ -133,8 +136,11 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Engine\Core\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="WorldRendererComponent.cpp">
+    <ClCompile Include="UIRendererComponent.cpp">
       <Filter>Engine\Built in components\WorldRendererComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Engine\Core\Time</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -216,11 +222,14 @@
     <ClInclude Include="UDCharacterController.hpp">
       <Filter>Engine\Built in components\UDCharacterController</Filter>
     </ClInclude>
-    <ClInclude Include="WorldRendererComponent.hpp">
+    <ClInclude Include="UIRendererComponent.hpp">
       <Filter>Engine\Built in components\WorldRendererComponent</Filter>
     </ClInclude>
     <ClInclude Include="Camera.hpp">
       <Filter>Engine\Core\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.hpp">
+      <Filter>Engine\Core\Time</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
