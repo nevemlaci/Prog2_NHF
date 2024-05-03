@@ -1,5 +1,6 @@
 #include "Time.hpp"
 
+#ifndef CPORTA
 namespace SGL2 {
 
 	Time_t& Time() {
@@ -19,3 +20,4 @@ namespace SGL2 {
 
 	
 }
+#endif
