@@ -7,7 +7,7 @@ namespace SGL2 {
 		return instance;
 	}
 
-	Time_t::Time_t() {
+	Time_t::Time_t() : m_DeltaTime(0.0) {
 
 	}
 
