@@ -8,13 +8,13 @@
 #endif
 
 namespace SGL2 {
-	Vector2::Vector2(float x , float y) : x(x), y(y) {}
+	Vector2::Vector2(double x , double y) : x(x), y(y) {}
 
-	float Vector2::abs() const {
+	double Vector2::abs() const {
 		return sqrtf((x * x) + (y * y));
 	}
 
-	float Vector2::length() const {
+	double Vector2::length() const {
 		return this->abs();
 	}
 
@@ -41,16 +41,16 @@ namespace SGL2 {
 		return (*this);
 	}
 
-	float Vector2::operator*(const Vector2& other) const{
+	double Vector2::operator*(const Vector2& other) const{
 		return (this->x * other.x + this->y * other.y);
 	}
 
 
-	Vector2 Vector2::operator*(float m) const{
+	Vector2 Vector2::operator*(double m) const{
 		return Vector2(x * m, y * m);
 	}
 
-	Vector2& Vector2::operator*=(float m) {
+	Vector2& Vector2::operator*=(double m) {
 		(*this) = Vector2(x * m, y * m);
 		return (*this);
 	}
@@ -63,7 +63,7 @@ namespace SGL2 {
 	
 #endif
 
-	Vector2 operator*(float m , const Vector2& r) {
+	Vector2 operator*(double m , const Vector2& r) {
 		return Vector2(r.x * m, r.y * m);
 	}
 

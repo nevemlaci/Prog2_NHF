@@ -18,6 +18,8 @@ public:
 	Vector2 position;
 	Vector2 size;
 	float rotation;
+
+	Vector2 Middle() const;
 #ifndef CPORTA
 
 #endif

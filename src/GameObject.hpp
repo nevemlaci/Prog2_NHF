@@ -26,7 +26,7 @@ public:
 	/// @param position Vector2
 	/// @param size Vector2
 	/// @param rot rotation
-	//MyTodo: component startup methods should probably be called when their gameobject gets constructed
+	//MyTodo: component startup methods should probably be called when the game has already started
 	GameObject(
 		Game& root_game,
 		const std::string& id, 

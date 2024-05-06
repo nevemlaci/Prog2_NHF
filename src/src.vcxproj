@@ -60,6 +60,7 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UDCharacterController.cpp" />
     <ClCompile Include="Vector2.cpp">
       <SubType>

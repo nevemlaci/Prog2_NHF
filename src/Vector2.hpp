@@ -12,14 +12,14 @@
 namespace SGL2 {
 class Vector2 {
 public:
-	float x;
-	float y;
+	double x;
+	double y;
 
-	Vector2(float x = 0, float y = 0);
+	Vector2(double x = 0, double y = 0);
 
-	float abs() const;
+	double abs() const;
 
-	float length() const;
+	double length() const;
 
 	Vector2 normalized() const;
 
@@ -29,10 +29,10 @@ public:
 	Vector2 operator-(const Vector2&) const;
 	Vector2& operator-=(const Vector2&);
 
-	float operator*(const Vector2&) const;
+	double operator*(const Vector2&) const;
 
-	Vector2 operator*(float) const;
-	Vector2& operator*=(float);
+	Vector2 operator*(double) const;
+	Vector2& operator*=(double);
 #ifndef CPORTA
 
 #endif
@@ -51,7 +51,7 @@ private:
 #endif
 };
 
-Vector2 operator*(float, const Vector2&);
+Vector2 operator*(double, const Vector2&);
 	
 }
 #endif

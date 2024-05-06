@@ -142,6 +142,9 @@
     <ClCompile Include="Time.cpp">
       <Filter>Engine\Core\Time</Filter>
     </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Engine\Core\Transform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.hpp">

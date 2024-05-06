@@ -44,6 +44,12 @@ int main(int argc, char** argv) {
 		EXPECT_EQ(testcomp_2.GetId(), std::string("c1") /*the first component had the id "c1"*/);
 	}END
 
+	Transform t = { Vector2(0, 0), Vector2(50, 100), 0 };
+	
+	TEST(Transform, Middle) {
+		EXPECT_DOUBLE_EQ(t.Middle().x, 25.0);
+		EXPECT_DOUBLE_EQ(t.Middle().y, 50.0);
+	}END
 
 #endif
 	delete game;
