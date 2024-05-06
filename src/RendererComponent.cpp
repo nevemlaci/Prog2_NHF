@@ -11,8 +11,8 @@ namespace SGL2 {
 	RendererComponent::RendererComponent(GameObject& root, 
 		const std::string& id, 
 		const std::string& asset_name,
-		int scaleX, int scaleY,
-		int offsetX, int offsety) :
+		double scaleX, double scaleY,
+		double offsetX, double offsety) :
 		Component(root, id),
 		m_OffsetX(offsetX),
 		m_OffsetY(offsety),

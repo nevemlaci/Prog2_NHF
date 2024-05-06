@@ -18,18 +18,18 @@ public:
 	RendererComponent(
 		GameObject& root, const std::string& id,
 		const std::string& asset_name,
-		int scaleX = 1, int scaleY = 1,
-		int offsetX = 0, int offsety = 0
+		double scaleX = 1, double scaleY = 1,
+		double offsetX = 0, double offsety = 0
 	);
 
 	void Startup(Game& game) override;
 	void Update(Game& game) override;
 
 private:
-	int m_OffsetX;
-	int m_OffsetY;
-	int m_ScaleX;
-	int m_ScaleY;
+	double m_OffsetX;
+	double m_OffsetY;
+	double m_ScaleX;
+	double m_ScaleY;
 	const SDL::Texture& m_Texture;
 
 };
