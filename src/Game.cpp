@@ -51,7 +51,7 @@ namespace SGL2 {
 		bool shouldrun = true;
 		while (shouldrun) {
 		Time().FrameStart(); 
-		std::cout << (1.0 / (Time().DeltaTime() / Time().ratio)) << " FPS\n";
+		//std::cout << (1.0 / (Time().DeltaTime() / Time().ratio)) << " FPS\n";
 			while (m_SDL.PollEvents()) {
 				switch (m_SDL.GetEvent().type) {
 				case SDL_QUIT:
