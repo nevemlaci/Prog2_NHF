@@ -38,7 +38,7 @@ public:
 	void Update(Game& game) override {
 		//link the camera to the player
 		
-		game.GetMainCamera().transform.position = m_RootGameObject.transform.position - (game.GetMainCamera().transform.size * 0.5) + (m_RootGameObject.transform.size * 0.5);
+		game.GetMainCamera().transform.SetPositionByMiddle(this->m_RootGameObject.transform.Middle());
 
 		//check for the macros that we added
 		Vector2 mov = Vector2(0, 0);

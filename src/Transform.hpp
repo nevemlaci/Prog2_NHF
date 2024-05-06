@@ -20,6 +20,7 @@ public:
 	float rotation;
 
 	Vector2 Middle() const;
+	void SetPositionByMiddle(const Vector2& middlepos);
 #ifndef CPORTA
 
 #endif
