@@ -8,21 +8,21 @@
 
 
 int main(int argc, char** argv) {
-	Game* game = SGL2::init();
+	SGL2::init();
 #ifndef CPORTA
-	game->Run();
+	SGL2::Game().Run();
 #endif
 
 #ifdef CPORTA
 
 	/*Test the gameobject getter*/
 	g1& testobj = game->GetGameObject<g1>("g1");
-	TEST(Game, GetGameObject) { //also confirms that the game object getter is working
+	TEST(Game_t, GetGameObject) { //also confirms that the game object getter is working
 		EXPECT_EQ(testobj.GetId(), std::string("g1")/*convert to std::string to be sure*/);
 	}END
 
 	/*Test the gameobject getter exception*/
-	TEST(Game, GetNonExistentGameObject) {
+	TEST(Game_t, GetNonExistentGameObject) {
 	EXPECT_THROW(
 		game->GetGameObject("object_with_this_id_does_not_exist"),
 		std::runtime_error);
@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
 	}END
 
 #endif
-	delete game;
+	
 
 #ifndef CPORTA
 	std::cerr << "\n\n\nInput any character to exit...\n";

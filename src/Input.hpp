@@ -10,9 +10,9 @@
 #include <string>
 
 namespace SGL2 {
-	class Game;
+	class Game_t;
 class InputManager {
-	friend class Game;
+	friend class Game_t;
 public:
 	/// @brief Adds a new key to an input macro. If the macro does not exist it gets created
 	/// @param macro_name 
@@ -22,10 +22,10 @@ public:
 	bool Get(const std::string& macro_name);
 
 private:
-	InputManager(Game&);
+	InputManager(Game_t&);
 	std::map<std::string, SDL_Scancode> m_InputMacros;
 
-	Game& m_RootGameRef;
+	Game_t& m_RootGameRef;
 };
 }
 #endif

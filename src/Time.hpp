@@ -13,7 +13,7 @@ namespace SGL2 {
 	using delta_time_duration = stdchr::duration<int64_t, delta_time_ratio>;
 	
 class Time_t {
-	friend class Game;
+	friend class Game_t;
 	friend Time_t& Time();
 public:
 

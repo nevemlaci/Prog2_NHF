@@ -20,7 +20,7 @@
 
 namespace SGL2 {
 class GameObject {
-	friend class Game;
+	friend class Game_t;
 public:
 	/// @brief Constructor
 	/// @param position Vector2
@@ -28,7 +28,7 @@ public:
 	/// @param rot rotation
 	//MyTodo: component startup methods should probably be called when the game has already started
 	GameObject(
-		Game& root_game,
+		Game_t& root_game,
 		const std::string& id, 
 		const Vector2& position, 
 		const Vector2& size, 
@@ -81,7 +81,7 @@ public:
 
 	const std::string& GetId() const { return m_Id; }
 
-	Game& GetRoot() const { return m_RootGameRef; }
+	Game_t& GetRoot() const { return m_RootGameRef; }
 
 	bool Active() const;
 
@@ -98,7 +98,7 @@ public:
 
 protected:
 	std::string m_Id; 
-	Game& m_RootGameRef; 
+	Game_t& m_RootGameRef; 
 	bool m_IsActive;
 	std::vector< std::unique_ptr<Component> > m_Components;
 #ifndef CPORTA

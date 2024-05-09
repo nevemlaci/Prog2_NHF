@@ -2,7 +2,7 @@
 #include "Game.hpp"
 
 #ifndef CPORTA
-SGL2::InputManager::InputManager(Game& root_game) :
+SGL2::InputManager::InputManager(Game_t& root_game) :
 	m_RootGameRef(root_game)
 {}
 

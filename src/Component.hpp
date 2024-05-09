@@ -13,7 +13,7 @@
 
 namespace SGL2 {
 	class GameObject;
-	class Game;
+	class Game_t;
 
 class Component {
 public:
@@ -29,11 +29,11 @@ public:
 	
 	/// @brief Runs after the component has been attached to the parent gameobject
 	/// @param game reference to the game instance
-	virtual void Startup(Game& game) = 0;
+	virtual void Startup(Game_t& game) = 0;
 
 	/// @brief Runs on every frame of the game
 	/// @param game reference to the game instance
-	virtual void Update(Game& game) = 0;
+	virtual void Update(Game_t& game) = 0;
 
 	/// @brief getter for m_Id
 	/// @return returns the id of the component

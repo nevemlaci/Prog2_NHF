@@ -18,13 +18,15 @@
 #include "memtrace.h"
 
 namespace SGL2 {
-class Game final {
+class Game_t final {
+	
+	friend Game_t& Game();
 	friend class GameObject;
-	friend class AssetManager;
+	friend class AssetManager_t;
 public:
 	/// @brief game instance ctor
 	/// @param title title of the game(and the game window)
-	Game(const char* title);
+	Game_t();
 
 	/// @brief runs the game
 	void Run();
@@ -89,7 +91,6 @@ public:
 	void DeleteGameObject(const std::string& id);
 
 #ifndef CPORTA
-	AssetManager& GetAssetManager() { return m_AssetManager; }
 	InputManager& GetInputManager() { return m_InputManager; }
 #endif
 
@@ -106,7 +107,6 @@ private:
 
 	Vector2 m_ScreenSize;
 
-	AssetManager m_AssetManager;
 	InputManager m_InputManager;
 	Camera m_MainCamera;
 
@@ -122,6 +122,7 @@ private:
 
 #endif
 };
+	Game_t& Game();
 }
 #endif
 
