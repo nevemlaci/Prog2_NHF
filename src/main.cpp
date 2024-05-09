@@ -8,6 +8,9 @@
 
 
 int main(int argc, char** argv) {
+	SGL2::Game();
+	SGL2::InputManager();
+	SGL2::AssetManager();
 	SGL2::init();
 #ifndef CPORTA
 	SGL2::Game().Run();

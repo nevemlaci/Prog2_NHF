@@ -5,6 +5,8 @@
 #include "Transform.hpp"
 #include "Vector2.hpp"
 #include "Time.hpp"
+#include "AssetManager.hpp"
+#include "Input.hpp"
 
 /*Built in components*/
 #include "RendererComponent.hpp"
@@ -22,5 +24,7 @@ using SGL2::RendererComponent;
 using SGL2::UIRendererComponent;
 using SGL2::UDCharacterController;
 using SGL2::Time;
+using SGL2::AssetManager;
+using SGL2::InputManager;
 #endif
 

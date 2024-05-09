@@ -90,10 +90,6 @@ public:
 	/// @param id 
 	void DeleteGameObject(const std::string& id);
 
-#ifndef CPORTA
-	InputManager& GetInputManager() { return m_InputManager; }
-#endif
-
 private:
 #ifndef CPORTA
 	/// @brief Runs the main loop of the game
@@ -107,17 +103,12 @@ private:
 
 	Vector2 m_ScreenSize;
 
-	InputManager m_InputManager;
 	Camera m_MainCamera;
 
 #endif
-
-
-
 	std::vector<std::unique_ptr<GameObject>> m_GameObjects;
 
 	const char* m_Title;
-
 #ifdef CPORTA
 
 #endif

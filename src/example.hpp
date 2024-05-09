@@ -8,6 +8,7 @@
 
 #endif
 
+
 class c1 : public Component {
 public:
 	c1(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
@@ -29,10 +30,10 @@ public:
 	ControllerScript(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
 
 	void Startup(Game_t& game) override {
-		m_RootGameObject.GetRoot().GetInputManager().AddMacro("up", "W");
-		m_RootGameObject.GetRoot().GetInputManager().AddMacro("down", "S");
-		m_RootGameObject.GetRoot().GetInputManager().AddMacro("left", "A");
-		m_RootGameObject.GetRoot().GetInputManager().AddMacro("right", "D");
+		InputManager().AddMacro("up", "W");
+		InputManager().AddMacro("down", "S");
+		InputManager().AddMacro("left", "A");
+		InputManager().AddMacro("right", "D");
 		std::cout << this->m_Id << '\n';
 	}
 	void Update(Game_t& game) override {
@@ -42,16 +43,16 @@ public:
 
 		//check for the macros that we added
 		Vector2 mov = Vector2(0, 0);
-		if (game.GetInputManager().Get("up")) {
+		if (InputManager().Get("up")) {
 			mov.y -= 1;
 		}
-		if (game.GetInputManager().Get("down")) {
+		if (InputManager().Get("down")) {
 			mov.y += 1;
 		}
-		if (game.GetInputManager().Get("left")) {
+		if (InputManager().Get("left")) {
 			mov.x -= 1;
 		}
-		if (game.GetInputManager().Get("right")) {
+		if (InputManager().Get("right")) {
 			mov.x += 1;
 		}
 

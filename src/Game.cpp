@@ -15,7 +15,6 @@ namespace SGL2 {
 		m_Title(""), m_SDL(SDL::SDL::Get()),
 		m_Window("", 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP),
 		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED),
-		m_InputManager(*this),
 		m_MainCamera(*this, Vector2(0,0), Vector2(0,0))
 	{
 		SDL_DisplayMode dm;
