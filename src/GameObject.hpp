@@ -26,7 +26,6 @@ public:
 	/// @param position Vector2
 	/// @param size Vector2
 	/// @param rot rotation
-	//MyTodo: component startup methods should probably be called when the game has already started
 	GameObject(
 		Game& root_game,
 		const std::string& id, 
@@ -43,7 +42,6 @@ public:
 	template <class T, class... Args>
 	T& AddComponent(Args&&... args) {
 		m_Components.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
-		m_Components.back()->Startup(this->m_RootGameRef);
 		return dynamic_cast<T&>(*m_Components.back());
 	}
 

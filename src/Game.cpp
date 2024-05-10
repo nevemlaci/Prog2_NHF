@@ -17,7 +17,8 @@ namespace SGL2 {
 		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED),
 		m_AssetManager(this),
 		m_InputManager(*this),
-		m_MainCamera(*this, Vector2(0,0), Vector2(0,0))
+		m_MainCamera(*this, Vector2(0,0), Vector2(0,0)),
+		m_HasStarted(false)
 	{
 		SDL_DisplayMode dm;
 		SDL_GetDesktopDisplayMode(0, &dm);
@@ -44,6 +45,12 @@ namespace SGL2 {
 	void Game::Run() {
 		/*idk what else to do here but I'll surely need something else*/
 		std::cout << "Running game: " << m_Title << '\n' << "\tGameObjects count at start: " << m_GameObjects.size() << '\n';
+		m_HasStarted = true;
+		for (auto& gameobject_ptr : m_GameObjects) {
+			for (auto& component_ptr : gameobject_ptr->m_Components) {
+				component_ptr->Startup(*this);
+			}
+		}
 		MainLoop();
 	}
 

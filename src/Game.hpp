@@ -65,6 +65,13 @@ public:
 	template<typename T, class... Args>
 	T& AddGameObject(Args&&... args) {
 		m_GameObjects.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
+		//if the game has already started
+		//we call the startup methods from the components when the gameobject gets added
+		if (m_HasStarted) {
+			for (auto& component_ptr : m_GameObjects.back()->m_Components) {
+				component_ptr->Startup(*this);
+			}
+		}
 		return dynamic_cast<T&>(*m_GameObjects.back());
 	}
 
@@ -117,6 +124,8 @@ private:
 	std::vector<std::unique_ptr<GameObject>> m_GameObjects;
 
 	const char* m_Title;
+
+	bool m_HasStarted;
 
 #ifdef CPORTA
 

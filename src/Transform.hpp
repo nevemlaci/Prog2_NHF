@@ -11,7 +11,7 @@
 
 #include "memtrace.h"
 
-//MyTodo: should add a middle point to transforms
+
 namespace SGL2 {
 struct Transform final {
 public:
