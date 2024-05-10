@@ -15,9 +15,9 @@ bool SGL2::InputManager_t::Get(const std::string& macro_name)
 	return false;
 }
 
-#endif
-
 SGL2::InputManager_t& SGL2::InputManager() {
 	static InputManager_t instance;
 	return instance;
 }
+#endif
+

@@ -26,7 +26,7 @@ namespace SGL2 {
 #endif
 
 #ifdef CPORTA
-	Game_t::Game_t(const char* title) : m_Title(title) {}
+	Game_t::Game_t() : m_Title("") {}
 #endif
 
 	void Game_t::DeleteGameObject(const std::string& id) {

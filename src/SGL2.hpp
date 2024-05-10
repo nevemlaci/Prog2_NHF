@@ -14,6 +14,7 @@
 #include "UDCharacterController.hpp"
 
 /*Simplify names*/
+using SGL2::Game;
 using SGL2::Game_t;
 using SGL2::GameObject;
 using SGL2::Component;

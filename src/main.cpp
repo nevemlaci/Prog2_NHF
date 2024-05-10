@@ -9,17 +9,19 @@
 
 int main(int argc, char** argv) {
 	SGL2::Game();
-	SGL2::InputManager();
-	SGL2::AssetManager();
 	SGL2::init();
 #ifndef CPORTA
+	InputManager();
+	AssetManager();
 	SGL2::Game().Run();
 #endif
 
-#ifdef CPORTA
 
+
+#ifdef CPORTA
+	
 	/*Test the gameobject getter*/
-	g1& testobj = game->GetGameObject<g1>("g1");
+	g1& testobj = Game().GetGameObject<g1>("g1");
 	TEST(Game_t, GetGameObject) { //also confirms that the game object getter is working
 		EXPECT_EQ(testobj.GetId(), std::string("g1")/*convert to std::string to be sure*/);
 	}END
@@ -27,7 +29,7 @@ int main(int argc, char** argv) {
 	/*Test the gameobject getter exception*/
 	TEST(Game_t, GetNonExistentGameObject) {
 	EXPECT_THROW(
-		game->GetGameObject("object_with_this_id_does_not_exist"),
+		Game().GetGameObject("object_with_this_id_does_not_exist"),
 		std::runtime_error);
 	}END
 
@@ -54,12 +56,14 @@ int main(int argc, char** argv) {
 		EXPECT_DOUBLE_EQ(t.Middle().y, 50.0);
 	}END
 
-#endif
 	
+#endif
 
 #ifndef CPORTA
+		/*
 	std::cerr << "\n\n\nInput any character to exit...\n";
 	std::cin.get(); 
+		*/
 #endif // !CPORTA
 	//int* a = new int; //memtrace test
 
