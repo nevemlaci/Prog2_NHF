@@ -19,13 +19,16 @@
 #include "memtrace.h"
 
 namespace SGL2 {
+/// @brief Base game object class. GameObjects are the base of the library, containing a transform and components
 class GameObject {
 	friend class Game_t;
 public:
-	/// @brief Constructor
-	/// @param position Vector2
-	/// @param size Vector2
-	/// @param rot rotation
+	/// @brief 
+	/// @param root_game gets passed by the game when adding the gameobject automatically.
+	/// @param id  
+	/// @param position 
+	/// @param size 
+	/// @param rot 
 	GameObject(
 		Game_t& root_game,
 		const std::string& id, 
@@ -48,7 +51,7 @@ public:
 	/// @brief Get the component of a given type
 	/// @tparam T type of the component
 	/// @return the first component of type T in the Component vecto
-	/// @throw std::runtime_error : "GetComponent(): Component with type not found." | If a component with the given type was not found.
+	/// @throw std::runtime_error : "GetComponent(): Component with type not found." , If a component with the given type was not found.
 	template <class T>
 	T& GetComponent() const {
 		for (auto& component_ptr : m_Components) {
@@ -64,7 +67,7 @@ public:
 	/// @tparam T typename of component subclass
 	/// @param id
 	/// @return the first T type component of the GameObject
-	/// @throw "Component& GetComponent() : Component with type not found" | if a component with type T and with given id was not found.
+	/// @throw "Component& GetComponent() : Component with type and id not found" , if a component with type T and with given id was not found.
 	template <class T>
 	T& GetComponent(const std::string& id) const {
 		for (auto& component_ptr : m_Components) {
@@ -81,8 +84,12 @@ public:
 
 	Game_t& GetRoot() const { return m_RootGameRef; }
 
+	/// @brief Active state getter
+	/// @return 
 	bool Active() const;
 
+	/// @brief Active state setter
+	/// @param a 
 	void Active(bool a);
 
 	Transform transform;

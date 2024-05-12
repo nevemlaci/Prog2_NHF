@@ -7,6 +7,12 @@ namespace SGL2 {
 #ifndef CPORTA
 		//manual SDL access example
 		Game().GetRenderer().SetRenderDrawColor(0, 100, 140, 255); 
+
+		InputManager().AddMacro("up", "W");
+		InputManager().AddMacro("down", "S");
+		InputManager().AddMacro("left", "A");
+		InputManager().AddMacro("right", "D");
+
 		//load assets using the asset manager
 		AssetManager().AddTexture("charactertexture", "player.png");
 		AssetManager().AddTexture("background", "background.jpeg");

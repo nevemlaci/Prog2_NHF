@@ -8,15 +8,13 @@
 
 
 int main(int argc, char** argv) {
-	SGL2::Game();
+	Game();
 	SGL2::init();
 #ifndef CPORTA
 	InputManager();
 	AssetManager();
-	SGL2::Game().Run();
+	Game().Run();
 #endif
-
-
 
 #ifdef CPORTA
 	
@@ -59,13 +57,6 @@ int main(int argc, char** argv) {
 	
 #endif
 
-#ifndef CPORTA
-		/*
-	std::cerr << "\n\n\nInput any character to exit...\n";
-	std::cin.get(); 
-		*/
-#endif // !CPORTA
-	//int* a = new int; //memtrace test
 
 	return 0;
 }

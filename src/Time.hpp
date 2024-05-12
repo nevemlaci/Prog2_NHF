@@ -12,13 +12,16 @@ namespace SGL2 {
 	using delta_time_ratio = std::nano;
 	using delta_time_duration = stdchr::duration<int64_t, delta_time_ratio>;
 	
+/// @brief Time manager(singleton)
 class Time_t {
 	friend class Game_t;
 	friend Time_t& Time();
 public:
-
+	/// @brief 
+	/// @return duration of the last frame (in nanoseconds)  
 	double DeltaTime() const { return m_DeltaTime; }
 
+	/// @brief 
 	const double ratio = static_cast<double>(delta_time_ratio::den);
 private:
 	Time_t();
@@ -31,6 +34,8 @@ private:
 	void FrameStart();
 
 };
+	/// @brief 
+	/// @return Time manager instance
 	Time_t& Time();
 }
 #endif

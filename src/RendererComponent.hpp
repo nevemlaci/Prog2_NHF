@@ -13,8 +13,17 @@
 #include "memtrace.h"
 
 namespace SGL2 {
+/// @brief Renders a texture on the scene. This component renders in relation with the camera. For UI elements, check UIRendererComponent
 class RendererComponent final : public Component {
 public:
+	/// @brief 
+	/// @param root root game object(gets passed automatically by GameObject::AddComponent()
+	/// @param id 
+	/// @param asset_name the name of the texture asset to be rendered by this component
+	/// @param scaleX scaling relative to the root's width
+	/// @param scaleY scaling relative to the root's height
+	/// @param offsetX offset from the root's X position
+	/// @param offsety offset from the root's X position
 	RendererComponent(
 		GameObject& root, const std::string& id,
 		const std::string& asset_name,

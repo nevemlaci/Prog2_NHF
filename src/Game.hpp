@@ -18,20 +18,21 @@
 #include "memtrace.h"
 
 namespace SGL2 {
+/// @brief Game manager singleton
 class Game_t final {
 	
 	friend Game_t& Game();
 	friend class GameObject;
 	friend class AssetManager_t;
 public:
-	/// @brief game instance ctor
-	/// @param title title of the game(and the game window)
-	Game_t();
 
 	/// @brief runs the game
 	void Run();
 #ifndef CPORTA
+	Game_t();
 
+	/// @brief 
+	/// @return SDL instance 
 	SDL::SDL& GetSDL() { return m_SDL; }
 
 	/// @brief getter for m_Renderer
@@ -42,8 +43,12 @@ public:
 	/// @return SDL::Window reference
 	SDL::Window& GetWindow() { return m_Window; }
 
+	/// @brief 
+	/// @return the screen size as a Vector2 
 	Vector2 GetScreenSize() const { return m_ScreenSize; }
 
+	/// @brief 
+	/// @return the reference to the game's camera 
 	Camera& GetMainCamera() { return m_MainCamera; }
 #endif
 
@@ -60,9 +65,9 @@ public:
 	const char* GetTitle() const { return m_Title; }
 
 	/// @brief adds a game object of type T with ...args being passed to the constructor
-	/// @tparam T should inherit from GameObject. Type of the object to be added(specifies what ctor is called)
+	/// @tparam T should inherit from GameObject. Type of the object to be added
 	/// @tparam ...Args should not be passed explicitly
-	/// @param ...args arguments to be passed into T's constructor
+	/// @param ...args arguments to be passed into T's constructor(the game instance reference is not needed)
 	/// @return returns a reference to the newly added GameObject
 	template<typename T, class... Args>
 	T& AddGameObject(Args&&... args) {
@@ -78,7 +83,7 @@ public:
 	}
 
 	/// @brief getter for game objects based on type and id
-	/// @tparam T type of gameobject(also specifies the type of the return value
+	/// @tparam T type of gameobject
 	/// @param id 
 	/// @return returns a reference to the gameobject(T&) if found
 	/// @exception throws std::runtime_error if an appropriate gameobject was not found.
@@ -93,7 +98,7 @@ public:
 		throw std::runtime_error("GameObject with given id not found.");
 	}
 
-	/// @brief deletes a gameobject with given id
+	/// @brief deletes a gameobject with given id (use with caution)
 	/// @param id 
 	void DeleteGameObject(const std::string& id);
 
@@ -116,12 +121,9 @@ private:
 	std::vector<std::unique_ptr<GameObject>> m_GameObjects;
 
 	const char* m_Title;
-<<<<<<< HEAD
 
 	bool m_HasStarted;
 
-=======
->>>>>>> global_getter_shit
 #ifdef CPORTA
 
 #endif

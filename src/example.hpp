@@ -30,10 +30,7 @@ public:
 	ControllerScript(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
 
 	void Startup(Game_t& game) override {
-		InputManager().AddMacro("up", "W");
-		InputManager().AddMacro("down", "S");
-		InputManager().AddMacro("left", "A");
-		InputManager().AddMacro("right", "D");
+		
 		std::cout << this->m_Id << '\n';
 	}
 	void Update(Game_t& game) override {

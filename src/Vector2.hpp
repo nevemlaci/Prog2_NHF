@@ -10,6 +10,7 @@
 #include "memtrace.h"
 
 namespace SGL2 {
+/// @brief Represents a vector in 2d space
 class Vector2 {
 public:
 	double x;
@@ -17,10 +18,13 @@ public:
 
 	Vector2(double x = 0, double y = 0);
 
+	/// @brief length of the vector
 	double abs() const;
 
+	/// @brief length of the vector
 	double length() const;
 
+	/// @brief normalizes the vector(divides both coordinates by the vector's lenght
 	Vector2 normalized() const;
 
 	Vector2 operator+(const Vector2&) const;

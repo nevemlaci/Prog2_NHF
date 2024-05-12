@@ -12,6 +12,7 @@
 
 
 namespace SGL2 {
+	/// @brief Camera
 	class Camera final : public GameObject {
 		friend class Game_t;
 	public:

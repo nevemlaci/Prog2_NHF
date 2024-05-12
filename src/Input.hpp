@@ -10,6 +10,7 @@
 #include <string>
 
 namespace SGL2 {
+/// @brief Handles input mapping 
 class InputManager_t {
 	friend InputManager_t& InputManager();
 public:
@@ -18,6 +19,9 @@ public:
 	/// @param key_name Key name reference: https://wiki.libsdl.org/SDL2/SDL_ScancodeAndKeycode
 	void AddMacro(const std::string& macro_name, const char* key_name);
 
+	/// @brief Get the state of a macro
+	/// @param macro_name 
+	/// @return true if the key behind the macro is being pressed, false otherwise
 	bool Get(const std::string& macro_name);
 
 private:
@@ -26,7 +30,8 @@ private:
 
 	
 };
-
+	/// @brief 
+	/// @return Input manager instance
 	InputManager_t& InputManager();
 }
 #endif

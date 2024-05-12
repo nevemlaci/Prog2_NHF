@@ -13,8 +13,17 @@
 #include "memtrace.h"
 
 namespace SGL2 {
+	/// @brief renders a texture on the screen with an absolute position. For scene rendering, see RendererComponent
 	class UIRendererComponent final : public Component {
 	public:
+		/// @brief 
+		/// @param root root game object(gets passed automatically by GameObject::AddComponent()
+		/// @param id 
+		/// @param asset_name the name of the texture asset to be rendered by this component
+		/// @param scaleX scaling relative to the root's width
+		/// @param scaleY scaling relative to the root's height
+		/// @param offsetX offset from the root's X position
+		/// @param offsety offset from the root's X position
 		UIRendererComponent(
 			GameObject& root, const std::string& id,
 			const std::string& asset_name,
