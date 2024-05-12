@@ -18,14 +18,14 @@ namespace SGL2 {
 		m_OffsetY(offsety),
 		m_ScaleX(scaleX),
 		m_ScaleY(scaleY),
-		m_Texture(root.GetRoot().GetAssetManager().GetTexture(asset_name)) 
+		m_Texture(AssetManager().GetTexture(asset_name)) 
 	{}
 
-	void RendererComponent::Startup(Game& game)  {
+	void RendererComponent::Startup(Game_t& game)  {
 		std::cout << "\tAdded RendererComponent(id: " << m_Id << ") to " << m_RootGameObject.GetId() << '\n';
 	}
 
-	void RendererComponent::Update(Game& game) {
+	void RendererComponent::Update(Game_t& game) {
 		game.GetRenderer() << SDL::at({ 
 			m_RootGameObject.transform.position.x + m_OffsetX - game.GetMainCamera().transform.position.x,
 			m_RootGameObject.transform.position.y + m_OffsetY - game.GetMainCamera().transform.position.y,

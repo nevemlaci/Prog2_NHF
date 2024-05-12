@@ -18,13 +18,15 @@
 #include "memtrace.h"
 
 namespace SGL2 {
-class Game final {
+class Game_t final {
+	
+	friend Game_t& Game();
 	friend class GameObject;
-	friend class AssetManager;
+	friend class AssetManager_t;
 public:
 	/// @brief game instance ctor
 	/// @param title title of the game(and the game window)
-	Game(const char* title);
+	Game_t();
 
 	/// @brief runs the game
 	void Run();
@@ -95,11 +97,6 @@ public:
 	/// @param id 
 	void DeleteGameObject(const std::string& id);
 
-#ifndef CPORTA
-	AssetManager& GetAssetManager() { return m_AssetManager; }
-	InputManager& GetInputManager() { return m_InputManager; }
-#endif
-
 private:
 #ifndef CPORTA
 	/// @brief Runs the main loop of the game
@@ -113,24 +110,23 @@ private:
 
 	Vector2 m_ScreenSize;
 
-	AssetManager m_AssetManager;
-	InputManager m_InputManager;
 	Camera m_MainCamera;
 
 #endif
-
-
-
 	std::vector<std::unique_ptr<GameObject>> m_GameObjects;
 
 	const char* m_Title;
+<<<<<<< HEAD
 
 	bool m_HasStarted;
 
+=======
+>>>>>>> global_getter_shit
 #ifdef CPORTA
 
 #endif
 };
+	Game_t& Game();
 }
 #endif
 

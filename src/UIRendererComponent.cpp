@@ -17,14 +17,14 @@ namespace SGL2 {
 		m_OffsetY(offsety),
 		m_ScaleX(scaleX),
 		m_ScaleY(scaleY),
-		m_Texture(root.GetRoot().GetAssetManager().GetTexture(asset_name))
+		m_Texture(AssetManager().GetTexture(asset_name))
 	{}
 
-	void UIRendererComponent::Startup(Game& game) {
+	void UIRendererComponent::Startup(Game_t& game) {
 		std::cout << "\tAdded UIRendererComponent(id: " << m_Id << ") to " << m_RootGameObject.GetId() << '\n';
 	}
 
-	void UIRendererComponent::Update(Game& game) {
+	void UIRendererComponent::Update(Game_t& game) {
 		game.GetRenderer() << SDL::at({
 			m_RootGameObject.transform.position.x + m_OffsetX,
 			m_RootGameObject.transform.position.y + m_OffsetY,

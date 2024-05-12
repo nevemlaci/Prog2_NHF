@@ -11,14 +11,18 @@
 
 namespace SGL2 {
 #ifndef CPORTA
-	Game::Game(const char* title) :
-		m_Title(title), m_SDL(SDL::SDL::Get()),
-		m_Window(title, 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP),
+	Game_t::Game_t() :
+		m_Title(""), m_SDL(SDL::SDL::Get()),
+		m_Window("", 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP),
 		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED),
+<<<<<<< HEAD
 		m_AssetManager(this),
 		m_InputManager(*this),
 		m_MainCamera(*this, Vector2(0,0), Vector2(0,0)),
 		m_HasStarted(false)
+=======
+		m_MainCamera(*this, Vector2(0,0), Vector2(0,0))
+>>>>>>> global_getter_shit
 	{
 		SDL_DisplayMode dm;
 		SDL_GetDesktopDisplayMode(0, &dm);
@@ -29,10 +33,10 @@ namespace SGL2 {
 #endif
 
 #ifdef CPORTA
-	Game::Game(const char* title) : m_Title(title) {}
+	Game_t::Game_t() : m_Title("") {}
 #endif
 
-	void Game::DeleteGameObject(const std::string& id) {
+	void Game_t::DeleteGameObject(const std::string& id) {
 		for (size_t i = 0; i < m_GameObjects.size(); i++) {
 			if (id==m_GameObjects.at(i)->m_Id) {
 				m_GameObjects.erase(m_GameObjects.begin() + 1);
@@ -42,7 +46,7 @@ namespace SGL2 {
 	}
 
 #ifndef CPORTA
-	void Game::Run() {
+	void Game_t::Run() {
 		/*idk what else to do here but I'll surely need something else*/
 		std::cout << "Running game: " << m_Title << '\n' << "\tGameObjects count at start: " << m_GameObjects.size() << '\n';
 		m_HasStarted = true;
@@ -54,7 +58,7 @@ namespace SGL2 {
 		MainLoop();
 	}
 
-	void Game::MainLoop() {
+	void Game_t::MainLoop() {
 		bool shouldrun = true;
 		while (shouldrun) {
 		Time().FrameStart(); 
@@ -80,6 +84,7 @@ namespace SGL2 {
 			}
 			m_Renderer.RenderPresent();
 		}
+		SDL_Quit();
 	}
 #endif // !CPORTA
 
@@ -90,5 +95,11 @@ namespace SGL2 {
 #ifdef CPORTA
 	
 #endif
+
+	Game_t& Game() {
+		static Game_t instance;
+		return instance;
+
+	}
 
 }

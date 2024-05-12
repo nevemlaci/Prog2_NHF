@@ -14,8 +14,9 @@
 
 namespace SGL2 {
 
-class AssetManager {
-	friend class Game;
+	class Game_t;
+class AssetManager_t {
+	friend AssetManager_t& AssetManager();
 public:
 
 	void AddFont(const std::string& asset_name, const std::string& font_path, unsigned int fontsize = 14);
@@ -44,7 +45,7 @@ public:
 	
 	const SDL::MixChunk& GetSound(const std::string& asset_name) const;
 private:
-	AssetManager(Game* game);
+	AssetManager_t(Game_t* game);
 	std::map<std::string, std::unique_ptr<SDL::Texture>> m_Textures;
 	std::map<std::string, std::unique_ptr<SDL::Text>> m_Texts;
 	std::map<std::string, std::unique_ptr<SDL::Font>> m_Fonts;
@@ -53,9 +54,11 @@ private:
 	std::map<std::string, std::unique_ptr<SDL::MixChunk>> m_SFXs;
 
 
-	Game& m_RootGameRef;
+	Game_t& m_RootGameRef;
 	
 };
+
+AssetManager_t& AssetManager();
 }
 #endif
 #endif

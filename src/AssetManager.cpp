@@ -5,22 +5,22 @@
 #ifndef CPORTA
 
 namespace SGL2 {
-	AssetManager::AssetManager(Game* game) : m_RootGameRef(*game), m_Music(nullptr)
+	AssetManager_t::AssetManager_t(Game_t* game) : m_RootGameRef(*game), m_Music(nullptr)
 	{
 		SDL::Mixer::OpenAudio(16000, MIX_DEFAULT_FORMAT, 2, 512);
 	}
 	
-	void AssetManager::AddFont(const std::string& asset_name, const std::string& font_path, unsigned int fontsize)
+	void AssetManager_t::AddFont(const std::string& asset_name, const std::string& font_path, unsigned int fontsize)
 	{
 		m_Fonts[asset_name] = std::make_unique<SDL::Font>(font_path.c_str(), fontsize);
 	}
 
-	const SDL::Font& AssetManager::GetFont(const std::string& asset_name) const
+	const SDL::Font& AssetManager_t::GetFont(const std::string& asset_name) const
 	{
 		return (*m_Fonts.at(asset_name));
 	}
 	
-	void AssetManager::AddText(
+	void AssetManager_t::AddText(
 		const std::string& asset_name, 
 		const std::string& text, 
 		const std::string& font_asset_name, 
@@ -38,12 +38,12 @@ namespace SGL2 {
 		}
 	}
 
-	const SDL::Text& AssetManager::GetText(const std::string& asset_name) const
+	const SDL::Text& AssetManager_t::GetText(const std::string& asset_name) const
 	{
 		return (*m_Texts.at(asset_name));
 	}
 
-	void AssetManager::AddTexture(const std::string& asset_name, const std::string& path)
+	void AssetManager_t::AddTexture(const std::string& asset_name, const std::string& path)
 	{
 		try {
 			m_Textures[asset_name] = std::make_unique<SDL::Texture>(path.c_str(), m_RootGameRef.GetRenderer());
@@ -53,12 +53,12 @@ namespace SGL2 {
 		}
 	}
 
-	const SDL::Texture& AssetManager::GetTexture(const std::string& asset_name) const
+	const SDL::Texture& AssetManager_t::GetTexture(const std::string& asset_name) const
 	{
 		return (*m_Textures.at(asset_name));
 	}
 
-	void AssetManager::SetMusic(const std::string& path)
+	void AssetManager_t::SetMusic(const std::string& path)
 	{
 		try {
 		m_Music = new SDL::MixMusic(path.c_str());
@@ -68,7 +68,7 @@ namespace SGL2 {
 		}
 	}
 	
-	void AssetManager::AddSound(const std::string& asset_name, const std::string& path)
+	void AssetManager_t::AddSound(const std::string& asset_name, const std::string& path)
 	{
 		try {
 			m_SFXs[asset_name] = std::make_unique<SDL::MixChunk>(path.c_str());
@@ -77,9 +77,13 @@ namespace SGL2 {
 			std::cout << e << '\n';
 		}
 	}
-	const SDL::MixChunk& AssetManager::GetSound(const std::string& asset_name) const
+	const SDL::MixChunk& AssetManager_t::GetSound(const std::string& asset_name) const
 	{
 		return (*m_SFXs.at(asset_name));
+	}
+	AssetManager_t& AssetManager() {
+		static AssetManager_t instance(&Game());
+		return instance;
 	}
 }
 #endif

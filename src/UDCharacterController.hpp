@@ -15,8 +15,8 @@ public:
 	void Move(const Vector2 vec);
 	void Rotate(float rot);
 
-	void Startup(Game& game);
-	void Update(Game& game);
+	void Startup(Game_t& game);
+	void Update(Game_t& game);
 private:
 	void DoMove();
 	void DoRotate();

@@ -10,7 +10,7 @@
 #endif
 
 namespace SGL2 {
-	Game* init();
+	void init();
 }
 #endif
 

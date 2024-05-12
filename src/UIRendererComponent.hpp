@@ -22,8 +22,8 @@ namespace SGL2 {
 			int offsetX = 0, int offsety = 0
 		);
 
-		void Startup(Game& game) override;
-		void Update(Game& game) override;
+		void Startup(Game_t& game) override;
+		void Update(Game_t& game) override;
 
 	private:
 		int m_OffsetX;
