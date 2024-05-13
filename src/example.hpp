@@ -12,11 +12,11 @@
 class c1 : public Component {
 public:
 	c1(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
-	void Startup(Game_t& game) override {
+	void Startup() override {
 
 		std::cout << this->m_Id << '\n';
 	}
-	void Update(Game_t& game) override {
+	void Update() override {
 	}
 };
 
@@ -29,11 +29,11 @@ class ControllerScript : public Component {
 public:
 	ControllerScript(GameObject& gameobject, const std::string& id) : Component(gameobject, id) {}
 
-	void Startup(Game_t& game) override {
+	void Startup() override {
 		
 		std::cout << this->m_Id << '\n';
 	}
-	void Update(Game_t& game) override {
+	void Update() override {
 		//link the camera to the player
 		
 		Game().GetMainCamera().transform.SetPositionByMiddle(this->m_RootGameObject.transform.Middle());

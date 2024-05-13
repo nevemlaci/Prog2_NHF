@@ -19,10 +19,10 @@ namespace SGL2 {
 		m_ShouldRotate = true;
 	}
 
-	void UDCharacterController::Startup(Game_t& game)
+	void UDCharacterController::Startup()
 	{}
 
-	void UDCharacterController::Update(Game_t & game)
+	void UDCharacterController::Update()
 	{
 		if (m_ShouldMove) DoMove();
 		if (m_ShouldRotate) DoRotate();

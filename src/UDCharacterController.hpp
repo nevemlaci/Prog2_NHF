@@ -26,8 +26,8 @@ public:
 	void Rotate(float rot);
 
 
-	void Startup(Game_t& game);
-	void Update(Game_t& game);
+	void Startup();
+	void Update();
 private:
 	void DoMove();
 	void DoRotate();

@@ -45,7 +45,7 @@ namespace SGL2 {
 		m_HasStarted = true;
 		for (auto& gameobject_ptr : m_GameObjects) {
 			for (auto& component_ptr : gameobject_ptr->m_Components) {
-				component_ptr->Startup(*this);
+				component_ptr->Startup();
 			}
 		}
 		MainLoop();
@@ -71,7 +71,7 @@ namespace SGL2 {
 			for (auto& gameobject_ptr : m_GameObjects) {
 				if (gameobject_ptr->Active()) {
 					for (auto& component_ptr : gameobject_ptr->m_Components) {
-						component_ptr->Update(*this);
+						component_ptr->Update();
 					}
 				}
 			}

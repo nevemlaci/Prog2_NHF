@@ -21,16 +21,16 @@ namespace SGL2 {
 		m_Texture(AssetManager().GetTexture(asset_name)) 
 	{}
 
-	void RendererComponent::Startup(Game_t& game)  {
+	void RendererComponent::Startup()  {
 		std::cout << "\tAdded RendererComponent(id: " << m_Id << ") to " << m_RootGameObject.GetId() << '\n';
 	}
 
-	void RendererComponent::Update(Game_t& game) {
-		game.GetRenderer() << SDL::at({ 
-			m_RootGameObject.transform.position.x + m_OffsetX - game.GetMainCamera().transform.position.x,
-			m_RootGameObject.transform.position.y + m_OffsetY - game.GetMainCamera().transform.position.y,
-			m_RootGameObject.transform.size.x * m_ScaleX * game.GetMainCamera().transform.size.x/game.GetScreenSize().x,
-			m_RootGameObject.transform.size.y * m_ScaleY * game.GetMainCamera().transform.size.y / game.GetScreenSize().y })
+	void RendererComponent::Update() {
+		Game().GetRenderer() << SDL::at({
+			m_RootGameObject.transform.position.x + m_OffsetX - Game().GetMainCamera().transform.position.x,
+			m_RootGameObject.transform.position.y + m_OffsetY - Game().GetMainCamera().transform.position.y,
+			m_RootGameObject.transform.size.x * m_ScaleX * Game().GetMainCamera().transform.size.x/Game().GetScreenSize().x,
+			m_RootGameObject.transform.size.y * m_ScaleY * Game().GetMainCamera().transform.size.y / Game().GetScreenSize().y })
 			<< m_Texture;
 	}
 

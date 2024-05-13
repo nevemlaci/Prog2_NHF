@@ -31,8 +31,8 @@ public:
 		double offsetX = 0, double offsety = 0
 	);
 
-	void Startup(Game_t& game) override;
-	void Update(Game_t& game) override;
+	void Startup() override;
+	void Update() override;
 
 private:
 	double m_OffsetX;

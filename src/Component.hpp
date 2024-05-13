@@ -30,12 +30,10 @@ public:
 	//MyTodo: remove game references from Startup() and Update()
 
 	/// @brief Runs after the component has been attached to the parent gameobject
-	/// @param game reference to the game instance
-	virtual void Startup(Game_t& game) = 0;
+	virtual void Startup() = 0;
 
 	/// @brief Runs on every frame of the game
-	/// @param game reference to the game instance
-	virtual void Update(Game_t& game) = 0;
+	virtual void Update() = 0;
 
 	/// @brief getter for m_Id
 	/// @return returns the id of the component

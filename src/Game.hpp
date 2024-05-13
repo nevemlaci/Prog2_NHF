@@ -76,7 +76,7 @@ public:
 		//we call the startup methods from the components when the gameobject gets added
 		if (m_HasStarted) {
 			for (auto& component_ptr : m_GameObjects.back()->m_Components) {
-				component_ptr->Startup(*this);
+				component_ptr->Startup();
 			}
 		}
 		return dynamic_cast<T&>(*m_GameObjects.back());
