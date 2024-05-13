@@ -23,6 +23,14 @@ namespace SGL2 {
 
 	const SDL::Font& AssetManager_t::GetFont(const std::string& asset_name) const
 	{
+		try {
+			return (*m_Fonts.at(asset_name));
+		}
+		catch (std::out_of_range e) {
+			throw std::out_of_range(std::string("Font with asset name: ") + asset_name + std::string(" was not found."));
+		}
+
+
 		return (*m_Fonts.at(asset_name));
 	}
 	
@@ -46,7 +54,13 @@ namespace SGL2 {
 
 	const SDL::Text& AssetManager_t::GetText(const std::string& asset_name) const
 	{
-		return (*m_Texts.at(asset_name));
+		try {
+			return (*m_Texts.at(asset_name));
+		}
+		catch (std::out_of_range e) {
+			throw std::out_of_range(std::string("Text with asset name: ") + asset_name + std::string(" was not found."));
+		}
+		
 	}
 
 	void AssetManager_t::AddTexture(const std::string& asset_name, const std::string& path)
@@ -61,7 +75,12 @@ namespace SGL2 {
 
 	const SDL::Texture& AssetManager_t::GetTexture(const std::string& asset_name) const
 	{
-		return (*m_Textures.at(asset_name));
+		try {
+			return (*m_Textures.at(asset_name));
+		}
+		catch (std::out_of_range e) {
+			throw std::out_of_range(std::string("Texture with asset name: ") + asset_name + std::string(" was not found."));
+		}
 	}
 
 	void AssetManager_t::SetMusic(const std::string& path)
@@ -85,7 +104,12 @@ namespace SGL2 {
 	}
 	const SDL::MixChunk& AssetManager_t::GetSound(const std::string& asset_name) const
 	{
-		return (*m_SFXs.at(asset_name));
+		try {
+			return (*m_SFXs.at(asset_name));
+		}
+		catch (std::out_of_range e) {
+			throw std::out_of_range(std::string("Sound with asset name: ") + asset_name + std::string(" was not found."));
+		}
 	}
 	AssetManager_t& AssetManager() {
 		static AssetManager_t instance(&Game());

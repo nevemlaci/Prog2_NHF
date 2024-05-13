@@ -27,8 +27,6 @@ public:
 
 	virtual ~Component() {}
 	
-	//MyTodo: remove game references from Startup() and Update()
-
 	/// @brief Runs after the component has been attached to the parent gameobject
 	virtual void Startup() = 0;
 
