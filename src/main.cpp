@@ -52,6 +52,16 @@ int main(int argc, char** argv) {
 		EXPECT_EQ(testcomp_2.GetId(), std::string("c1") /*the first component had the id "c1"*/);
 	}END
 
+	Vector2 v(0, 1);
+	TEST(Vector2, Length) {
+		EXPECT_DOUBLE_EQ(1.0, v.abs());
+	}END
+
+	Vector2 vn(1, 1);
+	TEST(Vector2, Normalize) {
+		EXPECT_DOUBLE_EQ(1.0 / sqrt(2), vn.normalized().x);
+	}END
+
 	Transform t = { Vector2(0, 0), Vector2(50, 100), 0 };
 	
 	TEST(Transform, Middle) {
