@@ -29,7 +29,7 @@ public:
 	/// @brief runs the game
 	void Run();
 #ifndef CPORTA
-	Game_t();
+	
 
 	/// @brief 
 	/// @return SDL instance 
@@ -103,6 +103,7 @@ public:
 	void DeleteGameObject(const std::string& id);
 
 private:
+	Game_t();
 #ifndef CPORTA
 	/// @brief Runs the main loop of the game
 	void MainLoop();
