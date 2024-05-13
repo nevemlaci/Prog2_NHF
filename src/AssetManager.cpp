@@ -58,6 +58,7 @@ namespace SGL2 {
 			return (*m_Texts.at(asset_name));
 		}
 		catch (std::out_of_range e) {
+			std::cout << (std::string("Text with asset name: ") + asset_name + std::string(" was not found.")) << '\n';
 			throw std::out_of_range(std::string("Text with asset name: ") + asset_name + std::string(" was not found."));
 		}
 		
@@ -79,6 +80,7 @@ namespace SGL2 {
 			return (*m_Textures.at(asset_name));
 		}
 		catch (std::out_of_range e) {
+			std::cout << (std::string("Texture with asset name: ") + asset_name + std::string(" was not found.")) << '\n';
 			throw std::out_of_range(std::string("Texture with asset name: ") + asset_name + std::string(" was not found."));
 		}
 	}
@@ -108,6 +110,7 @@ namespace SGL2 {
 			return (*m_SFXs.at(asset_name));
 		}
 		catch (std::out_of_range e) {
+			std::cout << (std::string("Sound with asset name: ") + asset_name + std::string(" was not found.")) << '\n';
 			throw std::out_of_range(std::string("Sound with asset name: ") + asset_name + std::string(" was not found."));
 		}
 	}
