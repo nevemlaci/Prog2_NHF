@@ -172,7 +172,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CPORTA|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <EnableASAN>true</EnableASAN>
   </PropertyGroup>
@@ -218,7 +218,6 @@
     <ExecutablePath>$(SolutionDir)lib;$(ExecutablePath)</ExecutablePath>
     <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
     <SourcePath>C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib;$(SourcePath)</SourcePath>
-    <ClangTidyChecks>clang-analyzer-*</ClangTidyChecks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\SDL_Wrapper_Lib;$(SolutionDir)include</IncludePath>
@@ -269,7 +268,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;MEMTRACE;CPORTA</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;MEMTRACE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
@@ -292,11 +291,10 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <AdditionalOptions>/Zc:__cplusplus -Xclang -std=c++11 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <OmitFramePointers>false</OmitFramePointers>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
