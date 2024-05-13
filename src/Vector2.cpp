@@ -11,7 +11,7 @@ namespace SGL2 {
 	Vector2::Vector2(double x , double y) : x(x), y(y) {}
 
 	double Vector2::abs() const {
-		return sqrtf((x * x) + (y * y));
+		return sqrt((x * x) + (y * y));
 	}
 
 	double Vector2::length() const {
