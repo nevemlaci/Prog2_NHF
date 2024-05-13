@@ -11,9 +11,14 @@ int main(int argc, char** argv) {
 	Game();
 	SGL2::init();
 #ifndef CPORTA
-	InputManager();
-	AssetManager();
-	Game().Run();
+	try {
+		InputManager();
+		AssetManager();
+		Game().Run();
+	}
+	catch (std::runtime_error e) {
+		std::cout << std::endl << e.what() << std::endl;
+	}
 #endif
 
 #ifdef CPORTA

@@ -7,6 +7,12 @@
 namespace SGL2 {
 	AssetManager_t::AssetManager_t(Game_t* game) : m_RootGameRef(*game), m_Music(nullptr)
 	{
+		if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_WEBP) == 0) 
+			throw std::runtime_error(IMG_GetError());
+		if (Mix_Init(MIX_INIT_OGG | MIX_INIT_MP3) == 0) 
+			throw std::runtime_error(Mix_GetError());
+		if (TTF_Init() == -1) throw std::runtime_error( TTF_GetError());
+
 		SDL::Mixer::OpenAudio(16000, MIX_DEFAULT_FORMAT, 2, 512);
 	}
 	

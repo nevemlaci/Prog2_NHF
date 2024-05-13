@@ -78,7 +78,7 @@ public:
 	/// @return SDL::MixChunk reference to thesound object
 	const SDL::MixChunk& GetSound(const std::string& asset_name) const;
 private:
-	//MyTodo : init SDL_MIXER inside this ctor
+	
 	AssetManager_t(Game_t* game);
 	std::map<std::string, std::unique_ptr<SDL::Texture>> m_Textures;
 	std::map<std::string, std::unique_ptr<SDL::Text>> m_Texts;
