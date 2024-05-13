@@ -15,13 +15,13 @@ namespace SGL2 {
 		m_Title(""), m_SDL(SDL::SDL::Get()),
 		m_Window("", 0, 0, 1920, 1080, SDL_WINDOW_FULLSCREEN_DESKTOP),
 		m_Renderer(m_Window, 0, SDL_RENDERER_ACCELERATED),
-		m_MainCamera(*this, Vector2(0,0), Vector2(0,0))
+		m_MainCamera(Vector2(0,0), Vector2(0,0))
 	{
 		SDL_DisplayMode dm;
 		SDL_GetDesktopDisplayMode(0, &dm);
 		m_ScreenSize.x = static_cast<float>(dm.w);
 		m_ScreenSize.y = static_cast<float>(dm.h);
-		m_MainCamera = Camera(*this, Vector2(0, 0), m_ScreenSize);
+		m_MainCamera = Camera(Vector2(0, 0), m_ScreenSize);
 	}
 #endif
 

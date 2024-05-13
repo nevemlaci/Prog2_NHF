@@ -30,7 +30,6 @@ public:
 	/// @param size 
 	/// @param rot 
 	GameObject(
-		Game_t& root_game,
 		const std::string& id, 
 		const Vector2& position, 
 		const Vector2& size, 
@@ -82,8 +81,6 @@ public:
 
 	const std::string& GetId() const { return m_Id; }
 
-	Game_t& GetRoot() const { return m_RootGameRef; }
-
 	/// @brief Active state getter
 	/// @return 
 	bool Active() const;
@@ -103,7 +100,6 @@ public:
 
 protected:
 	std::string m_Id; 
-	Game_t& m_RootGameRef; 
 	bool m_IsActive;
 	std::vector< std::unique_ptr<Component> > m_Components;
 #ifndef CPORTA

@@ -9,7 +9,6 @@
 namespace SGL2 {
 #ifndef CPORTA
 	GameObject::GameObject(
-		Game_t& root_game,
 		const std::string& id,
 		const Vector2& position, 
 		const Vector2& size,
@@ -17,7 +16,6 @@ namespace SGL2 {
 	) :
 		transform({ position, size, rot }),
 		m_Id(id),
-		m_RootGameRef(root_game),
 		m_IsActive(true)
 	{
 		std::cout << "New GameObject added. Id: " << m_Id << '\n';

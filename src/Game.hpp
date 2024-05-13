@@ -71,7 +71,7 @@ public:
 	/// @return returns a reference to the newly added GameObject
 	template<typename T, class... Args>
 	T& AddGameObject(Args&&... args) {
-		m_GameObjects.push_back(std::make_unique<T>((*this), std::forward<Args>(args)...));
+		m_GameObjects.push_back(std::make_unique<T>(std::forward<Args>(args)...));
 		//if the game has already started
 		//we call the startup methods from the components when the gameobject gets added
 		if (m_HasStarted) {
