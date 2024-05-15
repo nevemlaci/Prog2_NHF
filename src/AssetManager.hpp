@@ -25,8 +25,6 @@ public:
 	/// @param fontsize the size the font should be loaded with
 	void AddFont(const std::string& asset_name, const std::string& font_path, unsigned int fontsize = 14);
 
-	//MyTodo: add try-catch to getters for not-found cases
-
 	/// @brief 
 	/// @param asset_name 
 	/// @return SDL::Font reference to the font
