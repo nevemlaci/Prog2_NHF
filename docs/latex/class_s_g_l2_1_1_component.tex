@@ -1,0 +1,99 @@
+\doxysection{SGL2\+::Component Class Reference}
+\hypertarget{class_s_g_l2_1_1_component}{}\label{class_s_g_l2_1_1_component}\index{SGL2::Component@{SGL2::Component}}
+Inheritance diagram for SGL2\+::Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.996435cm]{class_s_g_l2_1_1_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_component_a1f36c1ffe4cfac025ab3c20b97cf2b29}{Component}} (\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&gameobject, const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_s_g_l2_1_1_component}{Component} ctor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_g_l2_1_1_component_af20001448f37f473b9c1f6df00dfd053}{Startup}} ()=0
+\begin{DoxyCompactList}\small\item\em Runs after the component has been attached to the parent gameobject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_g_l2_1_1_component_ad5bf35e6d80ccb398521e327ca15dcdd}{Update}} ()=0
+\begin{DoxyCompactList}\small\item\em Runs on every frame of the game. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_s_g_l2_1_1_component_a9969f10d50f69f73f0bec71052dcf746}{Get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em getter for m\+\_\+\+Id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_component_a543c8f878f6e405878dcdf6e1d3a1922}\label{class_s_g_l2_1_1_component_a543c8f878f6e405878dcdf6e1d3a1922} 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \& {\bfseries m\+\_\+\+Root\+Game\+Object}
+\begin{DoxyCompactList}\small\item\em reference to the parent gameobject \end{DoxyCompactList}\item 
+\Hypertarget{class_s_g_l2_1_1_component_a9b295cbc62c8693de9edb5dfad95dacc}\label{class_s_g_l2_1_1_component_a9b295cbc62c8693de9edb5dfad95dacc} 
+std\+::string {\bfseries m\+\_\+\+Id}
+\begin{DoxyCompactList}\small\item\em id of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_g_l2_1_1_component_a1f36c1ffe4cfac025ab3c20b97cf2b29}\label{class_s_g_l2_1_1_component_a1f36c1ffe4cfac025ab3c20b97cf2b29} 
+\index{SGL2::Component@{SGL2::Component}!Component@{Component}}
+\index{Component@{Component}!SGL2::Component@{SGL2::Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily SGL2\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&}]{gameobject,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_s_g_l2_1_1_component}{Component} ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gameobject} & parent gameobject \\
+\hline
+{\em id} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_component_a9969f10d50f69f73f0bec71052dcf746}\label{class_s_g_l2_1_1_component_a9969f10d50f69f73f0bec71052dcf746} 
+\index{SGL2::Component@{SGL2::Component}!GetId@{GetId}}
+\index{GetId@{GetId}!SGL2::Component@{SGL2::Component}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily const std\+::string \& SGL2\+::\+Component\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for m\+\_\+\+Id 
+
+\begin{DoxyReturn}{Returns}
+returns the id of the component 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_component_af20001448f37f473b9c1f6df00dfd053}\label{class_s_g_l2_1_1_component_af20001448f37f473b9c1f6df00dfd053} 
+\index{SGL2::Component@{SGL2::Component}!Startup@{Startup}}
+\index{Startup@{Startup}!SGL2::Component@{SGL2::Component}}
+\doxysubsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily virtual void SGL2\+::\+Component\+::\+Startup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Runs after the component has been attached to the parent gameobject. 
+
+
+
+Implemented in \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a8c1dc666290e7a06b999a8dc17ca9838}{SGL2\+::\+UDCharacter\+Controller}}, \mbox{\hyperlink{class_s_g_l2_1_1_renderer_component_a6686840c76d1f6d09532867ff078202f}{SGL2\+::\+Renderer\+Component}}, and \mbox{\hyperlink{class_s_g_l2_1_1_u_i_renderer_component_a6898db32129948f4575322752452218a}{SGL2\+::\+UIRenderer\+Component}}.
+
+\Hypertarget{class_s_g_l2_1_1_component_ad5bf35e6d80ccb398521e327ca15dcdd}\label{class_s_g_l2_1_1_component_ad5bf35e6d80ccb398521e327ca15dcdd} 
+\index{SGL2::Component@{SGL2::Component}!Update@{Update}}
+\index{Update@{Update}!SGL2::Component@{SGL2::Component}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void SGL2\+::\+Component\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Runs on every frame of the game. 
+
+
+
+Implemented in \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a4d4063f370a72de34350d6cff09cba09}{SGL2\+::\+UDCharacter\+Controller}}, \mbox{\hyperlink{class_s_g_l2_1_1_renderer_component_a37673ccd39ae5b2cd94810575c939a5a}{SGL2\+::\+Renderer\+Component}}, and \mbox{\hyperlink{class_s_g_l2_1_1_u_i_renderer_component_a0626911af2b4aed93ad649b1a60d7ed5}{SGL2\+::\+UIRenderer\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Component.\+hpp\item 
+Component.\+cpp\end{DoxyCompactItemize}

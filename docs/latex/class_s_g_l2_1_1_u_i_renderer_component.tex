@@ -1,0 +1,107 @@
+\doxysection{SGL2\+::UIRenderer\+Component Class Reference}
+\hypertarget{class_s_g_l2_1_1_u_i_renderer_component}{}\label{class_s_g_l2_1_1_u_i_renderer_component}\index{SGL2::UIRendererComponent@{SGL2::UIRendererComponent}}
+
+
+renders a texture on the screen with an absolute position. For scene rendering, see \doxylink{class_s_g_l2_1_1_renderer_component}{Renderer\+Component}  
+
+
+
+
+{\ttfamily \#include $<$UIRenderer\+Component.\+hpp$>$}
+
+Inheritance diagram for SGL2\+::UIRenderer\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_g_l2_1_1_u_i_renderer_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_u_i_renderer_component_a4402b970553b11366f4aa677f8ba4029}{UIRenderer\+Component}} (\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&root, const std\+::string \&id, const std\+::string \&asset\+\_\+name, int scaleX=1, int scaleY=1, int offsetX=0, int offsety=0)
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_u_i_renderer_component_a6898db32129948f4575322752452218a}{Startup}} () override
+\begin{DoxyCompactList}\small\item\em Runs after the component has been attached to the parent gameobject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_u_i_renderer_component_a0626911af2b4aed93ad649b1a60d7ed5}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Runs on every frame of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_s_g_l2_1_1_component}{SGL2\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_component_a1f36c1ffe4cfac025ab3c20b97cf2b29}{Component}} (\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&gameobject, const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_s_g_l2_1_1_component}{Component} ctor. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_s_g_l2_1_1_component_a9969f10d50f69f73f0bec71052dcf746}{Get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em getter for m\+\_\+\+Id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_s_g_l2_1_1_component}{SGL2\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \& {\bfseries m\+\_\+\+Root\+Game\+Object}
+\begin{DoxyCompactList}\small\item\em reference to the parent gameobject \end{DoxyCompactList}\item 
+std\+::string {\bfseries m\+\_\+\+Id}
+\begin{DoxyCompactList}\small\item\em id of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+renders a texture on the screen with an absolute position. For scene rendering, see \doxylink{class_s_g_l2_1_1_renderer_component}{Renderer\+Component} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_g_l2_1_1_u_i_renderer_component_a4402b970553b11366f4aa677f8ba4029}\label{class_s_g_l2_1_1_u_i_renderer_component_a4402b970553b11366f4aa677f8ba4029} 
+\index{SGL2::UIRendererComponent@{SGL2::UIRendererComponent}!UIRendererComponent@{UIRendererComponent}}
+\index{UIRendererComponent@{UIRendererComponent}!SGL2::UIRendererComponent@{SGL2::UIRendererComponent}}
+\doxysubsubsection{\texorpdfstring{UIRendererComponent()}{UIRendererComponent()}}
+{\footnotesize\ttfamily SGL2\+::\+UIRenderer\+Component\+::\+UIRenderer\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&}]{root,  }\item[{const std\+::string \&}]{id,  }\item[{const std\+::string \&}]{asset\+\_\+name,  }\item[{int}]{scaleX = {\ttfamily 1},  }\item[{int}]{scaleY = {\ttfamily 1},  }\item[{int}]{offsetX = {\ttfamily 0},  }\item[{int}]{offsety = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & root game object(gets passed automatically by \doxylink{class_s_g_l2_1_1_game_object_a8a4fdb19b58d63bbe0e37cec2af0f5c9}{Game\+Object\+::\+Add\+Component()} \\
+\hline
+{\em id} & \\
+\hline
+{\em asset\+\_\+name} & the name of the texture asset to be rendered by this component \\
+\hline
+{\em scaleX} & scaling relative to the root\textquotesingle{}s width \\
+\hline
+{\em scaleY} & scaling relative to the root\textquotesingle{}s height \\
+\hline
+{\em offsetX} & offset from the root\textquotesingle{}s X position \\
+\hline
+{\em offsety} & offset from the root\textquotesingle{}s X position \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_u_i_renderer_component_a6898db32129948f4575322752452218a}\label{class_s_g_l2_1_1_u_i_renderer_component_a6898db32129948f4575322752452218a} 
+\index{SGL2::UIRendererComponent@{SGL2::UIRendererComponent}!Startup@{Startup}}
+\index{Startup@{Startup}!SGL2::UIRendererComponent@{SGL2::UIRendererComponent}}
+\doxysubsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily void SGL2\+::\+UIRenderer\+Component\+::\+Startup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Runs after the component has been attached to the parent gameobject. 
+
+
+
+Implements \mbox{\hyperlink{class_s_g_l2_1_1_component_af20001448f37f473b9c1f6df00dfd053}{SGL2\+::\+Component}}.
+
+\Hypertarget{class_s_g_l2_1_1_u_i_renderer_component_a0626911af2b4aed93ad649b1a60d7ed5}\label{class_s_g_l2_1_1_u_i_renderer_component_a0626911af2b4aed93ad649b1a60d7ed5} 
+\index{SGL2::UIRendererComponent@{SGL2::UIRendererComponent}!Update@{Update}}
+\index{Update@{Update}!SGL2::UIRendererComponent@{SGL2::UIRendererComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void SGL2\+::\+UIRenderer\+Component\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Runs on every frame of the game. 
+
+
+
+Implements \mbox{\hyperlink{class_s_g_l2_1_1_component_ad5bf35e6d80ccb398521e327ca15dcdd}{SGL2\+::\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UIRenderer\+Component.\+hpp\item 
+UIRenderer\+Component.\+cpp\end{DoxyCompactItemize}

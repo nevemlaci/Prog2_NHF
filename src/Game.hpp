@@ -128,6 +128,10 @@ private:
 #ifdef CPORTA
 
 #endif
+
+#undef delete
+	Game_t(const Game_t&) = delete;
+	Game_t operator=(const Game_t&) = delete;
 };
 	Game_t& Game();
 }

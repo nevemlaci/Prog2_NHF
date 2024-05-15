@@ -23,12 +23,14 @@ namespace SGL2 {
 class GameObject {
 	friend class Game_t;
 public:
+
+
 	/// @brief 
 	/// @param root_game gets passed by the game when adding the gameobject automatically.
 	/// @param id  
 	/// @param position 
 	/// @param size 
-	/// @param rot 
+	/// @param rot base rotation in degrees
 	GameObject(
 		const std::string& id, 
 		const Vector2& position, 
@@ -109,6 +111,10 @@ protected:
 #ifdef CPORTA
 
 #endif
+
+#undef delete //memtrace griefing
+	GameObject(const GameObject&) = delete;
+	GameObject operator=(const GameObject&) = delete;
 };
 }
 #endif

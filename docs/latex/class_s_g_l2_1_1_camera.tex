@@ -1,0 +1,71 @@
+\doxysection{SGL2\+::Camera Class Reference}
+\hypertarget{class_s_g_l2_1_1_camera}{}\label{class_s_g_l2_1_1_camera}\index{SGL2::Camera@{SGL2::Camera}}
+
+
+\doxylink{class_s_g_l2_1_1_camera}{Camera}.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+Inheritance diagram for SGL2\+::Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_g_l2_1_1_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_camera_a46f5d1c6b3a93d01f91120b816821e6c}\label{class_s_g_l2_1_1_camera_a46f5d1c6b3a93d01f91120b816821e6c} 
+class {\bfseries Game\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{SGL2\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{Game\+Object}} (const std\+::string \&id, const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&position, const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&size, float rot)
+\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a8a4fdb19b58d63bbe0e37cec2af0f5c9}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Constructs a new component and adds it to the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a3cd566859f93df1f0568ff104990a982}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em Get the component of a given type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a81681790e253f910f0537013e24e9dda}{Get\+Component}} (const std\+::string \&id) const
+\begin{DoxyCompactList}\small\item\em Get the first component of T type of the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object} with a specific id. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries Get\+Id} () const
+\item 
+bool \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a53ec8e9ca1e915d9998ab1e25a293861}{Active}} () const
+\begin{DoxyCompactList}\small\item\em Active state getter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a3af302b56e8bf9cc1f200e7824304681}{Active}} (bool a)
+\begin{DoxyCompactList}\small\item\em Active state setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{SGL2\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_g_l2_1_1_transform}{Transform}} {\bfseries transform}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{SGL2\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} (const \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&)=delete
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} {\bfseries operator=} (const \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{SGL2\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+\+Id}
+\item 
+bool {\bfseries m\+\_\+\+Is\+Active}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_s_g_l2_1_1_component}{Component}} $>$ $>$ {\bfseries m\+\_\+\+Components}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_s_g_l2_1_1_camera}{Camera}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Camera.\+hpp\item 
+Camera.\+cpp\end{DoxyCompactItemize}

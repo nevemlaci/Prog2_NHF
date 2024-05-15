@@ -1,0 +1,82 @@
+\doxysection{SGL2\+::Input\+Manager\+\_\+t Class Reference}
+\hypertarget{class_s_g_l2_1_1_input_manager__t}{}\label{class_s_g_l2_1_1_input_manager__t}\index{SGL2::InputManager\_t@{SGL2::InputManager\_t}}
+
+
+Handles input mapping.  
+
+
+
+
+{\ttfamily \#include $<$Input.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t_abd14b457cc3de5e919b55219a284756b}{Add\+Macro}} (const std\+::string \&macro\+\_\+name, const char \texorpdfstring{$\ast$}{*}key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Adds a new key to an input macro. If the macro does not exist it gets created. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t_a9b299add562ad61baf2e1fcce8df9ab0}{Get}} (const std\+::string \&macro\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get the state of a macro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t}{Input\+Manager\+\_\+t}} \& \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t_a23ae5cb529884db32693572daa5b6fd7}{Input\+Manager}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles input mapping. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_input_manager__t_abd14b457cc3de5e919b55219a284756b}\label{class_s_g_l2_1_1_input_manager__t_abd14b457cc3de5e919b55219a284756b} 
+\index{SGL2::InputManager\_t@{SGL2::InputManager\_t}!AddMacro@{AddMacro}}
+\index{AddMacro@{AddMacro}!SGL2::InputManager\_t@{SGL2::InputManager\_t}}
+\doxysubsubsection{\texorpdfstring{AddMacro()}{AddMacro()}}
+{\footnotesize\ttfamily void SGL2\+::\+Input\+Manager\+\_\+t\+::\+Add\+Macro (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{macro\+\_\+name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Adds a new key to an input macro. If the macro does not exist it gets created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em macro\+\_\+name} & \\
+\hline
+{\em key\+\_\+name} & Key name reference\+: \href{https://wiki.libsdl.org/SDL2/SDL_ScancodeAndKeycode}{\texttt{ https\+://wiki.\+libsdl.\+org/\+SDL2/\+SDL\+\_\+\+Scancode\+And\+Keycode}} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_input_manager__t_a9b299add562ad61baf2e1fcce8df9ab0}\label{class_s_g_l2_1_1_input_manager__t_a9b299add562ad61baf2e1fcce8df9ab0} 
+\index{SGL2::InputManager\_t@{SGL2::InputManager\_t}!Get@{Get}}
+\index{Get@{Get}!SGL2::InputManager\_t@{SGL2::InputManager\_t}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily bool SGL2\+::\+Input\+Manager\+\_\+t\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{macro\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Get the state of a macro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em macro\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key behind the macro is being pressed, false otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_s_g_l2_1_1_input_manager__t_a23ae5cb529884db32693572daa5b6fd7}\label{class_s_g_l2_1_1_input_manager__t_a23ae5cb529884db32693572daa5b6fd7} 
+\index{SGL2::InputManager\_t@{SGL2::InputManager\_t}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!SGL2::InputManager\_t@{SGL2::InputManager\_t}}
+\doxysubsubsection{\texorpdfstring{InputManager}{InputManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t}{Input\+Manager\+\_\+t}} \& Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+Input manager instance 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Input.\+hpp\item 
+Input.\+cpp\end{DoxyCompactItemize}

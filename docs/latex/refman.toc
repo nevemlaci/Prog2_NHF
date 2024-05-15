@@ -1,0 +1,112 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Asset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}AddFont()}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}AddSound()}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}AddText()}{8}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}AddTexture()}{9}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}GetFont()}{9}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}GetMusic()}{9}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}GetSound()}{9}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}GetText()}{10}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}GetTexture()}{10}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}SetMusic()}{10}{subsubsection.4.1.2.10}%
+\contentsline {section}{\numberline {4.2}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Camera Class Reference}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{12}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Component Class Reference}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Constructor \& Destructor Documentation}{12}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Component()}{12}{subsubsection.4.3.1.1}%
+\contentsline {subsection}{\numberline {4.3.2}Member Function Documentation}{13}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}GetId()}{13}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Startup()}{13}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}Update()}{13}{subsubsection.4.3.2.3}%
+\contentsline {section}{\numberline {4.4}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Class Reference}{13}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{14}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Member Function Documentation}{14}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}AddGameObject()}{14}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}DeleteGameObject()}{15}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}GetGameObject()}{15}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}GetMainCamera()}{16}{subsubsection.4.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.4.2.5}GetRenderer()}{16}{subsubsection.4.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.4.2.6}GetScreenSize()}{16}{subsubsection.4.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.4.2.7}GetSDL()}{16}{subsubsection.4.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.4.2.8}GetTitle()}{16}{subsubsection.4.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.4.2.9}GetWindow()}{17}{subsubsection.4.4.2.9}%
+\contentsline {section}{\numberline {4.5}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object Class Reference}{17}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{18}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{18}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}GameObject()}{18}{subsubsection.4.5.2.1}%
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{18}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}Active()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}Active()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{subsubsection.4.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}AddComponent()}{19}{subsubsection.4.5.3.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.4}GetComponent()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{19}{subsubsection.4.5.3.4}%
+\contentsline {subsubsection}{\numberline {4.5.3.5}GetComponent()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{20}{subsubsection.4.5.3.5}%
+\contentsline {section}{\numberline {4.6}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Class Reference}{20}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{21}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Member Function Documentation}{21}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}AddMacro()}{21}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}Get()}{21}{subsubsection.4.6.2.2}%
+\contentsline {subsection}{\numberline {4.6.3}Friends And Related Symbol Documentation}{22}{subsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}InputManager}{22}{subsubsection.4.6.3.1}%
+\contentsline {section}{\numberline {4.7}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Renderer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Component Class Reference}{22}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{23}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{23}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}RendererComponent()}{23}{subsubsection.4.7.2.1}%
+\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{23}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}Startup()}{23}{subsubsection.4.7.3.1}%
+\contentsline {subsubsection}{\numberline {4.7.3.2}Update()}{24}{subsubsection.4.7.3.2}%
+\contentsline {section}{\numberline {4.8}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Time\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Class Reference}{24}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{24}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Member Function Documentation}{24}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}DeltaTime()}{24}{subsubsection.4.8.2.1}%
+\contentsline {subsection}{\numberline {4.8.3}Friends And Related Symbol Documentation}{25}{subsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.1}Time}{25}{subsubsection.4.8.3.1}%
+\contentsline {section}{\numberline {4.9}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Transform Struct Reference}{25}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{25}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Member Function Documentation}{25}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}Middle()}{25}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}SetPositionByMiddle()}{25}{subsubsection.4.9.2.2}%
+\contentsline {section}{\numberline {4.10}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::UDCharacter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{26}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{27}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{27}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}UDCharacterController()}{27}{subsubsection.4.10.2.1}%
+\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{27}{subsection.4.10.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.1}Move()}{27}{subsubsection.4.10.3.1}%
+\contentsline {subsubsection}{\numberline {4.10.3.2}Rotate()}{27}{subsubsection.4.10.3.2}%
+\contentsline {subsubsection}{\numberline {4.10.3.3}Startup()}{27}{subsubsection.4.10.3.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.4}Update()}{28}{subsubsection.4.10.3.4}%
+\contentsline {section}{\numberline {4.11}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::UIRenderer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Component Class Reference}{28}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{29}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{29}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}UIRendererComponent()}{29}{subsubsection.4.11.2.1}%
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{29}{subsection.4.11.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}Startup()}{29}{subsubsection.4.11.3.1}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}Update()}{30}{subsubsection.4.11.3.2}%
+\contentsline {section}{\numberline {4.12}SGL2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Vector2 Class Reference}{30}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{30}{subsection.4.12.1}%
+\contentsline {chapter}{\numberline {5}File Documentation}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Asset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Component.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{32}{section.5.3}%
+\contentsline {section}{\numberline {5.4}declaration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{33}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{33}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{34}{section.5.6}%
+\contentsline {section}{\numberline {5.7}init.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{36}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Input.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{36}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Renderer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Component.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{36}{section.5.9}%
+\contentsline {section}{\numberline {5.10}SGL2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{37}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Time.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{37}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Transform.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{38}{section.5.12}%
+\contentsline {section}{\numberline {5.13}UDCharacter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{38}{section.5.13}%
+\contentsline {section}{\numberline {5.14}UIRenderer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Component.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{39}{section.5.14}%
+\contentsline {section}{\numberline {5.15}Vector2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{39}{section.5.15}%
+\contentsline {chapter}{Index}{41}{section*.45}%

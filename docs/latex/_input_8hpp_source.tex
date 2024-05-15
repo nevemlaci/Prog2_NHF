@@ -1,0 +1,36 @@
+\doxysection{Input.\+hpp}
+\hypertarget{_input_8hpp_source}{}\label{_input_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Input.hpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ \_\_Input\_H\_\_}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ \_\_Input\_H\_\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CPORTA\ }\textcolor{comment}{//this\ should\ only\ exist\ when\ we\ are\ in\ a\ non\ console\ only\ environment}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cpp\_SDL\_include.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }SGL2\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t}{InputManager\_t}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t}{InputManager\_t}}\&\ \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t_a23ae5cb529884db32693572daa5b6fd7}{InputManager}}();}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t_abd14b457cc3de5e919b55219a284756b}{AddMacro}}(\textcolor{keyword}{const}\ std::string\&\ macro\_name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ key\_name);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t_a9b299add562ad61baf2e1fcce8df9ab0}{Get}}(\textcolor{keyword}{const}\ std::string\&\ macro\_name);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t}{InputManager\_t}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ std::map<std::string,\ SDL\_Scancode>\ m\_InputMacros;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_input_manager__t}{InputManager\_t}}\&\ InputManager();}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+
+\end{DoxyCode}

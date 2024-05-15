@@ -3,7 +3,6 @@
 #include "AssetManager.hpp"
 #include "Game.hpp"
 #include "Time.hpp"
-#include "Windows.h"
 
 #ifndef CPORTA
 

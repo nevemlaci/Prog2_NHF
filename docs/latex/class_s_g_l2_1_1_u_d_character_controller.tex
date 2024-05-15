@@ -1,0 +1,132 @@
+\doxysection{SGL2\+::UDCharacter\+Controller Class Reference}
+\hypertarget{class_s_g_l2_1_1_u_d_character_controller}{}\label{class_s_g_l2_1_1_u_d_character_controller}\index{SGL2::UDCharacterController@{SGL2::UDCharacterController}}
+
+
+Upside-\/down character controller. Allows for moving a game object with a vector.  
+
+
+
+
+{\ttfamily \#include $<$UDCharacter\+Controller.\+hpp$>$}
+
+Inheritance diagram for SGL2\+::UDCharacter\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_g_l2_1_1_u_d_character_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a90c82348064449305d04dab91bfd4c9f}{UDCharacter\+Controller}} (\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&gameobject, const std\+::string \&id)
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_ac6fb526dae4b9408b2c13ecd9f6dddf2}{Move}} (const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} vec)
+\begin{DoxyCompactList}\small\item\em Moves the root with a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_af3f7018fc86730bf6d6ac594ceb915b1}{Rotate}} (float rot)
+\begin{DoxyCompactList}\small\item\em Rotate the root. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a8c1dc666290e7a06b999a8dc17ca9838}{Startup}} ()
+\begin{DoxyCompactList}\small\item\em Runs after the component has been attached to the parent gameobject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a4d4063f370a72de34350d6cff09cba09}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Runs on every frame of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_s_g_l2_1_1_component}{SGL2\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_component_a1f36c1ffe4cfac025ab3c20b97cf2b29}{Component}} (\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&gameobject, const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_s_g_l2_1_1_component}{Component} ctor. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_s_g_l2_1_1_component_a9969f10d50f69f73f0bec71052dcf746}{Get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em getter for m\+\_\+\+Id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_s_g_l2_1_1_component}{SGL2\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \& {\bfseries m\+\_\+\+Root\+Game\+Object}
+\begin{DoxyCompactList}\small\item\em reference to the parent gameobject \end{DoxyCompactList}\item 
+std\+::string {\bfseries m\+\_\+\+Id}
+\begin{DoxyCompactList}\small\item\em id of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Upside-\/down character controller. Allows for moving a game object with a vector. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_g_l2_1_1_u_d_character_controller_a90c82348064449305d04dab91bfd4c9f}\label{class_s_g_l2_1_1_u_d_character_controller_a90c82348064449305d04dab91bfd4c9f} 
+\index{SGL2::UDCharacterController@{SGL2::UDCharacterController}!UDCharacterController@{UDCharacterController}}
+\index{UDCharacterController@{UDCharacterController}!SGL2::UDCharacterController@{SGL2::UDCharacterController}}
+\doxysubsubsection{\texorpdfstring{UDCharacterController()}{UDCharacterController()}}
+{\footnotesize\ttfamily SGL2\+::\+UDCharacter\+Controller\+::\+UDCharacter\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&}]{gameobject,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em gameobject} & \\
+\hline
+{\em id} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_u_d_character_controller_ac6fb526dae4b9408b2c13ecd9f6dddf2}\label{class_s_g_l2_1_1_u_d_character_controller_ac6fb526dae4b9408b2c13ecd9f6dddf2} 
+\index{SGL2::UDCharacterController@{SGL2::UDCharacterController}!Move@{Move}}
+\index{Move@{Move}!SGL2::UDCharacterController@{SGL2::UDCharacterController}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void SGL2\+::\+UDCharacter\+Controller\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}}}]{vec }\end{DoxyParamCaption})}
+
+
+
+Moves the root with a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & the movement vector. Recommended to be normalized if used for player movement to prevent diagonal speed boost. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_u_d_character_controller_af3f7018fc86730bf6d6ac594ceb915b1}\label{class_s_g_l2_1_1_u_d_character_controller_af3f7018fc86730bf6d6ac594ceb915b1} 
+\index{SGL2::UDCharacterController@{SGL2::UDCharacterController}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!SGL2::UDCharacterController@{SGL2::UDCharacterController}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void SGL2\+::\+UDCharacter\+Controller\+::\+Rotate (\begin{DoxyParamCaption}\item[{float}]{rot }\end{DoxyParamCaption})}
+
+
+
+Rotate the root. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rot} & amount of rotation(in degrees) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_u_d_character_controller_a8c1dc666290e7a06b999a8dc17ca9838}\label{class_s_g_l2_1_1_u_d_character_controller_a8c1dc666290e7a06b999a8dc17ca9838} 
+\index{SGL2::UDCharacterController@{SGL2::UDCharacterController}!Startup@{Startup}}
+\index{Startup@{Startup}!SGL2::UDCharacterController@{SGL2::UDCharacterController}}
+\doxysubsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily void SGL2\+::\+UDCharacter\+Controller\+::\+Startup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Runs after the component has been attached to the parent gameobject. 
+
+
+
+Implements \mbox{\hyperlink{class_s_g_l2_1_1_component_af20001448f37f473b9c1f6df00dfd053}{SGL2\+::\+Component}}.
+
+\Hypertarget{class_s_g_l2_1_1_u_d_character_controller_a4d4063f370a72de34350d6cff09cba09}\label{class_s_g_l2_1_1_u_d_character_controller_a4d4063f370a72de34350d6cff09cba09} 
+\index{SGL2::UDCharacterController@{SGL2::UDCharacterController}!Update@{Update}}
+\index{Update@{Update}!SGL2::UDCharacterController@{SGL2::UDCharacterController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void SGL2\+::\+UDCharacter\+Controller\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Runs on every frame of the game. 
+
+
+
+Implements \mbox{\hyperlink{class_s_g_l2_1_1_component_ad5bf35e6d80ccb398521e327ca15dcdd}{SGL2\+::\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UDCharacter\+Controller.\+hpp\item 
+UDCharacter\+Controller.\+cpp\end{DoxyCompactItemize}

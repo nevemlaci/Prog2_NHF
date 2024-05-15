@@ -1,0 +1,212 @@
+\doxysection{SGL2\+::Game\+Object Class Reference}
+\hypertarget{class_s_g_l2_1_1_game_object}{}\label{class_s_g_l2_1_1_game_object}\index{SGL2::GameObject@{SGL2::GameObject}}
+
+
+Base game object class. Game\+Objects are the base of the library, containing a transform and components.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+hpp$>$}
+
+Inheritance diagram for SGL2\+::Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_g_l2_1_1_game_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{Game\+Object}} (const std\+::string \&id, const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&position, const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&size, float rot)
+\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a8a4fdb19b58d63bbe0e37cec2af0f5c9}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Constructs a new component and adds it to the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a3cd566859f93df1f0568ff104990a982}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em Get the component of a given type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a81681790e253f910f0537013e24e9dda}{Get\+Component}} (const std\+::string \&id) const
+\begin{DoxyCompactList}\small\item\em Get the first component of T type of the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object} with a specific id. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_aee67b577862c94e6e5c0c50b1ccdae13}\label{class_s_g_l2_1_1_game_object_aee67b577862c94e6e5c0c50b1ccdae13} 
+const std\+::string \& {\bfseries Get\+Id} () const
+\item 
+bool \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a53ec8e9ca1e915d9998ab1e25a293861}{Active}} () const
+\begin{DoxyCompactList}\small\item\em Active state getter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a3af302b56e8bf9cc1f200e7824304681}{Active}} (bool a)
+\begin{DoxyCompactList}\small\item\em Active state setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_afa8bc54fc718bf85831549d4f4fb02e3}\label{class_s_g_l2_1_1_game_object_afa8bc54fc718bf85831549d4f4fb02e3} 
+\mbox{\hyperlink{struct_s_g_l2_1_1_transform}{Transform}} {\bfseries transform}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_a2325bc6e38cb26e478b562ca2404c637}\label{class_s_g_l2_1_1_game_object_a2325bc6e38cb26e478b562ca2404c637} 
+{\bfseries Game\+Object} (const \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&)=delete
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_ac9e96ac29402a99b52bb87c91eccc03b}\label{class_s_g_l2_1_1_game_object_ac9e96ac29402a99b52bb87c91eccc03b} 
+\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} {\bfseries operator=} (const \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{Game\+Object}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_a4bbaffa9facd4b2c659edb4b877bc2b6}\label{class_s_g_l2_1_1_game_object_a4bbaffa9facd4b2c659edb4b877bc2b6} 
+std\+::string {\bfseries m\+\_\+\+Id}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_aaa1005a9a6a32386eb6dfe663d36ec5e}\label{class_s_g_l2_1_1_game_object_aaa1005a9a6a32386eb6dfe663d36ec5e} 
+bool {\bfseries m\+\_\+\+Is\+Active}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_ab9fb6df3842701928e0b10bd8cad85c9}\label{class_s_g_l2_1_1_game_object_ab9fb6df3842701928e0b10bd8cad85c9} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_s_g_l2_1_1_component}{Component}} $>$ $>$ {\bfseries m\+\_\+\+Components}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game_object_a46f5d1c6b3a93d01f91120b816821e6c}\label{class_s_g_l2_1_1_game_object_a46f5d1c6b3a93d01f91120b816821e6c} 
+class {\bfseries Game\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base game object class. Game\+Objects are the base of the library, containing a transform and components. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}\label{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c} 
+\index{SGL2::GameObject@{SGL2::GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!SGL2::GameObject@{SGL2::GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily SGL2\+::\+Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&}]{position,  }\item[{const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&}]{size,  }\item[{float}]{rot }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+game} & gets passed by the game when adding the gameobject automatically. \\
+\hline
+{\em id} & ~\newline
+ \\
+\hline
+{\em position} & \\
+\hline
+{\em size} & \\
+\hline
+{\em rot} & base rotation in degrees \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_game_object_a53ec8e9ca1e915d9998ab1e25a293861}\label{class_s_g_l2_1_1_game_object_a53ec8e9ca1e915d9998ab1e25a293861} 
+\index{SGL2::GameObject@{SGL2::GameObject}!Active@{Active}}
+\index{Active@{Active}!SGL2::GameObject@{SGL2::GameObject}}
+\doxysubsubsection{\texorpdfstring{Active()}{Active()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool SGL2\+::\+Game\+Object\+::\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Active state getter. 
+
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game_object_a3af302b56e8bf9cc1f200e7824304681}\label{class_s_g_l2_1_1_game_object_a3af302b56e8bf9cc1f200e7824304681} 
+\index{SGL2::GameObject@{SGL2::GameObject}!Active@{Active}}
+\index{Active@{Active}!SGL2::GameObject@{SGL2::GameObject}}
+\doxysubsubsection{\texorpdfstring{Active()}{Active()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void SGL2\+::\+Game\+Object\+::\+Active (\begin{DoxyParamCaption}\item[{bool}]{a }\end{DoxyParamCaption})}
+
+
+
+Active state setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_game_object_a8a4fdb19b58d63bbe0e37cec2af0f5c9}\label{class_s_g_l2_1_1_game_object_a8a4fdb19b58d63bbe0e37cec2af0f5c9} 
+\index{SGL2::GameObject@{SGL2::GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!SGL2::GameObject@{SGL2::GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily template$<$class T , class... Args$>$ \\
+T \& SGL2\+::\+Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new component and adds it to the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & typename of component subclass to be added \\
+\hline
+{\em ...\+Args} & shouldn\textquotesingle{}t be passed explicitly \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em ...\+args} & parameters of the constructor of T(except the pointer to this game object) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the newly added \doxylink{class_s_g_l2_1_1_component}{Component} 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game_object_a3cd566859f93df1f0568ff104990a982}\label{class_s_g_l2_1_1_game_object_a3cd566859f93df1f0568ff104990a982} 
+\index{SGL2::GameObject@{SGL2::GameObject}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!SGL2::GameObject@{SGL2::GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& SGL2\+::\+Game\+Object\+::\+Get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the component of a given type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the component \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+the first component of type T in the \doxylink{class_s_g_l2_1_1_component}{Component} vecto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \+: "{}\+Get\+Component()\+: Component with type not found."{} , If a component with the given type was not found. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_s_g_l2_1_1_game_object_a81681790e253f910f0537013e24e9dda}\label{class_s_g_l2_1_1_game_object_a81681790e253f910f0537013e24e9dda} 
+\index{SGL2::GameObject@{SGL2::GameObject}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!SGL2::GameObject@{SGL2::GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& SGL2\+::\+Game\+Object\+::\+Get\+Component (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the first component of T type of the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object} with a specific id. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & typename of component subclass \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the first T type component of the \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Component\& Get\+Component() \+: Component with type and id not found,if} & a component with type T and with given id was not found. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Object.\+hpp\item 
+Game\+Object.\+cpp\end{DoxyCompactItemize}

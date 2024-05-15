@@ -1,0 +1,207 @@
+\doxysection{SGL2\+::Asset\+Manager\+\_\+t Class Reference}
+\hypertarget{class_s_g_l2_1_1_asset_manager__t}{}\label{class_s_g_l2_1_1_asset_manager__t}\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+
+
+Manages text, fonts, textures and sounds.  
+
+
+
+
+{\ttfamily \#include $<$Asset\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a54e87990b3025bc8dab890360ef5f1ca}{Add\+Font}} (const std\+::string \&asset\+\_\+name, const std\+::string \&font\+\_\+path, unsigned int fontsize=14)
+\begin{DoxyCompactList}\small\item\em Loads a new font. \end{DoxyCompactList}\item 
+const SDL\+::\+Font \& \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a25c1f1629c398e0a92452a94fc4dc3c6}{Get\+Font}} (const std\+::string \&asset\+\_\+name) const
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_aff4a5f85a324454a6622b76c9f546142}{Add\+Text}} (const std\+::string \&asset\+\_\+name, const std\+::string \&text, const std\+::string \&font\+\_\+asset\+\_\+name, SDL\+\_\+\+Color color=\{ 0, 0, 0, 255 \})
+\begin{DoxyCompactList}\small\item\em Loads a text with a given font. \end{DoxyCompactList}\item 
+const SDL\+::\+Text \& \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_ab16fe1b08f18aa7a4a5aab3c1d8072f1}{Get\+Text}} (const std\+::string \&asset\+\_\+name) const
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_aa58bbe75d02a9d8398c6f18a23ce15cf}{Add\+Texture}} (const std\+::string \&asset\+\_\+name, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Loads a texture. \end{DoxyCompactList}\item 
+const SDL\+::\+Texture \& \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_ab89b5125dc6fd12836465bc4797c0401}{Get\+Texture}} (const std\+::string \&asset\+\_\+name) const
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_ae6ad8a429e621f0c36affdc66ea4de5a}{Set\+Music}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em set the music of the game. Only one music can be loaded at one time. \end{DoxyCompactList}\item 
+const SDL\+::\+Mix\+Music \& \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_aaf2b3d8e71169be7e3be52d4e37385d1}{Get\+Music}} () const
+\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a2a5830c7302597c9019620a8a28bd2f3}{Add\+Sound}} (const std\+::string \&asset\+\_\+name, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Loads a sound. \end{DoxyCompactList}\item 
+const SDL\+::\+Mix\+Chunk \& \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a0d08d44822a6655a7876d531d4354dcd}{Get\+Sound}} (const std\+::string \&asset\+\_\+name) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_a3e4cad04265756ad435b732e619630aa}\label{class_s_g_l2_1_1_asset_manager__t_a3e4cad04265756ad435b732e619630aa} 
+\mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t}{Asset\+Manager\+\_\+t}} \& {\bfseries Asset\+Manager} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages text, fonts, textures and sounds. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_a54e87990b3025bc8dab890360ef5f1ca}\label{class_s_g_l2_1_1_asset_manager__t_a54e87990b3025bc8dab890360ef5f1ca} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!AddFont@{AddFont}}
+\index{AddFont@{AddFont}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{AddFont()}{AddFont()}}
+{\footnotesize\ttfamily void SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Add\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name,  }\item[{const std\+::string \&}]{font\+\_\+path,  }\item[{unsigned int}]{fontsize = {\ttfamily 14} }\end{DoxyParamCaption})}
+
+
+
+Loads a new font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & name of the asset(used to reference it via the library) \\
+\hline
+{\em font\+\_\+path} & path to the font file \\
+\hline
+{\em fontsize} & the size the font should be loaded with \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_a2a5830c7302597c9019620a8a28bd2f3}\label{class_s_g_l2_1_1_asset_manager__t_a2a5830c7302597c9019620a8a28bd2f3} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!AddSound@{AddSound}}
+\index{AddSound@{AddSound}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{AddSound()}{AddSound()}}
+{\footnotesize\ttfamily void SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Add\+Sound (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads a sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & name of the asset(used to reference it via the library) \\
+\hline
+{\em path} & path to the sound file \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_aff4a5f85a324454a6622b76c9f546142}\label{class_s_g_l2_1_1_asset_manager__t_aff4a5f85a324454a6622b76c9f546142} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!AddText@{AddText}}
+\index{AddText@{AddText}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{AddText()}{AddText()}}
+{\footnotesize\ttfamily void SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Add\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name,  }\item[{const std\+::string \&}]{text,  }\item[{const std\+::string \&}]{font\+\_\+asset\+\_\+name,  }\item[{SDL\+\_\+\+Color}]{color = {\ttfamily \{~0,~0,~0,~255~\}} }\end{DoxyParamCaption})}
+
+
+
+Loads a text with a given font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & name of the asset(used to reference it via the library) \\
+\hline
+{\em text} & \\
+\hline
+{\em font\+\_\+asset\+\_\+name} & name of the font asset \\
+\hline
+{\em color} & color of the text, black by default. Format\+: \{red, green, blue, alpha\} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_aa58bbe75d02a9d8398c6f18a23ce15cf}\label{class_s_g_l2_1_1_asset_manager__t_aa58bbe75d02a9d8398c6f18a23ce15cf} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!AddTexture@{AddTexture}}
+\index{AddTexture@{AddTexture}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{AddTexture()}{AddTexture()}}
+{\footnotesize\ttfamily void SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Add\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads a texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & name of the asset(used to reference it via the library) \\
+\hline
+{\em path} & path to the texture(image) file \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_a25c1f1629c398e0a92452a94fc4dc3c6}\label{class_s_g_l2_1_1_asset_manager__t_a25c1f1629c398e0a92452a94fc4dc3c6} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
+{\footnotesize\ttfamily const SDL\+::\+Font \& SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Get\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Font reference to the font 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_aaf2b3d8e71169be7e3be52d4e37385d1}\label{class_s_g_l2_1_1_asset_manager__t_aaf2b3d8e71169be7e3be52d4e37385d1} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!GetMusic@{GetMusic}}
+\index{GetMusic@{GetMusic}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{GetMusic()}{GetMusic()}}
+{\footnotesize\ttfamily const SDL\+::\+Mix\+Music \& SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Get\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Mix\+Music reference to the music object ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_a0d08d44822a6655a7876d531d4354dcd}\label{class_s_g_l2_1_1_asset_manager__t_a0d08d44822a6655a7876d531d4354dcd} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!GetSound@{GetSound}}
+\index{GetSound@{GetSound}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{GetSound()}{GetSound()}}
+{\footnotesize\ttfamily const SDL\+::\+Mix\+Chunk \& SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Get\+Sound (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Mix\+Chunk reference to thesound object 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_ab16fe1b08f18aa7a4a5aab3c1d8072f1}\label{class_s_g_l2_1_1_asset_manager__t_ab16fe1b08f18aa7a4a5aab3c1d8072f1} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!GetText@{GetText}}
+\index{GetText@{GetText}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{GetText()}{GetText()}}
+{\footnotesize\ttfamily const SDL\+::\+Text \& SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Get\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Text reference to the text object 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_ab89b5125dc6fd12836465bc4797c0401}\label{class_s_g_l2_1_1_asset_manager__t_ab89b5125dc6fd12836465bc4797c0401} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{GetTexture()}{GetTexture()}}
+{\footnotesize\ttfamily const SDL\+::\+Texture \& SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Get\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Texture reference to the texture object 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_asset_manager__t_ae6ad8a429e621f0c36affdc66ea4de5a}\label{class_s_g_l2_1_1_asset_manager__t_ae6ad8a429e621f0c36affdc66ea4de5a} 
+\index{SGL2::AssetManager\_t@{SGL2::AssetManager\_t}!SetMusic@{SetMusic}}
+\index{SetMusic@{SetMusic}!SGL2::AssetManager\_t@{SGL2::AssetManager\_t}}
+\doxysubsubsection{\texorpdfstring{SetMusic()}{SetMusic()}}
+{\footnotesize\ttfamily void SGL2\+::\+Asset\+Manager\+\_\+t\+::\+Set\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+set the music of the game. Only one music can be loaded at one time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path to the music file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Asset\+Manager.\+hpp\item 
+Asset\+Manager.\+cpp\end{DoxyCompactItemize}

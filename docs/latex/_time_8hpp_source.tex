@@ -1,0 +1,43 @@
+\doxysection{Time.\+hpp}
+\hypertarget{_time_8hpp_source}{}\label{_time_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Time.hpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ \_\_Time\_H\_\_}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ \_\_Time\_H\_\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CPORTA\ }\textcolor{comment}{//time\ is\ only\ relevant\ in\ a\ graphical\ environment}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }stdchr\ =\ std::chrono;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }SGL2\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ }delta\_time\_ratio\ =\ std::nano;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using\ }delta\_time\_duration\ =\ stdchr::duration<int64\_t,\ delta\_time\_ratio>;}
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_game__t}{Game\_t}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}\&\ \mbox{\hyperlink{class_s_g_l2_1_1_time__t_ad637d2b30a3e1e4850ff6e17fcc74718}{Time}}();}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_s_g_l2_1_1_time__t_aa2ac9b83cd4954ae7cea5399a7172209}{DeltaTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_DeltaTime;\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ ratio\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(delta\_time\_ratio::den);}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}();}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#undef\ delete\ }\textcolor{comment}{//sorry\ memtrace\ but\ you\ are\ annoying\ and\ you\ define\ an\ operator\ as\ a\ macro}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_time__t}{Time\_t}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_DeltaTime;}
+\DoxyCodeLine{00033\ \ \ \ \ stdchr::steady\_clock::time\_point\ m\_FrameStart;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ FrameStart();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00039\ \ \ \ \ Time\_t\&\ Time();}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+
+\end{DoxyCode}

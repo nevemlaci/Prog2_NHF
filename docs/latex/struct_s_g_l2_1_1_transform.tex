@@ -1,0 +1,70 @@
+\doxysection{SGL2\+::Transform Struct Reference}
+\hypertarget{struct_s_g_l2_1_1_transform}{}\label{struct_s_g_l2_1_1_transform}\index{SGL2::Transform@{SGL2::Transform}}
+
+
+represents a \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object}\textquotesingle{}s transformations in 2d space(position, size, rotation)  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_l2_1_1_transform_ac4c08cdd0372f6f53504ad42c225524c}{Middle}} () const
+\begin{DoxyCompactList}\small\item\em calculates the middle point of the transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_s_g_l2_1_1_transform_a4ae91be6ca5d521b47e39413b6e7628e}{Set\+Position\+By\+Middle}} (const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&middlepos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the transform by moving it\textquotesingle{}s middle point instead of the top left point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_s_g_l2_1_1_transform_a73c6b46085cdfe88a005b15d849c8e03}\label{struct_s_g_l2_1_1_transform_a73c6b46085cdfe88a005b15d849c8e03} 
+\mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} {\bfseries position}
+\item 
+\Hypertarget{struct_s_g_l2_1_1_transform_abc4b6e738aa2b6f38f2613a768ca2828}\label{struct_s_g_l2_1_1_transform_abc4b6e738aa2b6f38f2613a768ca2828} 
+\mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} {\bfseries size}
+\item 
+\Hypertarget{struct_s_g_l2_1_1_transform_a685d402282c2acf3d70503945c8365fc}\label{struct_s_g_l2_1_1_transform_a685d402282c2acf3d70503945c8365fc} 
+float {\bfseries rotation}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+represents a \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object}\textquotesingle{}s transformations in 2d space(position, size, rotation) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_s_g_l2_1_1_transform_ac4c08cdd0372f6f53504ad42c225524c}\label{struct_s_g_l2_1_1_transform_ac4c08cdd0372f6f53504ad42c225524c} 
+\index{SGL2::Transform@{SGL2::Transform}!Middle@{Middle}}
+\index{Middle@{Middle}!SGL2::Transform@{SGL2::Transform}}
+\doxysubsubsection{\texorpdfstring{Middle()}{Middle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} SGL2\+::\+Transform\+::\+Middle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+calculates the middle point of the transform 
+
+\begin{DoxyReturn}{Returns}
+middle point of the transform 
+\end{DoxyReturn}
+\Hypertarget{struct_s_g_l2_1_1_transform_a4ae91be6ca5d521b47e39413b6e7628e}\label{struct_s_g_l2_1_1_transform_a4ae91be6ca5d521b47e39413b6e7628e} 
+\index{SGL2::Transform@{SGL2::Transform}!SetPositionByMiddle@{SetPositionByMiddle}}
+\index{SetPositionByMiddle@{SetPositionByMiddle}!SGL2::Transform@{SGL2::Transform}}
+\doxysubsubsection{\texorpdfstring{SetPositionByMiddle()}{SetPositionByMiddle()}}
+{\footnotesize\ttfamily void SGL2\+::\+Transform\+::\+Set\+Position\+By\+Middle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \&}]{middlepos }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the transform by moving it\textquotesingle{}s middle point instead of the top left point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em middlepos} & position of the middle point \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Transform.\+hpp\item 
+Transform.\+cpp\end{DoxyCompactItemize}

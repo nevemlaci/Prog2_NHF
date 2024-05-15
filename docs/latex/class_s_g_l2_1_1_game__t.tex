@@ -1,0 +1,196 @@
+\doxysection{SGL2\+::Game\+\_\+t Class Reference}
+\hypertarget{class_s_g_l2_1_1_game__t}{}\label{class_s_g_l2_1_1_game__t}\index{SGL2::Game\_t@{SGL2::Game\_t}}
+
+
+Game manager singleton.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game__t_a94401f7ef3da5e11843c76c9ad7e3a40}\label{class_s_g_l2_1_1_game__t_a94401f7ef3da5e11843c76c9ad7e3a40} 
+void {\bfseries Run} ()
+\begin{DoxyCompactList}\small\item\em runs the game \end{DoxyCompactList}\item 
+SDL\+::\+SDL \& \mbox{\hyperlink{class_s_g_l2_1_1_game__t_a27cb7628fe84206618a64b388cd08b80}{Get\+SDL}} ()
+\item 
+SDL\+::\+Renderer \& \mbox{\hyperlink{class_s_g_l2_1_1_game__t_a468ebd91e7df92022706cf277e40c2d3}{Get\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em getter for m\+\_\+\+Renderer \end{DoxyCompactList}\item 
+SDL\+::\+Window \& \mbox{\hyperlink{class_s_g_l2_1_1_game__t_a1c1ecf52d831f028264d945fd2ac66f7}{Get\+Window}} ()
+\begin{DoxyCompactList}\small\item\em getter for m\+\_\+\+Window \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_s_g_l2_1_1_game__t_ab6a7f8d4a36dde16cadab9543175d8ab}{Get\+Screen\+Size}} () const
+\item 
+\mbox{\hyperlink{class_s_g_l2_1_1_camera}{Camera}} \& \mbox{\hyperlink{class_s_g_l2_1_1_game__t_aaba8e729334d2f6e1df3cbf8349ebba4}{Get\+Main\+Camera}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_g_l2_1_1_game__t_a2aaabf63146a671330f7aded03d428da}{Get\+Title}} () const
+\item 
+{\footnotesize template$<$typename T , class... Args$>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game__t_a76a959c6918c7913e822c5bca6fde0ba}{Add\+Game\+Object}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em adds a game object of type T with ...args being passed to the constructor \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = Game\+Object$>$ }\\T \& \mbox{\hyperlink{class_s_g_l2_1_1_game__t_a065a397d244761f2fc0269aaac0add7e}{Get\+Game\+Object}} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em getter for game objects based on type and id \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_g_l2_1_1_game__t_aafbae663fd71a4f9755e65ebb0da5751}{Delete\+Game\+Object}} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em deletes a gameobject with given id (use with caution) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game__t_a00df87c957d8f7ee0fc51f07a0542f4a}\label{class_s_g_l2_1_1_game__t_a00df87c957d8f7ee0fc51f07a0542f4a} 
+class {\bfseries Game\+Object}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game__t_ad870388e857713997daed38733eebb3b}\label{class_s_g_l2_1_1_game__t_ad870388e857713997daed38733eebb3b} 
+class {\bfseries Asset\+Manager\+\_\+t}
+\item 
+\Hypertarget{class_s_g_l2_1_1_game__t_a13c99792f8cb46aeb45466228a9f78dc}\label{class_s_g_l2_1_1_game__t_a13c99792f8cb46aeb45466228a9f78dc} 
+\mbox{\hyperlink{class_s_g_l2_1_1_game__t}{Game\+\_\+t}} \& {\bfseries Game} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game manager singleton. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_g_l2_1_1_game__t_a76a959c6918c7913e822c5bca6fde0ba}\label{class_s_g_l2_1_1_game__t_a76a959c6918c7913e822c5bca6fde0ba} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!AddGameObject@{AddGameObject}}
+\index{AddGameObject@{AddGameObject}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{AddGameObject()}{AddGameObject()}}
+{\footnotesize\ttfamily template$<$typename T , class... Args$>$ \\
+T \& SGL2\+::\+Game\+\_\+t\+::\+Add\+Game\+Object (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+adds a game object of type T with ...args being passed to the constructor 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & should inherit from \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object}. Type of the object to be added \\
+\hline
+{\em ...\+Args} & should not be passed explicitly \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em ...\+args} & arguments to be passed into T\textquotesingle{}s constructor(the game instance reference is not needed) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a reference to the newly added \doxylink{class_s_g_l2_1_1_game_object}{Game\+Object} 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game__t_aafbae663fd71a4f9755e65ebb0da5751}\label{class_s_g_l2_1_1_game__t_aafbae663fd71a4f9755e65ebb0da5751} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!DeleteGameObject@{DeleteGameObject}}
+\index{DeleteGameObject@{DeleteGameObject}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{DeleteGameObject()}{DeleteGameObject()}}
+{\footnotesize\ttfamily void SGL2\+::\+Game\+\_\+t\+::\+Delete\+Game\+Object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+deletes a gameobject with given id (use with caution) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_g_l2_1_1_game__t_a065a397d244761f2fc0269aaac0add7e}\label{class_s_g_l2_1_1_game__t_a065a397d244761f2fc0269aaac0add7e} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetGameObject@{GetGameObject}}
+\index{GetGameObject@{GetGameObject}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetGameObject()}{GetGameObject()}}
+{\footnotesize\ttfamily template$<$typename T  = Game\+Object$>$ \\
+T \& SGL2\+::\+Game\+\_\+t\+::\+Get\+Game\+Object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for game objects based on type and id 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of gameobject \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a reference to the gameobject(\+T\&) if found 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & std\+::runtime\+\_\+error if an appropriate gameobject was not found. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_s_g_l2_1_1_game__t_aaba8e729334d2f6e1df3cbf8349ebba4}\label{class_s_g_l2_1_1_game__t_aaba8e729334d2f6e1df3cbf8349ebba4} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetMainCamera@{GetMainCamera}}
+\index{GetMainCamera@{GetMainCamera}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetMainCamera()}{GetMainCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_l2_1_1_camera}{Camera}} \& SGL2\+::\+Game\+\_\+t\+::\+Get\+Main\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the reference to the game\textquotesingle{}s camera ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game__t_a468ebd91e7df92022706cf277e40c2d3}\label{class_s_g_l2_1_1_game__t_a468ebd91e7df92022706cf277e40c2d3} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily SDL\+::\+Renderer \& SGL2\+::\+Game\+\_\+t\+::\+Get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for m\+\_\+\+Renderer 
+
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Renderer reference 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game__t_ab6a7f8d4a36dde16cadab9543175d8ab}\label{class_s_g_l2_1_1_game__t_ab6a7f8d4a36dde16cadab9543175d8ab} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetScreenSize@{GetScreenSize}}
+\index{GetScreenSize@{GetScreenSize}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetScreenSize()}{GetScreenSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}} SGL2\+::\+Game\+\_\+t\+::\+Get\+Screen\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the screen size as a \doxylink{class_s_g_l2_1_1_vector2}{Vector2} ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game__t_a27cb7628fe84206618a64b388cd08b80}\label{class_s_g_l2_1_1_game__t_a27cb7628fe84206618a64b388cd08b80} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetSDL@{GetSDL}}
+\index{GetSDL@{GetSDL}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetSDL()}{GetSDL()}}
+{\footnotesize\ttfamily SDL\+::\+SDL \& SGL2\+::\+Game\+\_\+t\+::\+Get\+SDL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+SDL instance ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game__t_a2aaabf63146a671330f7aded03d428da}\label{class_s_g_l2_1_1_game__t_a2aaabf63146a671330f7aded03d428da} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetTitle@{GetTitle}}
+\index{GetTitle@{GetTitle}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetTitle()}{GetTitle()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} SGL2\+::\+Game\+\_\+t\+::\+Get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+title of the game ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_s_g_l2_1_1_game__t_a1c1ecf52d831f028264d945fd2ac66f7}\label{class_s_g_l2_1_1_game__t_a1c1ecf52d831f028264d945fd2ac66f7} 
+\index{SGL2::Game\_t@{SGL2::Game\_t}!GetWindow@{GetWindow}}
+\index{GetWindow@{GetWindow}!SGL2::Game\_t@{SGL2::Game\_t}}
+\doxysubsubsection{\texorpdfstring{GetWindow()}{GetWindow()}}
+{\footnotesize\ttfamily SDL\+::\+Window \& SGL2\+::\+Game\+\_\+t\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for m\+\_\+\+Window 
+
+\begin{DoxyReturn}{Returns}
+SDL\+::\+Window reference 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+hpp\item 
+Game.\+cpp\end{DoxyCompactItemize}

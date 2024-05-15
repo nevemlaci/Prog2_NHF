@@ -1,0 +1,102 @@
+\doxysection{Game\+Object.\+hpp}
+\hypertarget{_game_object_8hpp_source}{}\label{_game_object_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ GameObject.hpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ \_\_GameObject\_H\_\_}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ \_\_GameObject\_H\_\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Transform.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ CPORTA}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}memtrace.h"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }SGL2\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{GameObject}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_game__t}{Game\_t}};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{GameObject}}(}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id},\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}}\&\ position,\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}}\&\ size,\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rot);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object}{\string~GameObject}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class\ }T,\ \textcolor{keyword}{class}...\ Args>}
+\DoxyCodeLine{00047\ \ \ \ \ T\&\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a8a4fdb19b58d63bbe0e37cec2af0f5c9}{AddComponent}}(Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ m\_Components.push\_back(std::make\_unique<T>((*\textcolor{keyword}{this}),\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}T\&\textcolor{keyword}{>}(*m\_Components.back());}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00057\ \ \ \ \ T\&\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a3cd566859f93df1f0568ff104990a982}{GetComponent}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\_ptr\ :\ m\_Components)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_component}{Component}}*\ tryCast\ =\ \textcolor{keyword}{dynamic\_cast<}T*\textcolor{keyword}{>}(component\_ptr.get());}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tryCast)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}T\&\textcolor{keyword}{>}(*tryCast);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(std::string(\textcolor{stringliteral}{"{}GetComponent():\ Component\ with\ type\ not\ found."{}}));}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00073\ \ \ \ \ T\&\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a81681790e253f910f0537013e24e9dda}{GetComponent}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\_ptr\ :\ m\_Components)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_component}{Component}}*\ tryCast\ =\ \textcolor{keyword}{dynamic\_cast<}T*\textcolor{keyword}{>}(component\_ptr.get());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tryCast\ \&\&\ (\textcolor{keywordtype}{id}\ ==\ component\_ptr-\/>GetId()))\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}T\&\textcolor{keyword}{>}(*tryCast);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(std::string(\textcolor{stringliteral}{"{}GetComponent():\ Component\ with\ type\ and\ id\ not\ found."{}}));}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ GetId()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_Id;\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a53ec8e9ca1e915d9998ab1e25a293861}{Active}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a53ec8e9ca1e915d9998ab1e25a293861}{Active}}(\textcolor{keywordtype}{bool}\ a);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ Transform\ transform;}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#ifndef\ CPORTA}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#ifdef\ CPORTA}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00104\ \ \ \ \ std::string\ m\_Id;\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_IsActive;}
+\DoxyCodeLine{00106\ \ \ \ \ std::vector<\ std::unique\_ptr<Component>\ >\ m\_Components;}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#ifndef\ CPORTA}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#ifdef\ CPORTA}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#undef\ delete\ }\textcolor{comment}{//memtrace\ griefing}}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{GameObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{GameObject}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{GameObject}}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_game_object_a0bdd2c528071cb7ee08d6c050a3d857c}{GameObject}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ \}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+
+\end{DoxyCode}

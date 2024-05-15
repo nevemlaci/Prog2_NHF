@@ -1,0 +1,73 @@
+\doxysection{Asset\+Manager.\+hpp}
+\hypertarget{_asset_manager_8hpp_source}{}\label{_asset_manager_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ AssetManager.hpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ \_\_AssetManager\_H\_\_}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ \_\_AssetManager\_H\_\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CPORTA}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cpp\_SDL\_include.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}memtrace.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }SGL2\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }Game\_t;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t}{AssetManager\_t}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t}{AssetManager\_t}}\&\ AssetManager();}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a54e87990b3025bc8dab890360ef5f1ca}{AddFont}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name,\ \textcolor{keyword}{const}\ std::string\&\ font\_path,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ fontsize\ =\ 14);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//MyTodo:\ add\ try-\/catch\ to\ getters\ for\ not-\/found\ cases}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ SDL::Font\&\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a25c1f1629c398e0a92452a94fc4dc3c6}{GetFont}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_aff4a5f85a324454a6622b76c9f546142}{AddText}}(}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ asset\_name,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ text,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ font\_asset\_name,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ SDL\_Color\ color\ =\ \{\ 0,\ 0,\ 0,\ 255\ \});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{const}\ SDL::Text\&\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_ab16fe1b08f18aa7a4a5aab3c1d8072f1}{GetText}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_aa58bbe75d02a9d8398c6f18a23ce15cf}{AddTexture}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name,\ \textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ SDL::Texture\&\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_ab89b5125dc6fd12836465bc4797c0401}{GetTexture}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_ae6ad8a429e621f0c36affdc66ea4de5a}{SetMusic}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ SDL::MixMusic\&\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_aaf2b3d8e71169be7e3be52d4e37385d1}{GetMusic}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (*m\_Music);}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a2a5830c7302597c9019620a8a28bd2f3}{AddSound}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name,\ \textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{const}\ SDL::MixChunk\&\ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t_a0d08d44822a6655a7876d531d4354dcd}{GetSound}}(\textcolor{keyword}{const}\ std::string\&\ asset\_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_asset_manager__t}{AssetManager\_t}}(\mbox{\hyperlink{class_s_g_l2_1_1_game__t}{Game\_t}}*\ game);}
+\DoxyCodeLine{00083\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<SDL::Texture>>\ m\_Textures;}
+\DoxyCodeLine{00084\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<SDL::Text>>\ m\_Texts;}
+\DoxyCodeLine{00085\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<SDL::Font>>\ m\_Fonts;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ SDL::MixMusic*\ m\_Music;}
+\DoxyCodeLine{00088\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<SDL::MixChunk>>\ m\_SFXs;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_game__t}{Game\_t}}\&\ m\_RootGameRef;}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ AssetManager\_t\&\ AssetManager();}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+
+\end{DoxyCode}

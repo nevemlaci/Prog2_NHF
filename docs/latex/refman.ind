@@ -1,0 +1,172 @@
+\begin{theindex}
+
+  \item {Active}
+    \subitem {SGL2::GameObject}, \hyperpage{18, 19}
+  \item {AddComponent}
+    \subitem {SGL2::GameObject}, \hyperpage{19}
+  \item {AddFont}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{8}
+  \item {AddGameObject}
+    \subitem {SGL2::Game\_t}, \hyperpage{14}
+  \item {AddMacro}
+    \subitem {SGL2::InputManager\_t}, \hyperpage{21}
+  \item {AddSound}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{8}
+  \item {AddText}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{8}
+  \item {AddTexture}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Component}
+    \subitem {SGL2::Component}, \hyperpage{12}
+
+  \indexspace
+
+  \item {DeleteGameObject}
+    \subitem {SGL2::Game\_t}, \hyperpage{15}
+  \item {DeltaTime}
+    \subitem {SGL2::Time\_t}, \hyperpage{24}
+
+  \indexspace
+
+  \item {GameObject}
+    \subitem {SGL2::GameObject}, \hyperpage{18}
+  \item {Get}
+    \subitem {SGL2::InputManager\_t}, \hyperpage{21}
+  \item {GetComponent}
+    \subitem {SGL2::GameObject}, \hyperpage{19, 20}
+  \item {GetFont}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{9}
+  \item {GetGameObject}
+    \subitem {SGL2::Game\_t}, \hyperpage{15}
+  \item {GetId}
+    \subitem {SGL2::Component}, \hyperpage{13}
+  \item {GetMainCamera}
+    \subitem {SGL2::Game\_t}, \hyperpage{15}
+  \item {GetMusic}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{9}
+  \item {GetRenderer}
+    \subitem {SGL2::Game\_t}, \hyperpage{16}
+  \item {GetScreenSize}
+    \subitem {SGL2::Game\_t}, \hyperpage{16}
+  \item {GetSDL}
+    \subitem {SGL2::Game\_t}, \hyperpage{16}
+  \item {GetSound}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{9}
+  \item {GetText}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{10}
+  \item {GetTexture}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{10}
+  \item {GetTitle}
+    \subitem {SGL2::Game\_t}, \hyperpage{16}
+  \item {GetWindow}
+    \subitem {SGL2::Game\_t}, \hyperpage{16}
+
+  \indexspace
+
+  \item {InputManager}
+    \subitem {SGL2::InputManager\_t}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Middle}
+    \subitem {SGL2::Transform}, \hyperpage{25}
+  \item {Move}
+    \subitem {SGL2::UDCharacterController}, \hyperpage{27}
+
+  \indexspace
+
+  \item {RendererComponent}
+    \subitem {SGL2::RendererComponent}, \hyperpage{23}
+  \item {Rotate}
+    \subitem {SGL2::UDCharacterController}, \hyperpage{27}
+
+  \indexspace
+
+  \item {SetMusic}
+    \subitem {SGL2::AssetManager\_t}, \hyperpage{10}
+  \item {SetPositionByMiddle}
+    \subitem {SGL2::Transform}, \hyperpage{25}
+  \item {SGL2::AssetManager\_t}, \hyperpage{7}
+    \subitem {AddFont}, \hyperpage{8}
+    \subitem {AddSound}, \hyperpage{8}
+    \subitem {AddText}, \hyperpage{8}
+    \subitem {AddTexture}, \hyperpage{8}
+    \subitem {GetFont}, \hyperpage{9}
+    \subitem {GetMusic}, \hyperpage{9}
+    \subitem {GetSound}, \hyperpage{9}
+    \subitem {GetText}, \hyperpage{10}
+    \subitem {GetTexture}, \hyperpage{10}
+    \subitem {SetMusic}, \hyperpage{10}
+  \item {SGL2::Camera}, \hyperpage{11}
+  \item {SGL2::Component}, \hyperpage{12}
+    \subitem {Component}, \hyperpage{12}
+    \subitem {GetId}, \hyperpage{13}
+    \subitem {Startup}, \hyperpage{13}
+    \subitem {Update}, \hyperpage{13}
+  \item {SGL2::Game\_t}, \hyperpage{13}
+    \subitem {AddGameObject}, \hyperpage{14}
+    \subitem {DeleteGameObject}, \hyperpage{15}
+    \subitem {GetGameObject}, \hyperpage{15}
+    \subitem {GetMainCamera}, \hyperpage{15}
+    \subitem {GetRenderer}, \hyperpage{16}
+    \subitem {GetScreenSize}, \hyperpage{16}
+    \subitem {GetSDL}, \hyperpage{16}
+    \subitem {GetTitle}, \hyperpage{16}
+    \subitem {GetWindow}, \hyperpage{16}
+  \item {SGL2::GameObject}, \hyperpage{17}
+    \subitem {Active}, \hyperpage{18, 19}
+    \subitem {AddComponent}, \hyperpage{19}
+    \subitem {GameObject}, \hyperpage{18}
+    \subitem {GetComponent}, \hyperpage{19, 20}
+  \item {SGL2::InputManager\_t}, \hyperpage{20}
+    \subitem {AddMacro}, \hyperpage{21}
+    \subitem {Get}, \hyperpage{21}
+    \subitem {InputManager}, \hyperpage{22}
+  \item {SGL2::RendererComponent}, \hyperpage{22}
+    \subitem {RendererComponent}, \hyperpage{23}
+    \subitem {Startup}, \hyperpage{23}
+    \subitem {Update}, \hyperpage{23}
+  \item {SGL2::Time\_t}, \hyperpage{24}
+    \subitem {DeltaTime}, \hyperpage{24}
+    \subitem {Time}, \hyperpage{25}
+  \item {SGL2::Transform}, \hyperpage{25}
+    \subitem {Middle}, \hyperpage{25}
+    \subitem {SetPositionByMiddle}, \hyperpage{25}
+  \item {SGL2::UDCharacterController}, \hyperpage{26}
+    \subitem {Move}, \hyperpage{27}
+    \subitem {Rotate}, \hyperpage{27}
+    \subitem {Startup}, \hyperpage{27}
+    \subitem {UDCharacterController}, \hyperpage{27}
+    \subitem {Update}, \hyperpage{28}
+  \item {SGL2::UIRendererComponent}, \hyperpage{28}
+    \subitem {Startup}, \hyperpage{29}
+    \subitem {UIRendererComponent}, \hyperpage{29}
+    \subitem {Update}, \hyperpage{29}
+  \item {SGL2::Vector2}, \hyperpage{30}
+  \item {Startup}
+    \subitem {SGL2::Component}, \hyperpage{13}
+    \subitem {SGL2::RendererComponent}, \hyperpage{23}
+    \subitem {SGL2::UDCharacterController}, \hyperpage{27}
+    \subitem {SGL2::UIRendererComponent}, \hyperpage{29}
+
+  \indexspace
+
+  \item {Time}
+    \subitem {SGL2::Time\_t}, \hyperpage{25}
+
+  \indexspace
+
+  \item {UDCharacterController}
+    \subitem {SGL2::UDCharacterController}, \hyperpage{27}
+  \item {UIRendererComponent}
+    \subitem {SGL2::UIRendererComponent}, \hyperpage{29}
+  \item {Update}
+    \subitem {SGL2::Component}, \hyperpage{13}
+    \subitem {SGL2::RendererComponent}, \hyperpage{23}
+    \subitem {SGL2::UDCharacterController}, \hyperpage{28}
+    \subitem {SGL2::UIRendererComponent}, \hyperpage{29}
+
+\end{theindex}

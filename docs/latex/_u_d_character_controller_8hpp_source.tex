@@ -1,0 +1,40 @@
+\doxysection{UDCharacter\+Controller.\+hpp}
+\hypertarget{_u_d_character_controller_8hpp_source}{}\label{_u_d_character_controller_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ UDCharacterController.hpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ \_\_UDCharacterController\_H\_\_}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ \_\_UDCharacterController\_H\_\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CPORTA}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Vector2.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }SGL2\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller}{UDCharacterController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_s_g_l2_1_1_component}{Component}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a90c82348064449305d04dab91bfd4c9f}{UDCharacterController}}(\mbox{\hyperlink{class_s_g_l2_1_1_game_object}{GameObject}}\&\ gameobject,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_ac6fb526dae4b9408b2c13ecd9f6dddf2}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}}\ vec);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_af3f7018fc86730bf6d6ac594ceb915b1}{Rotate}}(\textcolor{keywordtype}{float}\ rot);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a8c1dc666290e7a06b999a8dc17ca9838}{Startup}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_g_l2_1_1_u_d_character_controller_a4d4063f370a72de34350d6cff09cba09}{Update}}();}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ DoMove();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ DoRotate();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_ShouldMove\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_s_g_l2_1_1_vector2}{Vector2}}\ m\_MoveAmount\ ;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_ShouldRotate\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_RotAmount\ =\ 0;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+
+\end{DoxyCode}
